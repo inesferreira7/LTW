@@ -12,9 +12,53 @@ img{
 }
 
 #header{
-  background-color: 	#20B2AA;
+  background-color:#20B2AA;
   height: 130px;
-  width:100%;
+}
+
+#header #left{
+  padding-left: 70px;
+  float:left;
+}
+
+#header #right{
+  padding-top:50px;
+  padding-right:90px;
+  float:right;
+  width:
+}
+
+#header #right .search2{
+  width: 120px;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 3px 5px 3px 5px;
+}
+
+#header #right .search1{
+  width: 120px;
+  margin: 15px;
+  padding: 3px 5px 3px 5px;
+  border-radius: 10px;
+}
+
+#header #right .button{
+  margin-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 40px;
+    border-radius: 10px;
+    background: url('search-icon.png');
+    background-size:15px 15px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position:15px;
+}
+
+#login{
+  background-color: white;
+  padding: 3px 5px 3px 5px;
+  margin-left: 15px;
+  color: #20B2AA;
 }
 
 #content{
@@ -27,25 +71,13 @@ img{
 	padding-right: 10px;
 }
 
-#left{
-  padding-left: 70px;
-  display: inline-block;
-  float:left;
-}
-
-#right{
-  padding-right:550px;
-  display: inline-block;
-  float:right;
-}
-
 form {
   width:1000px;
   margin:40px 300px;
   display: inline-block;
 }
 
-.search{
+form .search{
   padding:8px 300px 10px 35px;
   margin:5px;
   border-radius:15px;
@@ -56,7 +88,7 @@ form {
   background-position:10px;
 }
 
-.button{
+form .button{
   margin-left: 10px;
   padding-bottom: 10px;
   padding-right: 40px;
