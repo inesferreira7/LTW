@@ -1,43 +1,69 @@
 html{
-  background-color:image;
-  background-size: 25%;
 }
 
 body{
 margin: 0 auto;
-max-width: 90%;
-background-color:white;
+max-width: 100%;
 }
 
 img{
   padding-top: 30px;
-  padding-bottom: 200px;
+  padding-bottom: 20px;
 }
 
-
 #header{
-  background-color: white;
+  background-color: 	#20B2AA;
+  height: 130px;
   width:100%;
 }
 
 #content{
+  background-color:	#2F4F4F;
   clear:left;
   clear:right;
-  background-color: :white;
-	padding-bottom: 10px;
+	padding-bottom: 30px;
 	padding-top: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
 #left{
-  padding-left: 30px;
+  padding-left: 70px;
   display: inline-block;
   float:left;
 }
 
 #right{
-  padding-right:450px;
+  padding-right:550px;
   display: inline-block;
   float:right;
+}
+
+form {
+  width:1000px;
+  margin:40px 300px;
+  display: inline-block;
+}
+
+.search{
+  padding:8px 300px 10px 35px;
+  margin:5px;
+  border-radius:15px;
+  background: url('search-icon.png');
+  background-size:15px 15px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position:10px;
+}
+
+.button{
+  margin-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 40px;
+    border-radius: 10px;
+    background: url('search-icon.png');
+    background-size:15px 15px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position:15px;
 }
