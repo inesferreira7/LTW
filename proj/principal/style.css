@@ -1,0 +1,43 @@
+html{
+  background-color:image;
+  background-size: 25%;
+}
+
+body{
+margin: 0 auto;
+max-width: 90%;
+background-color:white;
+}
+
+img{
+  padding-top: 30px;
+  padding-bottom: 200px;
+}
+
+
+#header{
+  background-color: white;
+  width:100%;
+}
+
+#content{
+  clear:left;
+  clear:right;
+  background-color: :white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#left{
+  padding-left: 30px;
+  display: inline-block;
+  float:left;
+}
+
+#right{
+  padding-right:450px;
+  display: inline-block;
+  float:right;
+}
