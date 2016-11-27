@@ -33,6 +33,7 @@ img{
   margin: 5px;
   border-radius: 10px;
   padding: 3px 5px 3px 5px;
+  outline: 0;
 }
 
 #header #right .search1{
@@ -40,6 +41,7 @@ img{
   margin: 15px;
   padding: 3px 5px 3px 5px;
   border-radius: 10px;
+  outline: 0;
 }
 
 #header #right .button{
@@ -52,6 +54,7 @@ img{
     background-color: white;
     background-repeat: no-repeat;
     background-position:15px;
+
 }
 
 #header #bottom {
@@ -69,6 +72,7 @@ img{
   color:black;
   float: right;
   margin-left: 5px;
+
 }
 
 #login{
@@ -76,6 +80,7 @@ img{
   padding: 3px 5px 3px 5px;
   margin-left: 15px;
   color: #20B2AA;
+  outline: 0;
 }
 
 #content{
@@ -86,6 +91,7 @@ img{
 	padding-top: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
+
 }
 
 form {
@@ -103,6 +109,7 @@ form .search{
   background-color: white;
   background-repeat: no-repeat;
   background-position:10px;
+    outline: 0;
 }
 
 form .button{
@@ -115,4 +122,6 @@ form .button{
     background-color: white;
     background-repeat: no-repeat;
     background-position:15px;
+    outline: 0;
+
 }
