@@ -63,3 +63,13 @@ label{
   padding-left:5px;
   border-radius:10px;
 }
+
+.button{
+  font-family: verdana;
+  font-size: 0.9rem;
+  margin-left:100px;
+  margin-top:40px;
+  background-color: #d3d3d3;
+  border-radius:5px;
+  padding:5px;
+}
