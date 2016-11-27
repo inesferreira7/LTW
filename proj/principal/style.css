@@ -54,6 +54,23 @@ img{
     background-position:15px;
 }
 
+#header #bottom {
+  float: right;
+  padding-right: 220px;
+}
+
+#header #bottom #new_user{
+  color:black;
+  font-size: 100%;
+  float: left;
+}
+
+#header #bottom #register{
+  color:black;
+  float: right;
+  margin-left: 5px;
+}
+
 #login{
   background-color: white;
   padding: 3px 5px 3px 5px;
