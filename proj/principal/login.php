@@ -5,7 +5,7 @@ $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname'];
 $email=$_POST['email'];
 $username=$_POST['username'];
-$password=$_POSTO['lastname'];
+$password=$_POST['password'];
 
-if(createUser($username, $password, $email, $name, $dateOfBirth, $gender, $picture) == 0)
+if(createUser($firstname, $lastname, $email, $username, $password) == 0)
         echo 'User successfully created! You may now log in.';

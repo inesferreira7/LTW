@@ -5,7 +5,7 @@ $(document).ready(function() {
       if($('form').length != 0){ //Impede que quando voltamos a carregar crie outro abaixo
         $('form').remove();
       }
-      $form = $('<form id="form" method="post" action ="login.php" onsubmit="return validateForm()"> </form>');
+      $form = $('<form id="form" method="post" action="login.php" onsubmit="return validateForm()"> </form>');
       $form.append('<label> First name <input type="text" class ="preenche" name="firstname"></label><br>'); //Primeiro nome
       $form.append('<label> Last name<input type="text" class ="preenche" name="lastname"></label><br>'); //Ultimo nome
       $form.append('<label> Email <input type="e-mail" class ="preenche" name="email"></label><br>'); //Email
