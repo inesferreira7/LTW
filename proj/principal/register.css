@@ -1,0 +1,25 @@
+html{
+  background-color: #2F4F4F
+}
+
+#header{
+  padding-top:25px;
+  background-color:#20B2AA;
+  height: 105px;
+}
+
+#header #right{
+  padding-right:900px;
+  float:right;
+}
+
+#header #left{
+  float:left;
+}
+
+#chose{
+  color:#d3d3d3;
+  font-family:verdana;
+  padding-left:40px;
+  padding-top: 30px;
+}
