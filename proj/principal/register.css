@@ -22,4 +22,44 @@ html{
   font-family:verdana;
   padding-left:40px;
   padding-top: 30px;
+  margin-bottom: 50px;
+}
+
+input[name=firstname]{
+  margin-left:50px;
+}
+
+input[name=lastname]{
+  margin-left:57px;
+}
+
+input[name=email]{
+  width:300px;
+  margin-left:88px;
+}
+
+input[name=username]{
+  margin-left:53px;
+}
+
+input[name=password]{
+  margin-left:56px;
+}
+
+label{
+  margin-left:50px;
+  color:#d3d3d3;
+  font-family:verdana;
+  font-size: 0.9rem;
+}
+
+.preenche{
+  width:200px;
+  padding-top: 8px;
+  padding-bottom:8px;
+  margin-left:20px;
+  margin-bottom:20px;
+  padding-right: 5px;
+  padding-left:5px;
+  border-radius:10px;
 }
