@@ -34,6 +34,7 @@ img{
   border-radius: 10px;
   padding: 3px 5px 3px 5px;
   outline: 0;
+  border:none;
 }
 
 #header #right .search1{
@@ -41,6 +42,7 @@ img{
   margin: 15px;
   padding: 3px 5px 3px 5px;
   border-radius: 10px;
+  border:none;
   outline: 0;
 }
 
@@ -66,12 +68,14 @@ img{
   color:black;
   font-size: 100%;
   float: left;
+
 }
 
 #header #bottom #register{
   color:black;
   float: right;
   margin-left: 5px;
+
 
 }
 
@@ -81,6 +85,7 @@ img{
   margin-left: 15px;
   color: #20B2AA;
   outline: 0;
+  
 }
 
 #content{
@@ -110,6 +115,7 @@ form .search{
   background-repeat: no-repeat;
   background-position:10px;
     outline: 0;
+    border: none;
 }
 
 form .button{
@@ -123,5 +129,6 @@ form .button{
     background-repeat: no-repeat;
     background-position:15px;
     outline: 0;
+    border:none;
 
 }
