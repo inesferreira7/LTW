@@ -12,5 +12,5 @@ $password=$_POST['password'];
   $statement->execute([$email, $username, $password,$firstname,$lastname]);
 
 
-header('Location: principal.php');
+header('Location: register.html');
 ?>

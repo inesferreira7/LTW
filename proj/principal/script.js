@@ -11,7 +11,7 @@ $(document).ready(function() {
       $form.append('<label> Email <input type="e-mail" class ="preenche" name="email"></label><br>'); //Email
       $form.append('<label> Username <input type="text" class ="preenche" name="username"></label><br>'); //Username
       $form.append('<label> Password <input type="password" class ="preenche" name="password"></label><br>'); //Password
-      $form.append('<button type="button" class="button"> Register! </button');
+      $form.append('<button type="submit" class="button"> Register! </button>');
 
       $('body').append($form);
     }
@@ -34,4 +34,8 @@ $(document).ready(function() {
     }
   });
 
-});
+  function validateForm(){
+    return true;
+  }
+
+  });
