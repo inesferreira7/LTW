@@ -1,6 +1,12 @@
 <?php
 include_once('connection.php');
 
+$firstname=$_POST['firstname'];
+$lastname=$_POST['lastname'];
+$email=$_POST['email'];
+$username=$_POST['username'];
+$password=$_POST['password'];
+
 function createUser($firstname, $lastname, $email, $utilizador, $password){
   global $db;
 
@@ -11,3 +17,5 @@ function createUser($firstname, $lastname, $email, $utilizador, $password){
   $statement->execute();
   return $statement->errorCode();
 }
+
+?>
