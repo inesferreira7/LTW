@@ -40,3 +40,5 @@ CREATE TABLE Review(
   FOREIGN KEY(user_id) REFERENCES User(user_id),
   FOREIGN KEY(restaurant_id) REFERENCES Restaurant(restaurant_id)
 );
+
+INSERT INTO User VALUES (NULL, '123@gmail.com', '123', '1234', 'joao', 'chaves');

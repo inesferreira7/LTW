@@ -13,9 +13,9 @@ function createUser($firstname, $lastname, $email, $utilizador, $password){
   $statement = $db->prepare('INSERT INTO User VALUES(NULL,?,?,?,?,?)');
   $statement = $db->execute([$firstname,$lastname,$email,$utilizador,$password]);
 
-  $statement = $db->prepare('SELECT * FROM Users;');
+  /*$statement = $db->prepare('SELECT * FROM Users;');
   $statement->execute();
-  return $statement->errorCode();
+  return $statement->errorCode();*/
 }
 
 ?>
