@@ -24,11 +24,11 @@ if(isset($_SESSION["username"])) {
 			<div id="title">
 				<img id="foodaholics" src="title.png" alt="Foodaholics" >
 			</div>
-			<div id="right">
-				<input type="text" class="search1" placeholder="Enter Username">
-				<input type="password" class="search2" placeholder="Enter Password">
-				<button id="login" type="button">Log In</button>
-			</div>
+        <form action="getUsers.php" method="post" id="right">
+            	<input type="text" name="username" class="search1" placeholder="Enter Username" id='loginUsername'/>
+            	<input type="password" name="password" class="search2" placeholder="Enter Password" id='loginPassword'/>
+            	<input id='login' type="submit" value="Log In"/>
+        </form>
 			<div id="bottom">
 				<h1 id="new_user">Are you a new user? </h1>
 				<a href="register.php" id="register">Register now!</a>
