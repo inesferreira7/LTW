@@ -13,7 +13,9 @@
   <body>
     <div id="header">
 			<div id="logo">
+				<a href="principal.php" width="128" >
 				<img src="fork.png" class="logo" alt="Foodaholics" width="128" height="128">
+                    </a>
 			</div>
 			<div id="title">
 				<img id="foodaholics" src="title.png" alt="Foodaholics" >
@@ -22,5 +24,6 @@
 		<div id="chose">
 			<input type="radio" name ="type" value="user"> Reviewer
 			<input type="radio" name ="type" value="owner"> Owner
+		</div>
 	</body>
 </html>

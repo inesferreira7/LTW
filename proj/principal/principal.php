@@ -13,7 +13,6 @@ if(isset($_SESSION["username"])) {
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="style.css">
-
 	</head>
   <body>
 
@@ -29,16 +28,29 @@ if(isset($_SESSION["username"])) {
             	<input type="password" name="password" class="search2" placeholder="Enter Password" id='loginPassword'/>
             	<input id='login' type="submit" value="Log In"/>
         </form>
-			<div id="bottom">
+			 <div id="bottom">
 				<h1 id="new_user">Are you a new user? </h1>
 				<a href="register.php" id="register">Register now!</a>
-			</div>
-		</div>
-		<div id="content">
-			<form>
+			 </div>
+	</div>
+	<div id="content">
+		<form>
           <input type="text" class="search" placeholder="Search">
 					<input type="button" class="button">
-			</form>
-		</div>
+		</form>
+	</div>
+
+	<div class="image1">
+		<div class="image">
+			<img id="myImg" src="pizza.jpg"  width="300" height="200">
+	</div>
+
+
+
+
+
+  
+
+
 	</body>
 </html>
