@@ -2,19 +2,29 @@ html{
   background-color: #2F4F4F
 }
 
+
+img{
+  padding-top: 10px;
+}
 #header{
-  padding-top:25px;
   background-color:#20B2AA;
-  height: 105px;
+  height: 130px;
 }
 
-#header #right{
-  padding-right:900px;
-  float:right;
-}
-
-#header #left{
+#header #logo{
+  padding-left: 50px;
   float:left;
+}
+
+#header #title{
+  padding-top:18px;
+  float:left;
+
+}
+
+#header #foodaholics{
+ position:relative;
+   right:25px;
 }
 
 #chose{
