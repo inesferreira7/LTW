@@ -1,4 +1,8 @@
-
+<?php
+if (isset($_GET['Message'])) {
+    print $_GET['Message'];
+}
+?>
 
 <!DOCTYPE html>
 <html>
