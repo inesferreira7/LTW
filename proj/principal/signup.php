@@ -10,7 +10,7 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 
 if(strlen($username) < 3){
-  echo "false";
+  echo "<script type='text/javascript'>alert('Username needs to be at least 3 characters long.'); window.location = 'register.php'</script>";
 }
 else{
 
@@ -26,7 +26,6 @@ else{
   $s = $db->prepare("INSERT INTO Reviewer(reviewer_id, user_id) VALUES (NULL, $id)");
   $s->execute();
   header('Location: principal.php');
-
 }
 
 ?>
