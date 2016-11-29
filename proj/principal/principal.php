@@ -10,33 +10,35 @@ if(isset($_SESSION["username"])) {
 <html>
 	<head>
 		<title>Foodaholics</title>
-		<meta charset="UTF-8"/>
-		<link rel="stylesheet" href="reset.css"/>
-		<link rel="stylesheet" href="style.css"/>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+
 	</head>
   <body>
+
     <div id="header">
-			<div id="left">
-				<img src="chef2.png" class="logo" alt="Foodaholics" width="133" height="70"/>
-				<img src="title.png" alt="Foodaholics"/>
+			<div id="logo">
+				<img src="fork.png" class="logo" alt="Foodaholics" width="128" height="128">
 			</div>
-			<form action="getUsers.php" method="post" id="right">
-				<input type="text" name="username" class="search1" placeholder="Enter Username" id='loginUsername'/>
-				<input type="password" name="password" class="search2" placeholder="Enter Password" id='loginPassword'/>
-				<input id='login' type="submit" value="Log In"/>
-			</form>
+			<div id="title">
+				<img id="foodaholics" src="title.png" alt="Foodaholics" >
+			</div>
+			<div id="right">
+				<input type="text" class="search1" placeholder="Enter Username">
+				<input type="password" class="search2" placeholder="Enter Password">
+				<button id="login" type="button">Log In</button>
+			</div>
 			<div id="bottom">
 				<h1 id="new_user">Are you a new user? </h1>
-				<a href="register.html" id="register">Register now!</a>
+				<a href="register.php" id="register">Register now!</a>
 			</div>
 		</div>
 		<div id="content">
 			<form>
-          <input type="text" class="search" placeholder="Search"/>
-					<button type="button" class="button"></button>
+          <input type="text" class="search" placeholder="Search">
+					<input type="button" class="button">
 			</form>
 		</div>
 	</body>
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
 </html>

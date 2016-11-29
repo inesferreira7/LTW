@@ -1,6 +1,6 @@
 <?php
 if(!isset($_POST["username"])) {
-	header('Location: register.html');
+	header('Location: register.php');
     die();
 }
 
@@ -22,7 +22,7 @@ if(!isset($_POST["username"])) {
   foreach($result as $row){
     if($row["username"] == $username && $password == $row["password"]){
       echo 'true';
-      header('Location: register.html');
+      header('Location: register.php');
       return;
     }
   }
