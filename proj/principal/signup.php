@@ -1,6 +1,7 @@
 <?php
+include_once "connection.php";
 
-$db = new PDO("sqlite:../database/database.db");
+global $db;
 
 $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname'];
