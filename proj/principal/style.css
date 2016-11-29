@@ -1,10 +1,11 @@
 html{
+  background-color: #2F4F4F
 }
 
-body{
-margin: 0 auto;
-max-width: 100%;
-}
+/*body{
+    overflow-x:hidden;
+
+}*/
 
 img{
   padding-top: 10px;
@@ -28,7 +29,7 @@ img{
 
  #header #foodaholics{
   position:relative;
-    right:25px;
+  right:25px;
 }
 
 
@@ -36,7 +37,6 @@ img{
   padding-top:35px;
   padding-right:100px;
   float:right;
-
 }
 
 #header #right .search2{
@@ -58,27 +58,24 @@ img{
 }
 
 
-
-
 #header #bottom {
   float: right;
   padding-right: 185px;
   font-family: 'Work Sans', sans-serif;
 }
 
+
 #header #bottom #new_user{
   color:black;
   font-size: 100%;
   float: left;
-
 }
+
 
 #header #bottom #register{
   color:black;
   float: right;
   margin-left: 5px;
-
-
 }
 
 #login{
@@ -87,7 +84,6 @@ img{
   margin-left: 15px;
   color: #20B2AA;
   outline: 0;
-
   cursor:pointer;
 }
 
