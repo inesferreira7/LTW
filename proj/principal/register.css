@@ -50,6 +50,8 @@ input[name=email]{
 
 input[name=username]{
   margin-left:53px;
+  background: url(info.png) no-repeat scroll 7px 7px;
+  padding-left:30px;
 }
 
 input[name=password]{
@@ -87,3 +89,10 @@ label{
   outline: 0;
 
 }
+
+
+
+ #un{
+   width:100%;
+   display:inline-block;
+ }
