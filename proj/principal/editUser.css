@@ -52,6 +52,7 @@ img{
     width:110px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: 'Work Sans', sans-serif;
 }
 
 .dropdown-content a {
@@ -70,9 +71,112 @@ img{
     width:200px;
     padding-right:100px;
     position:relative;
-    right:10px;
+    right:12px;
+    top:10px;
 
 }
 
+#body #editButton{
 
+    position:relative;
+    right:312px;
+    width:200px;
+    top:225px;
+    font-family: 'Work Sans', sans-serif;
+
+    outline:0;
+    cursor:pointer;
+    height:30px;
+}
+
+#body #changeButton{
+    position:relative;
+    right:516px;
+    width:200px;
+    top:260px;
+    font-family: 'Work Sans', sans-serif;
+    outline:0;
+    cursor:pointer;
+    height:30px;
+}
+
+label{
+    color:#d3d3d3;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.9rem;
+
+}
+
+input[name=firstname]{
+    margin-left:50px;
+}
+
+input[name=lastname]{
+    margin-left:52px;
+}
+
+input[name=email]{
+    width:300px;
+    margin-left:88px;
+}
+
+input[name=username]{
+    margin-left:56px;
+}
+
+input[name=currPassword]{
+}
+
+
+input[name=newPassword]{
+    margin-left:38px;
+}
+
+/*input[name=inputImg]{
+    width:112px;
+    position:relative;
+    left:475px;
+    font-family: 'Work Sans', sans-serif;
+
+}*/
+
+
+
+.preenche{
+    width:200px;
+    padding-top: 8px;
+    padding-bottom:8px;
+    margin-left:20px;
+    margin-bottom:20px;
+    padding-right: 5px;
+    padding-left:5px;
+    border-radius:10px;
+    outline:0;
+    border:none;
+}
+
+.button{
+    width:200px;
+    padding: 8px 5px 8px 5px;
+    border-radius:10px;
+    font-family: 'Work Sans', sans-serif;
+    outline:0;
+    position:relative;
+    left:475px;
+    top: 30px;
+
+
+
+}
+
+.button1{
+    width:200px;
+    padding: 8px 5px 8px 5px;
+    border-radius:10px;
+    outline:0;
+    position:relative;
+    top: 40px;
+
+
+}
 

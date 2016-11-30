@@ -48,12 +48,5 @@ if(isset($_SESSION["username"])) {
 			<img id="myImg" src="pizza.jpg"  width="300" height="200">
 	</div>
 
-
-
-
-
-
-
-
 	</body>
 </html>

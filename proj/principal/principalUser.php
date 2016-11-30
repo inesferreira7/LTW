@@ -24,7 +24,7 @@
         <img id="currentPhoto" src="image.jpg" onerror="this.src='defaultUser.png'" width="110" height="110" onclick="clickUser()" class="dropbtn">
         <div id="userOptions" class="dropdown-content">
             <a href="userPage.html">Profile</a>
-            <a href="editUser.html">Edit Profile</a>
+            <a href="editUser.php">Edit Profile</a>
             <a href="principal.php">Logout</a>
         </div>
     </div>
