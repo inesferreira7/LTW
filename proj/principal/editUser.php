@@ -4,8 +4,7 @@
     <title>Foodaholics-User</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="principalUser.css">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="editUser.css">
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="dropDownUser.js"></script>
 </head>
@@ -29,11 +28,16 @@
         </div>
     </div>
 </div>
-<div id="content">
-    <form>
-        <input type="text" class="search" placeholder="Search">
-        <input type="button" class="button">
-    </form>
+
+<div id = "body">
+    <div id="bigImage" >
+        <img id="bigImage1" src="image.jpg" onerror="this.src='defaultUser.png'" width = "110" heigt="110">
+
+    </div>
+
+
 </div>
+
+
 </body>
 </html>

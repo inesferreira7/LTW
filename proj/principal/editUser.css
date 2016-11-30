@@ -1,0 +1,78 @@
+html{
+    background-color: #2F4F4F
+}
+
+body{
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+img{
+    padding-top: 10px;
+}
+
+#header{
+    background-color:#20B2AA;
+    height: 130px;
+}
+
+#header #logo{
+    padding-left: 50px;
+    float:left;
+}
+
+#header #title{
+    padding-top:18px;
+    float:left;
+
+}
+
+#header #foodaholics{
+    position:relative;
+    right:25px;
+}
+
+#header #userImage{
+    float:right;
+    padding-right:100px;
+    cursor:pointer;
+
+}
+
+.userOptions {
+    position: absolute;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    margin-top: 7px;
+    background-color: #f9f9f9;
+    width:110px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    text-align:center;
+    display: block;
+}
+
+.dropdown a:hover {background-color:#d9d9d9}
+.show {display:block;}
+
+#body #bigImage1{
+    float:left;
+    width:200px;
+    padding-right:100px;
+    position:relative;
+    right:10px;
+
+}
+
+
+
