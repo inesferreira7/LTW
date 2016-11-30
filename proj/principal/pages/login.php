@@ -20,5 +20,5 @@ $password=$_POST['password'];
   $s = $db->prepare("INSERT INTO Reviewer(reviewer_id, user_id) VALUES (NULL, $id)");
   $s->execute();
 
-header('Location: register.html');
+header('Location: register.php');
 ?>

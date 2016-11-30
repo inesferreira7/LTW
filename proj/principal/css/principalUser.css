@@ -89,7 +89,7 @@ form .search{
   padding:8px 300px 10px 35px;
   margin:5px;
   border-radius:15px;
-  background: url('search-icon.png');
+  background: url('../res/images/search-icon.png');
   background-size:15px 15px;
   background-color: white;
   background-repeat: no-repeat;
@@ -104,7 +104,7 @@ form .button{
   padding-bottom: 10px;
   padding-right: 40px;
     border-radius: 10px;
-    background: url('search-icon.png');
+    background: url('../res/images/search-icon.png');
     background-size:15px 15px;
     background-color: white;
     background-repeat: no-repeat;
