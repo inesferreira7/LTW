@@ -36,31 +36,39 @@ img{
 }
 
 input[name=firstname]{
-  margin-left:50px;
+  margin-left:51px;
+  margin-bottom: 40px;
 }
 
 input[name=lastname]{
-  margin-left:57px;
+  margin-left:56px;
+  margin-bottom: 40px;
 }
 
 input[name=email]{
   width:300px;
-  margin-left:80px;
+  margin-left:83px;
+  margin-bottom: 20px;
 }
 
 input[name=username]{
-  margin-left:56px;
+  margin-left:54px;
+  margin-bottom: 10px;
 }
 
 input[name=password]{
   margin-left:56px;
+  margin-bottom: 10px;
+
+
 }
 
 label{
   margin-left:50px;
   color:#d3d3d3;
-  font-family:verdana;
+  font-family:'Work Sans', sans-serif;;
   font-size: 0.9rem;
+
 }
 
 .preenche{
@@ -77,7 +85,7 @@ label{
 }
 
 .button{
-  font-family: verdana;
+  font-family: 'Work Sans', sans-serif;
   font-size: 0.9rem;
   margin-left:100px;
   margin-top:40px;
@@ -90,7 +98,29 @@ label{
 
 
 
- #un{
-   width:100%;
-   display:inline-block;
+ #un .u{
+   position:relative;
+   top:9px;
+   left:9px;
  }
+
+#pw .p{
+  position:relative;
+  top:9px;
+  left:12px;
+}
+
+#userParagraph{
+  position:relative;
+  left:170px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#passParagraph{
+  position:relative;
+  left:170px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+
+
