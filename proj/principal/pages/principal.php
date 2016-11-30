@@ -12,19 +12,19 @@ if(isset($_SESSION["username"])) {
 	<head>
 		<title>Foodaholics</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="../css/style.css">
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="../js/script.js"></script>
 	</head>
   <body>
 
     <div id="header">
 			<div id="logo">
-				<img src="fork.png" class="logo" alt="Foodaholics" width="128" height="128">
+				<img src="../res/images/fork.png" class="logo" alt="Foodaholics" width="128" height="128">
 			</div>
 			<div id="title">
-				<img id="foodaholics" src="title.png" alt="Foodaholics" >
+				<img id="foodaholics" src="../res/images/title.png" alt="Foodaholics" >
 			</div>
         <form action="getUsers.php" method="post" id="right" onsubmit="return check();">
             	<input type="text" name="username" class="search1" placeholder="Enter Username" id='loginUsername'/>
@@ -45,7 +45,7 @@ if(isset($_SESSION["username"])) {
 
 	<div class="image1">
 		<div class="image">
-			<img id="myImg" src="pizza.jpg"  width="300" height="200">
+			<img id="myImg" src="../res/images/pizza.jpg" width="300" height="200">
 	</div>
 
 	</body>
