@@ -1,14 +1,12 @@
 <?php
-include_once "connection.php";
 
-global $db;
+$db = new PDO("sqlite:../database/database.db");
 
 $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname'];
 $email=$_POST['email'];
 $username=$_POST['username'];
 $password=$_POST['password'];
-
 
 
 if(strlen($username) < 3){
