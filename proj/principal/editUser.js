@@ -7,7 +7,7 @@ function openEdit() {
     $form.append('<label> Last name  <input type="text" class ="preenche" name="lastname"></label><br>'); //Ultimo nome
     $form.append('<label> Email      <input type="e-mail" class ="preenche" name="email"></label><br>'); //Email
     $form.append('<label> Username   <input type="text" class ="preenche" name="username"></label><br>'); //Username
-    /*$form.append('<input type="file" onchange="readURL(this);" name="inputImg" />');*/
+          $form.append('<input type="file" onchange="readURL(this);" name="inputImg" />');
     $form.append('<button type="submit" class="button"> Update </button>');
 
 

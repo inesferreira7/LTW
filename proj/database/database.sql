@@ -13,7 +13,8 @@ CREATE TABLE User(
   lastname TEXT NOT NULL,
   email TEXT NOT NULL UNIQUE,
   username TEXT NOT NULL UNIQUE,
-  password TEXT NOT NULL
+  password TEXT NOT NULL,
+  image TEXT NOT NULL
 );
 --podemos acrescentar imagens
 

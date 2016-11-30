@@ -11,6 +11,7 @@ $(document).ready(function() {
       $form.append('<label> Email <input type="e-mail" class ="preenche" name="email"></label><br>'); //Email
       $form.append('<div id="un"><label> Username <input type="text" class ="preenche" name="username"></label><img class="u" src ="info.png" alt="inf" width="25" height="25"></div><br>'); //Username
       $form.append('<div id="pw"><label> Password <input type="password" class ="preenche" name="password"></label><img class="p" src ="info.png" alt="inf" width="25" height="25"></div><br>'); //Password
+      $form.append('<input type="file" name="image" id="uploadInput">');
       $form.append('<button type="submit" class="button"> Register! </button>');
 
       $('body').append($form);
