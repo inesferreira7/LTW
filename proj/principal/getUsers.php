@@ -22,7 +22,7 @@ if(!isset($_POST["username"])) {
   foreach($result as $row){
     if($row["username"] == $username && $password == $row["password"]){
       echo 'true';
-      header('Location: register.php');
+      header('Location: principalUser.php');
       return;
     }
   }
