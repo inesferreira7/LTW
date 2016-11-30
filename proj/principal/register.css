@@ -29,7 +29,7 @@ img{
 
 #chose{
   color:#d3d3d3;
-  font-family:verdana;
+  font-family: 'Work Sans', sans-serif;
   padding-left:40px;
   padding-top: 30px;
   margin-bottom: 50px;
@@ -45,13 +45,11 @@ input[name=lastname]{
 
 input[name=email]{
   width:300px;
-  margin-left:88px;
+  margin-left:80px;
 }
 
 input[name=username]{
-  margin-left:53px;
-  background: url(info.png) no-repeat scroll 7px 7px;
-  padding-left:30px;
+  margin-left:56px;
 }
 
 input[name=password]{
