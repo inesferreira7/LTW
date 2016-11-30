@@ -1,7 +1,15 @@
 <?php
-include_once "connection.php";
-global $db;
+if(!isset($_POST["username"])) {
+	header('Location: register.php');
+    die();
+}
 
+    try{
+      $db = new PDO('sqlite:../database/database.db');
+    }
+    catch(PDOException $ex){
+      echo "false";
+    }
 
   $username = $_POST["username"];
   $password = $_POST["password"];
