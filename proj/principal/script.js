@@ -39,3 +39,29 @@ $(document).ready(function() {
   }
 
   });
+
+function check(){
+  var username = document.getElementById("loginUsername");
+  var password = document.getElementById("loginPassword");
+
+  if(username.value == ""){
+    username.style.borderColor = 'red';
+    username.style.backgroundColor = '#F4A460';
+  }
+  else{
+    username.style.backgroundColor = 'white';
+  }
+
+  if(password.value == ""){
+    password.style.borderColor = 'red';
+    password.style.backgroundColor = '#F4A460';
+  }
+  else{
+    password.style.backgroundColor  ='white';
+  }
+
+  if(username.value == "" || password.value == "")
+    return false;
+
+  return true;
+}
