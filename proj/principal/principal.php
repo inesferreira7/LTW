@@ -14,6 +14,8 @@ if(isset($_SESSION["username"])) {
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="style.css">
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="script.js"></script>
 	</head>
   <body>
 
@@ -24,7 +26,7 @@ if(isset($_SESSION["username"])) {
 			<div id="title">
 				<img id="foodaholics" src="title.png" alt="Foodaholics" >
 			</div>
-        <form action="getUsers.php" method="post" id="right">
+        <form action="getUsers.php" method="post" id="right" onsubmit="return check();">
             	<input type="text" name="username" class="search1" placeholder="Enter Username" id='loginUsername'/>
             	<input type="password" name="password" class="search2" placeholder="Enter Password" id='loginPassword'/>
             	<input id='login' type="submit" value="Log In"/>
@@ -50,7 +52,7 @@ if(isset($_SESSION["username"])) {
 
 
 
-  
+
 
 
 	</body>
