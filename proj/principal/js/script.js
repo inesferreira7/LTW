@@ -45,6 +45,9 @@ $(document).ready(function() {
       $form.append('<label> Email <input type="e-mail" class ="preenche" name="email"></label><br>'); //Email
       $form.append('<div id="un"><label> Username <input type="text" class ="preenche" name="username"></label><img class="u" src ="../res/images/info.png" alt="inf" width="25" height="25"></div><br>'); //Username
       $form.append('<div id="pw"><label> Password <input type="password" class ="preenche" name="password"></label><img class="p" src ="../res/images/info.png" alt="inf" width="25" height="25"></div><br>'); //Password
+      $form.append('<label> Name <input type="text" class ="preenche" name="r_name"></label><br>'); //Name of restaurant
+      $form.append('<label> Description <input type="text" class ="preenche" name="description"></label><br>'); //Description
+      $form.append('<label> Address <input type="text" class ="preenche" name="address"></label><br>'); //Address
       $form.append('<button type="button" class="button"> Register! </button>');
 
       $('body').append($form);

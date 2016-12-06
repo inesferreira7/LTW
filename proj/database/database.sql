@@ -27,7 +27,10 @@ CREATE TABLE Reviewer(
 CREATE TABLE Restaurant(
   restaurant_id INTEGER PRIMARY KEY AUTOINCREMENT,
   name TEXT NOT NULL,
-  descricao TEXT NOT NULL
+  descricao TEXT NOT NULL,
+  morada TEXT NOT NULL,
+  owner_id INTEGER NOT NULL,
+  FOREIGN KEY(owner_id) REFERENCES Owner(owner_id)
 );
 --podemos acrescentar imagens e tipo
 
@@ -35,8 +38,7 @@ CREATE TABLE Owner(
   owner_id INTEGER PRIMARY KEY AUTOINCREMENT,
   user_id INTEGER NOT NULL,
   restaurant_id INTEGER NOT NULL,
-  FOREIGN KEY(user_id) REFERENCES User(user_id),
-  FOREIGN KEY(restaurant_id) REFERENCES Restaurant(restaurant_id)
+  FOREIGN KEY(user_id) REFERENCES User(user_id)
 );
 
 CREATE TABLE Review(

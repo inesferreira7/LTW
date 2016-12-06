@@ -39,13 +39,12 @@ else{
 
   //$username = mysql_real_escape_string($username);
 
-  $stmt = $db->prepare('SELECT * FROM User WHERE username= ?');
-  $stmt->execute([$username]);
-
+  $stmt = $db->prepare("SELECT * FROM User WHERE username='$username'");
+  $stmt->execute();
   $result = $stmt->fetch();
   $id = $result["user_id"];
 
-  $s = $db->prepare('INSERT INTO Reviewer(reviewer_id, user_id) VALUES (NULL, $id)');
+  $s = $db->prepare("INSERT INTO Reviewer(reviewer_id, user_id) VALUES (NULL, $id)");
   $s->execute();
   header('Location: principal.php');
 }
