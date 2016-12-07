@@ -3,39 +3,36 @@ html{
 }
 
 body{
-    margin: 0 auto;
-    max-width: 100%;
-    min-width:1200px;
+    min-width:1300px;
 }
 
-img{
-    padding-top: 10px;
-}
 
 #header{
     background-color:#20B2AA;
     height: 130px;
+
 }
 
 #header #logo{
-    padding-left: 50px;
-    float:left;
-}
-
-#header #title{
-    padding-top:18px;
+    margin-left: 3.5%;
+    margin-top:0.7%;
     float:left;
 
 }
+
 
 #header #foodaholics{
+    margin-top: 2%;
+    float:left;
     position:relative;
-    right:25px;
+    right:1%;
+
 }
 
 #header #userImage{
     float:right;
-    padding-right:100px;
+    padding-right:10%;
+    padding-top: 0.7%;
     cursor:pointer;
 
 }
@@ -48,7 +45,7 @@ img{
 .dropdown-content {
     display: none;
     position: absolute;
-    margin-top: 7px;
+    margin-top: 0.5%;
     background-color: #f9f9f9;
     width:110px;
     overflow: auto;
@@ -68,125 +65,116 @@ img{
 .show {display:block;}
 
 #body #bigImage1{
-    float:left;
-    width:200px;
-    padding-right:100px;
-    position:relative;
-    right:12px;
-    top:10px;
-
+    position:absolute;
+    padding-top: 2%;
+    height:33%;
+    width:16%;
 }
 
 #body #editButton{
-
-    position:relative;
-    right:312px;
-    width:200px;
-    top:225px;
+    position:absolute;
+    margin-top:2%;
+    margin-left:18%;
+    width:12%;
     font-family: 'Work Sans', sans-serif;
-
     outline:0;
     cursor:pointer;
     height:30px;
 }
 
 #body #changeButton{
-    position:relative;
-    right:516px;
-    width:200px;
-    top:260px;
+    position:absolute;
+    margin-top:6%;
+    margin-left:18%;
+    width:12%;
     font-family: 'Work Sans', sans-serif;
     outline:0;
     cursor:pointer;
     height:30px;
 }
 
-#body #userInfo{
-    position:relative;
-    float:left;
-    background-color: white;
-
-
-}
-
-label{
-    color:#d3d3d3;
+#body #userOptions{
+    position:absolute;
     font-family: 'Work Sans', sans-serif;
-    font-size: 0.9rem;
-
+    color:#E2FCEF;
+    width:12%;
+    margin-top:18%;
+    margin-left:13%;
+    font-size:70%;
+    padding-bottom: 3%;
+    line-height: 400%;
 }
 
-input[name=firstname]{
-    margin-left:50px;
-}
-
-input[name=lastname]{
-    margin-left:52px;
-}
-
-input[name=email]{
-    width:300px;
-    margin-left:88px;
-}
-
-input[name=username]{
-    margin-left:56px;
-}
-
-input[name=currPassword]{
+#body #rectangle{
+    position:absolute;
+    padding-top:18%;
 }
 
 
-input[name=newPassword]{
-    margin-left:38px;
-}
 
-input[name=inputImg]{
-    width:112px;
+#form .button{
     position:relative;
-    left:475px;
+    bottom:130px;
+    right:414px;
+    width:47.3%;
     font-family: 'Work Sans', sans-serif;
+    outline:0;
+    cursor:pointer;
+    height:30px;
+}
+
+#form1 .button{
+    position:relative;
+    top:14px;
+    right:414px;
+    width:42.2%;
+    font-family: 'Work Sans', sans-serif;
+    outline:0;
+    cursor:pointer;
+    height:30px;
+}
+
+#form{
+    padding-left: 35%;
+    padding-top:1%;
+    text-align: right;
+    display: inline-block;
+    line-height: 200%;
+    font-family: 'Work Sans', sans-serif;
+    color:white;
+    font-size: 150%;
+
 
 }
 
+#form1{
+    padding-left: 31.89%;
+    padding-top:1%;
+    text-align: right;
+    display: inline-block;
+    line-height: 200%;
+    font-family: 'Work Sans', sans-serif;
+    color:white;
+    font-size: 150%;
+}
 
-
-.preenche{
-    width:200px;
-    padding-top: 8px;
-    padding-bottom:8px;
-    margin-left:20px;
-    margin-bottom:20px;
-    padding-right: 5px;
-    padding-left:5px;
+#form .preenche{
+    padding: 8px 4px 4px 4px;
     border-radius:10px;
     outline:0;
     border:none;
 }
 
-.button{
-    width:200px;
-    padding: 8px 5px 8px 5px;
-    border-radius:10px;
-    font-family: 'Work Sans', sans-serif;
-    outline:0;
-    position:relative;
-    left:475px;
-    top: 30px;
-
-
-
-}
-
-.button1{
-    width:200px;
-    padding: 8px 5px 8px 5px;
+#form1 .preenche{
+    padding: 8px 4px 4px 4px;
     border-radius:10px;
     outline:0;
-    position:relative;
-    top: 40px;
-
+    border:none;
 }
+
+
+
+
 
 
 
