@@ -2,11 +2,11 @@ function openEdit() {
     if($('form').length != 0){ //Impede que quando voltamos a carregar crie outro abaixo
         $('form').remove();
     }
-    $form = $('<form id="form" method="post" action="../pages/signup.php"></form>');
-    $form.append('<label> First name <input type="text" class ="preenche" name="firstname" "></label><br>'); //Primeiro nome
-    $form.append('<label> Last name  <input type="text" class ="preenche" name="lastname"></label><br>'); //Ultimo nome
-    $form.append('<label> Email      <input type="e-mail" class ="preenche" name="email"></label><br>'); //Email
-    $form.append('<label> Username   <input type="text" class ="preenche" name="username"></label><br>'); //Username
+    $form = $('<form id="form" method="post" action="../pages/updateUser.php" onsubmit="return check();"></form>');
+    $form.append('<label> First name <input type="text" class ="preenche" name="firstname" id="firstname"></label><br>'); //Primeiro nome
+    $form.append('<label> Last name  <input type="text" class ="preenche" name="lastname" id="lastname"></label><br>'); //Ultimo nome
+    $form.append('<label> Email      <input type="e-mail" class ="preenche" name="email" id="email"></label><br>'); //Email
+    $form.append('<label> Username   <input type="text" class ="preenche" name="username" id="username"></label><br>'); //Username
     $form.append('<input type="file" onchange="readURL(this);" name="inputImg" />');
     $form.append('<button type="submit" class="button"> Update </button>');
 
@@ -38,4 +38,12 @@ function readURL(input) {
 
         reader.readAsDataURL(input.files[0]);
     }
+}
+
+function check(){
+  var username = document.getElementById("username");
+  if (username.value != 0 && strlen(username.value) < 3)
+    return false;
+
+  return true;
 }
