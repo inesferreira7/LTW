@@ -1,7 +1,10 @@
 <?php
 include_once "connection.php";
 
-session_start();
+if(!isset($_POST["username"])) {
+	header('Location: register.php');
+    die();
+}
 
 global $db;
 
@@ -16,10 +19,7 @@ global $db;
   foreach($result as $row){
     if($row["username"] == $username && $password == $row["password"]){
       echo 'true';
-			$_SESSION['username'] = $username;
-			$_SESSION['id'] = $row["user_id"];
       header('Location: principalUser.php');
-			die();
       return;
     }
   }

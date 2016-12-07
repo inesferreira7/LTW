@@ -2,52 +2,42 @@ html{
   background-color: #2F4F4F
 }
 
-body{
-  min-width:1200px;
-}
+/*body{
+    overflow-x:hidden;
 
+}*/
+
+img{
+  padding-top: 10px;
+}
 
 #header{
   background-color:#20B2AA;
   height: 130px;
-
 }
 
 #header #logo{
-  margin-left: 3.5%;
-  margin-top:0.7%;
+  padding-left: 50px;
+  float:left;
+}
+
+#header #title{
+  padding-top:18px;
   float:left;
 
 }
 
-
-
-#header #foodaholics{
-  margin-top: 2%;
-  float:left;
+ #header #foodaholics{
   position:relative;
-  right:1%;
-
+  right:25px;
 }
 
 
-#header #top{
-  padding-top: 3%;
-  padding-right: 15%;
+#header #right{
+  padding-top:35px;
+
   float:right;
-
-
-}
-
-#header #top #login{
-  background-color: white;
-  padding: 3px 5px 3px 5px;
-  color: #20B2AA;
-  outline: 0;
-  cursor:pointer;
-  margin-left:100%;
-  position:relative;
-  bottom:22px;
+  position:absolute;
 }
 
 
@@ -55,66 +45,94 @@ body{
 
 #header #right .search2{
   width: 120px;
+  margin: 5px;
   border-radius: 10px;
   padding: 3px 5px 3px 5px;
   outline: 0;
   border:none;
-  margin-left:4%;
-
+  position:relative;
+  right:200px;
+  bottom:40px;
 
 }
 
-#header #right .search1 {
+#header #right .search1{
   width: 120px;
+  margin: 15px;
   padding: 3px 5px 3px 5px;
   border-radius: 10px;
-  border: none;
+  border:none;
   outline: 0;
+  position:relative;
+  right:200px;
+  bottom:40px;
 }
-
 
 
 #header #bottom {
-  padding-right: 19%;
+  float: right;
+  padding-right: 185px;
   font-family: 'Work Sans', sans-serif;
-  float:right;
-  color:#E2FCEF;
-
+  position:relative;
+  top:100px;
+  right:67px;
 
 }
 
 
 #header #bottom #new_user{
+  color:black;
   font-size: 100%;
-  float:left;
+  float: left;
+
 }
 
+
 #header #bottom #register{
-  color:#E2FCEF;
-  margin-left:10px;
+  color:black;
+  float: right;
+  margin-left: 5px;
+
 }
+
+#login{
+  background-color: white;
+  padding: 3px 5px 3px 5px;
+  margin-left: 15px;
+  color: #20B2AA;
+  outline: 0;
+  cursor:pointer;
+  position: relative;
+  right:180px;
+  bottom:40px;
+}
+
+/*#login:hover, #login:focus {
+    background-color:#A9A9A9;
+}*/
 
 
 #content{
-
   background-color:	#2F4F4F;
   clear:left;
   clear:right;
-  padding-bottom: 30px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+	padding-bottom: 30px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 
 }
 
-#content{
-  padding-left: 25%;
-  padding-top:5%;
+form {
+  width:1000px;
+  margin:40px 300px;
+  display: inline-block;
 }
 
 form .search{
-
+  color:black;
   padding:8px 300px 10px 35px;
+  margin:5px;
   border-radius:15px;
   background: url('../res/images/search-icon.png');
   background-size:15px 15px;
@@ -127,32 +145,41 @@ form .search{
 }
 
 form .button{
-  margin-left: 1%;
-  padding-bottom: 1%;
-  padding-right: 4%;
-  border-radius: 10px;
-  background: url('../res/images/search-icon.png');
-  background-size:15px 15px;
-  background-color: white;
-  background-repeat: no-repeat;
-  background-position:15px;
-  outline: 0;
-  border:none;
-  cursor:pointer;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 40px;
+    border-radius: 10px;
+    background: url('../res/images/search-icon.png');
+    background-size:15px 15px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position:15px;
+    outline: 0;
+    border:none;
+    cursor:pointer;
 
 }
 
 
 
-
+img {
+  max-width: 100%;
+  display: block;
+}
 
 .image1 {
-  max-width: 300px;
+  position: absolute;
+  left:400px;
+  padding-top: 200px;
 
-  margin-left: 50%;
-  margin-top: 15%;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+}
+
+
+.image {
+  width: 100%;
+  height: 100%;
 }
 
 .image img {
