@@ -1,3 +1,24 @@
+<?php
+//include_once ("connection.php");
+
+//global $db;
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    header("principal.php");
+}
+$username = $_SESSION['username'];
+/*$id = $_SESSION['id'];
+
+$userEmail = $db->prepare('SELECT email FROM User WHERE user_id = ?');
+$userEmail->execute([$id]);
+$currentEmail= $userEmail->fetchAll();*/
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +30,7 @@
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="../js/dropDownUser.js"></script>
 </head>
+
 <body>
 
 <div id="header">

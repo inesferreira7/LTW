@@ -1,3 +1,43 @@
+<?php
+include_once ("connection.php");
+
+global $db;
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+    header("principal.php");
+}
+$username = $_SESSION["username"];
+
+
+$table = $db->prepare('SELECT * FROM User');
+$table->execute();
+$result = $table->fetchAll();
+
+
+foreach($result as $row){
+    if($row["username"] == $username){
+        $email = $row["email"];
+        $firstName = $row["first_name"];
+        $lastName = $row["lastname"];
+
+    }
+}
+
+
+
+
+/*
+$userEmail = $db->prepare("SELECT email FROM User WHERE username = 'catotas' ");
+$userEmail->execute();
+$email = $userEmail->fetchAll();
+*/
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,6 +54,9 @@
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 
 </head>
+
+
+
 <body>
 
 <div id="header">
@@ -37,12 +80,17 @@
 
 <div id = "body">
     <div id="bigImage" >
-
         <img id="bigImage1" src="#" onerror="this.src='../res/images/defaultUser.png'" width = "110" heigt="110">
     </div>
     <div id="options">
         <button id="editButton" type="button" onclick="openEdit()">Edit Profile</button>
         <button id="changeButton" type="button" onclick="changePassword()">Change Password</button>
+    </div>
+    <div id="userInfo">
+        <h1 id = "email"><?php echo $email ?></h1>
+        <h1 id = "username"><?php echo $username?></h1>
+        <h1 id = "fistname"><?php echo $firstName ?></h1>
+        <h1 id = "lastname"><?php echo $lastName ?></h1>
     </div>
 
 </div>
