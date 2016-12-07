@@ -5,6 +5,7 @@ html{
 body{
     margin: 0 auto;
     max-width: 100%;
+    min-width:1200px;
 }
 
 img{
@@ -100,6 +101,14 @@ img{
     height:30px;
 }
 
+#body #userInfo{
+    position:relative;
+    float:left;
+    background-color: white;
+
+
+}
+
 label{
     color:#d3d3d3;
     font-family: 'Work Sans', sans-serif;
@@ -177,6 +186,8 @@ input[name=inputImg]{
     position:relative;
     top: 40px;
 
-
 }
+
+
+
 
