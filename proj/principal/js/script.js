@@ -48,7 +48,7 @@ $(document).ready(function() {
       $form.append('<label> Name <input type="text" class ="preenche" name="r_name"></label><br>'); //Name of restaurant
       $form.append('<label> Description <input type="text" class ="preenche" name="description"></label><br>'); //Description
       $form.append('<label> Address <input type="text" class ="preenche" name="address"></label><br>'); //Address
-      $form.append('<button type="button" class="button"> Register! </button>');
+      $form.append('<button type="submit" class="button"> Register! </button>');
 
       $('body').append($form);
 

@@ -37,7 +37,6 @@ CREATE TABLE Restaurant(
 CREATE TABLE Owner(
   owner_id INTEGER PRIMARY KEY AUTOINCREMENT,
   user_id INTEGER NOT NULL,
-  restaurant_id INTEGER NOT NULL,
   FOREIGN KEY(user_id) REFERENCES User(user_id)
 );
 
