@@ -2,13 +2,8 @@ html{
   background-color: #2F4F4F
 }
 
-/*body{
-    overflow-x:hidden;
-
-}*/
-
-img{
-  padding-top: 10px;
+body{
+  min-width:1300px;
 }
 
 #header{
@@ -21,13 +16,9 @@ img{
   float:left;
 }
 
-#header #title{
-  padding-top:18px;
+#header #foodaholics{
+  margin-top: 2%;
   float:left;
-
-}
-
- #header #foodaholics{
   position:relative;
   right:25px;
 }
