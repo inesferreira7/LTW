@@ -111,16 +111,19 @@ function checkR(){
   if(firstname.value == ""){
     firstname.style.borderColor = 'red';
     firstname.style.backgroundColor = '#F4A460';
+    return false;
   }
 
   if(lastname.value == ""){
     lastname.style.borderColor = 'red';
     lastname.style.backgroundColor = '#F4A460';
+    return false;
   }
 
   if(email.value == ""){
     email.style.borderColor = 'red';
     email.style.backgroundColor = '#F4A460';
+    return false;
   }
 
   if(username.value == "" || strlen(username.value) < 3){
@@ -131,11 +134,8 @@ function checkR(){
   if(password.value == "" || strlen(password.value) < 7){
     password.style.borderColor = 'red';
     password.style.backgroundColor = '#F4A460';
-  }
-
-  if(firstname.value == "" || lastname.value == "" || email.value == "" || username.value == ""
-  || password.value == "" || strlen(username.value) < 3 || strlen(password.value) < 7)
     return false;
+  }
 
   return true;
 }
