@@ -69,7 +69,7 @@ $email = $userEmail->fetchAll();
         <img id="foodaholics" src="../res/images/title.png" alt="Foodaholics" >
     </div>
     <div id="userImage" class="dropdown">
-        <img id="currentPhoto" src="image.jpg" onerror="this.src='../res/images/defaultUser.png'" width="110" height="110" onclick="clickUser()" class="dropbtn">
+        <img id="currentPhoto" src="#" onerror="this.src='../res/images/defaultUser.png'" width="110" height="110" onclick="clickUser()" class="dropbtn">
         <div id="userOptions" class="dropdown-content">
             <a href="../userPage.html">Profile</a>
             <a href="editUser.php">Edit Profile</a>
@@ -79,19 +79,27 @@ $email = $userEmail->fetchAll();
 </div>
 
 <div id = "body">
-    <div id="bigImage" >
+    <svg id="rectangle"  width="440" height="200" >
+        <rect  width="410" height="190" style="fill:#20B2AA;stroke-width:2;stroke:#3D3522">
+            Sorry, your browser does not support inline SVG.
+    </svg>
+    <div id="userOptions">
+        <p class="big">
+            <h1 id = "email"><?php echo $email ?></h1>
+            <h1 id = "username"><?php echo $username?></h1>
+            <h1 id = "fistname"><?php echo $firstName ?></h1>
+            <h1 id = "lastname"><?php echo $lastName ?></h1>
+        </p>
+
+    </div>
+    <div id="options"  >
         <img id="bigImage1" src="#" onerror="this.src='../res/images/defaultUser.png'" width = "110" heigt="110">
-    </div>
-    <div id="options">
-        <button id="editButton" type="button" onclick="openEdit()">Edit Profile</button>
+        <button id="editButton" type="button" onclick="openEdit()" width>Edit Profile</button>
         <button id="changeButton" type="button" onclick="changePassword()">Change Password</button>
+
+
     </div>
-    <div id="userInfo">
-        <h1 id = "email"><?php echo $email ?></h1>
-        <h1 id = "username"><?php echo $username?></h1>
-        <h1 id = "fistname"><?php echo $firstName ?></h1>
-        <h1 id = "lastname"><?php echo $lastName ?></h1>
-    </div>
+
 
 </div>
 

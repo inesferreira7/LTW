@@ -3,7 +3,7 @@ html{
 }
 
 body{
-  min-width:1200px;
+  min-width:1300px;
 }
 
 
@@ -19,8 +19,6 @@ body{
   float:left;
 
 }
-
-
 
 #header #foodaholics{
   margin-top: 2%;
