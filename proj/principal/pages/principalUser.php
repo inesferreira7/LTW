@@ -45,7 +45,7 @@ $currentEmail= $userEmail->fetchAll();*/
     <div id="userImage" class="dropdown">
         <img id="currentPhoto" src="image.jpg" onerror="this.src='../res/images/defaultUser.png'" width="110" height="110" onclick="clickUser()" class="dropbtn">
         <div id="userOptions" class="dropdown-content">
-            <a href="../userPage.html"><?php echo $username?> </a>
+            <a href="../userPage.html">Profile</a>
             <a href="editUser.php">Edit Profile</a>
             <a href="principal.php">Logout</a>
         </div>

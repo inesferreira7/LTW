@@ -29,7 +29,7 @@ function changePassword(){
 
 }
 
-function readURL(input) {
+/*function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
@@ -42,6 +42,7 @@ function readURL(input) {
 
         reader.readAsDataURL(input.files[0]);
     }
+<<<<<<< HEAD
 
     var formData = new FormData();
 
@@ -65,3 +66,6 @@ function check(){
 
   return true;
 }
+=======
+}*/
+>>>>>>> master
