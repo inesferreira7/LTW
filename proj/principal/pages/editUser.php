@@ -96,17 +96,7 @@ $email = $userEmail->fetchAll();
         <img id="bigImage1" src="#" onerror="this.src='../res/images/defaultUser.png'" width = "110" heigt="110">
         <button id="editButton" type="button" onclick="openEdit()" width>Edit Profile</button>
         <button id="changeButton" type="button" onclick="changePassword()">Change Password</button>
-
-
     </div>
-
-
 </div>
-
-
-
-
-
-
 </body>
 </html>

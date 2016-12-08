@@ -2,13 +2,15 @@ function openEdit() {
     if($('form').length != 0){ //Impede que quando voltamos a carregar crie outro abaixo
         $('form').remove();
     }
-    $form = $('<form id="form" method="post" action="../pages/updateUser.php" onsubmit="return check();"></form>');
+    $form = $('<form id="form" method="post" action="../pages/updateUser.php" onsubmit="return check();" enctype="multipart/form-data"></form>');
     $form.append('<label> First name <input type="text" class ="preenche" name="firstname"></label><br>'); //Primeiro nome
     $form.append('<label> Last name  <input type="text" class ="preenche" name="lastname" id="lastname"></label><br>'); //Ultimo nome
     $form.append('<label> Email      <input type="text" class ="preenche" name="email" id="email"></label><br>'); //Email
     $form.append('<label> Username   <input type="text" class ="preenche" name="username" id="username"></label><br>'); //Username
-    $form.append('<input type="file" onchange="readURL(this);" name="inputImg" />');
+    $form.append('<input type="file" onchange="readURL(this);" name="userfile" />');
     $form.append('<button type="submit" class="button"> Update </button>');
+    $form.append('<input type="hidden" name="MAX_FILE_SIZE" value="512000" />');
+
 
 
     $('body').append($form);
@@ -39,6 +41,20 @@ function readURL(input) {
         };
 
         reader.readAsDataURL(input.files[0]);
+    }
+
+    var formData = new FormData();
+
+    if(formData){
+
+        $.ajax({
+            url: 'uploadImage.php',
+            type: "POST",
+            data: formData,
+            processData: false,
+            contentType: false
+            }
+        )
     }
 }
 
