@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+	if(isset($_SESSION['id'])){
+		header('Location: principalUser.php');
+		die();
+		return;
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
