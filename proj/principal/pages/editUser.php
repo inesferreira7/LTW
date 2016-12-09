@@ -23,10 +23,6 @@ foreach($result as $row){
 
     }
 }
-
-if($email === "")
-  header('Location: principal.php');
-
 ?>
 
 

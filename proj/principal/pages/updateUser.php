@@ -20,7 +20,7 @@
   }
 
   if(strlen($lastname) != 0){
-    $changeLast = $db->prepare('UPDATE User SET last_name= ? WHERE user_id = ?');
+    $changeLast = $db->prepare('UPDATE User SET lastname= ? WHERE user_id = ?');
     $changeLast->execute([$lastname, $_SESSION['id']]);
     echo 'Last name changed successfully';
   }
@@ -37,7 +37,7 @@
 
     if($temp == 0){
       $changeEmail = $db->prepare('UPDATE User SET email = ? WHERE user_id = ?');
-      $changeEmail->execute([$_SESSION['id'], $email]);
+      $changeEmail->execute([$email, $_SESSION['id']]);
     }
     echo 'Email changed successfully';
   }
@@ -48,13 +48,13 @@
     $res1 = $checkUser->fetchAll();
     $temp1 = 0;
     foreach($res1 as $row1){
-      if($row["username"] == $username)
+      if($row1["username"] == $username)
         $temp1 = 1;
     }
 
     if($temp1 == 0){
       $changeUser = $db->prepare('UPDATE User SET username = ? WHERE user_id = ?');
-      $changeUser->execute([$_SESSION['id'], $username]);
+      $changeUser->execute([$username, $_SESSION['id']]);
       $_SESSION['username'] = $username;
     }
     echo 'Username changed successfully';
