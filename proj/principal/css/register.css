@@ -63,6 +63,13 @@ input[name=password]{
 
 }
 
+input[name=userfile]{
+
+
+
+
+}
+
 label{
   margin-left:50px;
   color:#d3d3d3;
@@ -120,6 +127,14 @@ label{
   position:relative;
   left:170px;
   font-family: 'Work Sans', sans-serif;
+}
+
+#photo{
+  position: relative;
+  bottom:360px;
+  left:40%;
+  width: 254px;
+  height:254px;
 }
 
 

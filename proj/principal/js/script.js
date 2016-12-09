@@ -8,12 +8,16 @@ $(document).ready(function() {
       if($('form').length != 0){ //Impede que quando voltamos a carregar crie outro abaixo
         $('form').remove();
       }
-      $form = $('<form id="form" method="post" action="../pages/signupR.php" onsubmit="return checkR();"></form>');
+      $defaultPhoto = '../res/images/defaultUser.png';
+      $form = $('<form id="form" method="post" action="../pages/signupR.php" onsubmit="return checkR(); enctype="multipart/form-data"></form>');
       $form.append('<label> First name <input type="text" class ="preenche" name="firstname" id="firstnameR"></label><br>'); //Primeiro nome
       $form.append('<label> Last name<input type="text" class ="preenche" name="lastname" id="lastnameR"></label><br>'); //Ultimo nome
       $form.append('<label> Email <input type="e-mail" class ="preenche" name="email" id="emailR"></label><br>'); //Email
       $form.append('<div id="un"><label> Username <input type="text" class ="preenche" name="username" id="usernameR"></label><img class="u" src ="../res/images/info.png" alt="inf" width="25" height="25"></div><br>'); //Username
       $form.append('<div id="pw"><label> Password <input type="password" class ="preenche" name="password" id="passwordR"></label><img class="p" src ="../res/images/info.png" alt="inf" width="25" height="25"></div><br>'); //Password
+      $form.append('<img id="photo" class= "setPhoto" src="#" onerror="this.src=$defaultPhoto"  />' );
+      $form.append('<input type="file" onchange="readURL(this);" name="userfile" />');
+      $form.append('<input type="hidden" name="MAX_FILE_SIZE" value="512000" />');
       $form.append('<button type="submit" class="button"> Register! </button>');
 
       $('body').append($form);
@@ -36,6 +40,8 @@ $(document).ready(function() {
 
     }
   });
+
+
 
   $('input:radio[value="owner"]').change(function(){
     if ($(this).is(':checked') == true) {
@@ -101,6 +107,22 @@ function checkLogin(){
     return false;
 
   return true;
+}
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#photo')
+          .attr('src', e.target.result);
+
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+
+
 }
 
 function checkR(){
