@@ -45,6 +45,7 @@ CREATE TABLE Review(
   review_id INTEGER PRIMARY KEY AUTOINCREMENT,
   user_id INTEGER NOT NULL,
   restaurant_id INTEGER NOT NULL,
+  comment TEXT NOT NULL,
   stars INTEGER NOT NULL,
   FOREIGN KEY(user_id) REFERENCES User(user_id),
   FOREIGN KEY(restaurant_id) REFERENCES Restaurant(restaurant_id)

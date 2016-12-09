@@ -5,6 +5,7 @@ if(isset($_SESSION["username"])) {
     header('Location: principal.php');
     die();
 }*/
+
 ?>
 
 <!DOCTYPE html>
