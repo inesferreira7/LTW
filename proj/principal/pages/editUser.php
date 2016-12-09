@@ -1,5 +1,5 @@
 <?php
-include_once ("connection.php");
+include_once("connection.php");
 
 global $db;
 
@@ -15,9 +15,8 @@ $table = $db->prepare('SELECT * FROM User');
 $table->execute();
 $result = $table->fetchAll();
 
-
 foreach($result as $row){
-    if($row["username"] == $username){
+    if($row["username"] === $username){
         $email = $row["email"];
         $firstName = $row["first_name"];
         $lastName = $row["lastname"];
@@ -25,8 +24,8 @@ foreach($result as $row){
     }
 }
 
-
-
+if($email === "")
+  header('Location: principal.php');
 
 ?>
 
