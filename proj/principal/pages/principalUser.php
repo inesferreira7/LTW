@@ -54,7 +54,10 @@ foreach($result as $row) {
             <a href="editUser.php">Edit Profile</a>
             <a href="principal.php">Logout</a>
         </div>
+
     </div>
+    <h1 id="userName"><?php echo $username?></h1>
+
 </div>
 <div id="content">
     <form>

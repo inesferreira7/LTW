@@ -39,11 +39,23 @@ img{
 
 }
 
+#header #userName{
+    float:right;
+    font-family: 'Work Sans', sans-serif;
+    font-size:150%;
+    margin-right: 3%;
+    margin-top: 0.65%;
+
+
+}
+
 .userOptions {
     position: absolute;
     display: inline-block;
 
 }
+
+
 .dropdown-content {
     display: none;
     position: absolute;
