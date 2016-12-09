@@ -1,7 +1,9 @@
 <?php
-include_once('connection.php');
+include_once("connection.php");
 
 global $db;
+
+session_start();
 
 $firstname=$_POST['firstname'];
 $lastname=$_POST['lastname'];
@@ -37,6 +39,16 @@ else{
     return;
   }
 
+  $uploaddir = '../res/images/';
+  $uploadfile = $uploaddir . basename($_FILES['restfile']['name']);
+
+  if (move_uploaded_file($_FILES['restfile']['tmp_name'], $uploadfile)) {
+    echo "File is valid, and was successfully uploaded.\n";
+  } else {
+    echo "Upload failed ";
+    return;
+  }
+
   $statement = $db->prepare('INSERT INTO User VALUES (NULL, ?, ?, ?, ?, ?, ?)');
   $statement->execute([$firstname, $lastname, $email,$username,$password,$image]);
 
@@ -55,8 +67,8 @@ else{
   $r = $owner->fetch();
   $ownerid = $r["owner_id"];
 
-  $rest = $db->prepare('INSERT INTO Restaurant VALUES (NULL,?,?,?,?)');
-  $rest->execute([$restname,$description,$address,$ownerid]);
+  $rest = $db->prepare('INSERT INTO Restaurant VALUES (NULL,?,?,?,?,?)');
+  $rest->execute([$restname,$description,$address,$ownerid,$uploadfile]);
 
   header('Location: principal.php');
 }

@@ -30,6 +30,7 @@ CREATE TABLE Restaurant(
   descricao TEXT NOT NULL,
   morada TEXT NOT NULL,
   owner_id INTEGER NOT NULL,
+  image TEXT,
   FOREIGN KEY(owner_id) REFERENCES Owner(owner_id)
 );
 --podemos acrescentar imagens e tipo
