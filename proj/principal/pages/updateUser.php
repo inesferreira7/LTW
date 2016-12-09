@@ -12,6 +12,7 @@
   $lastname = $_POST['lastname'];
   $email = $_POST['email'];
   $username = $_POST['username'];
+  $image = $_POST['userfile'];
 
   if(strlen($firstname) != 0){
     $changeFirst = $db->prepare('UPDATE User SET first_name= ? WHERE user_id = ?');
@@ -60,18 +61,23 @@
     echo 'Username changed successfully';
   }
 
-$uploaddir = '../res/images/';
-$uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
-echo "<p>";
 
-if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-  echo "File is valid, and was successfully uploaded.\n";
-} else {
-  echo "Upload failed";
+    $uploaddir = '../res/images/';
+    $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+
+
+
+    if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
+        echo "File is valid, and was successfully uploaded.\n";
+        $changeImage = $db->prepare('UPDATE User SET image = ? WHERE user_id = ?');
+        $changeImage->execute([$uploadfile, $_SESSION['id']]);
+
+    } else {
+        echo "Upload failed";
 }
 
-  echo 'true';
-  header('location: principalUser.php');
-  return;
+        echo 'true';
+        header('location: principalUser.php');
+    return;
 ?>
