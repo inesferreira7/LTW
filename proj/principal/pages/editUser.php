@@ -28,13 +28,6 @@ foreach($result as $row){
 
 
 
-/*
-$userEmail = $db->prepare("SELECT email FROM User WHERE username = 'catotas' ");
-$userEmail->execute();
-$email = $userEmail->fetchAll();
-*/
-
-
 ?>
 
 

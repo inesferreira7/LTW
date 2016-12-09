@@ -16,13 +16,13 @@
   if(strlen($firstname) != 0){
     $changeFirst = $db->prepare('UPDATE User SET first_name= ? WHERE user_id = ?');
     $changeFirst->execute([$firstname, $_SESSION['id']]);
-    echo 'First name changed succesfully';
+    echo 'First name changed successfully';
   }
 
   if(strlen($lastname) != 0){
     $changeLast = $db->prepare('UPDATE User SET last_name= ? WHERE user_id = ?');
     $changeLast->execute([$lastname, $_SESSION['id']]);
-    echo 'Last name changed succesfully';
+    echo 'Last name changed successfully';
   }
 
   if(strlen($email) != 0){
@@ -39,7 +39,7 @@
       $changeEmail = $db->prepare('UPDATE User SET email = ? WHERE user_id = ?');
       $changeEmail->execute([$_SESSION['id'], $email]);
     }
-    echo 'Email changed succesfully';
+    echo 'Email changed successfully';
   }
 
   if(strlen($username) != 0){
@@ -57,7 +57,7 @@
       $changeUser->execute([$_SESSION['id'], $username]);
       $_SESSION['username'] = $username;
     }
-    echo 'Username changed succesfully';
+    echo 'Username changed successfully';
   }
 
 $uploaddir = '../res/images/';

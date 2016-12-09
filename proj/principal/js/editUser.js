@@ -29,7 +29,7 @@ function changePassword(){
 
 }
 
-/*function readURL(input) {
+function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
@@ -42,21 +42,8 @@ function changePassword(){
 
         reader.readAsDataURL(input.files[0]);
     }
-<<<<<<< HEAD
 
-    var formData = new FormData();
 
-    if(formData){
-
-        $.ajax({
-            url: 'uploadImage.php',
-            type: "POST",
-            data: formData,
-            processData: false,
-            contentType: false
-            }
-        )
-    }
 }
 
 function check(){
@@ -66,6 +53,3 @@ function check(){
 
   return true;
 }
-=======
-}*/
->>>>>>> master
