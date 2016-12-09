@@ -1,13 +1,3 @@
-<?php
-/*
-session_start();
-if(isset($_SESSION["username"])) {
-    header('Location: principal.php');
-    die();
-}*/
-
-?>
-
 <!DOCTYPE html>
 <html>
 	<head>

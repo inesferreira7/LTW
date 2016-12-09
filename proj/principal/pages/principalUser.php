@@ -1,7 +1,7 @@
 <?php
 include_once ("connection.php");
 
-//global $db;
+global $db;
 
 session_start();
 
@@ -52,7 +52,7 @@ foreach($result as $row) {
         <div id="userOptions" class="dropdown-content">
             <a href="principalUser.php"><?php echo $username ?></a>
             <a href="editUser.php">Edit Profile</a>
-            <a href="principal.php">Logout</a>
+            <a href="logout.php">Logout</a>
         </div>
 
     </div>
