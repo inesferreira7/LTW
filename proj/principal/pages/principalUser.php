@@ -60,9 +60,9 @@ foreach($result as $row) {
 
 </div>
 <div id="content">
-    <form method="post" action="search.php">
-        <input type="text" class="search" name="search" placeholder="Search">
-        <button type="button" class="button">
+    <form method="post" action="../pages/search.php">
+      <input type="text" class="search" name="search" placeholder="Search">
+      <button type="submit" class="button">
     </form>
 </div>
 </body>
