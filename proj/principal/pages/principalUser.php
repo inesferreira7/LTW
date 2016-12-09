@@ -61,8 +61,8 @@ foreach($result as $row) {
 </div>
 <div id="content">
     <form method="post" action="search.php">
-        <input type="text" class="search" placeholder="Search">
-        <input type="button" class="button">
+        <input type="text" class="search" name="search" placeholder="Search">
+        <button type="button" class="button">
     </form>
 </div>
 </body>
