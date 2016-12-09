@@ -13,6 +13,10 @@ $restname=$_POST['search'];
     if(strpos($rest["name"], $restname) !== false){
       echo $rest["name"];
     }
+    if(strpos(strtolower($rest["name"]), $restname) !== false){
+      echo $rest["name"];
+    }
   }
+
 
 ?>
