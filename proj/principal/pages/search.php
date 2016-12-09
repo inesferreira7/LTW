@@ -5,11 +5,14 @@ global $db;
 
 $restname=$_POST['search'];
 
-  $stmt = $db->prepare("SELECT * FROM Restaurant WHERE name='$restname'");
-  $stmt->execute();
-  $r = $stmt->fetch();
-  echo $r["name"];
-  echo $r["descricao"];
-  echo $r["morada"];
+  //seleciona restaurants
+  $statement = $db->prepare('SELECT * FROM Restaurant');
+  $statement->execute();
+  $all = $statement->fetchAll();
+  foreach ($all as $rest) {
+    if(strpos($rest["name"], $restname) !== false){
+      echo $rest["name"];
+    }
+  }
 
 ?>
