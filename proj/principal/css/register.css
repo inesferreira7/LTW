@@ -35,6 +35,16 @@ img{
   margin-bottom: 50px;
 }
 
+input[value="user"] {
+  margin-right:15px;
+  margin-left: 50px;
+}
+
+input[value="owner"] {
+  margin-right:15px;
+  margin-left: 100px;
+}
+
 input[name=firstname]{
   margin-left:51px;
   margin-bottom: 40px;
@@ -131,11 +141,8 @@ label{
 
 #photo{
   position: relative;
-  bottom:360px;
   left:40%;
+  bottom:360px;
   width: 254px;
   height:254px;
 }
-
-
-
