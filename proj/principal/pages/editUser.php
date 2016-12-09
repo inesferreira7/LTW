@@ -1,26 +1,20 @@
 <?php
 include_once("connection.php");
-
 global $db;
-
 session_start();
-
 if(!isset($_SESSION['username'])){
     header("principal.php");
 }
 $username = $_SESSION["username"];
-
-
 $table = $db->prepare('SELECT * FROM User');
 $table->execute();
 $result = $table->fetchAll();
-
 foreach($result as $row){
     if($row["username"] === $username){
         $email = $row["email"];
         $firstName = $row["first_name"];
         $lastName = $row["lastname"];
-
+        $image = $row["image"];
     }
 }
 ?>
@@ -57,7 +51,7 @@ foreach($result as $row){
         <img id="foodaholics" src="../res/images/title.png" alt="Foodaholics" >
     </div>
     <div id="userImage" class="dropdown">
-        <img id="currentPhoto" src="#" onerror="this.src='../res/images/defaultUser.png'" width="110" height="110" onclick="clickUser()" class="dropbtn">
+        <img id="currentPhoto" src="<?php echo $image?>"onerror="this.src='../res/images/defaultUser.png'" width="110" height="110" onclick="clickUser()" class="dropbtn">
         <div id="userOptions" class="dropdown-content">
             <a href="../userPage.html">Profile</a>
             <a href="editUser.php">Edit Profile</a>
@@ -75,13 +69,13 @@ foreach($result as $row){
         <p class="big">
             <h1 id = "email"><?php echo $email ?></h1>
             <h1 id = "username"><?php echo $username?></h1>
-            <h1 id = "fistname"><?php echo $firstName ?></h1>
+            <h1 id = "firstname"><?php echo $firstName ?></h1>
             <h1 id = "lastname"><?php echo $lastName ?></h1>
         </p>
 
     </div>
     <div id="options"  >
-        <img id="bigImage1" src="#" onerror="this.src='../res/images/defaultUser.png'" width = "110" heigt="110">
+        <img id="bigImage1" src="<?php echo $image?>" onerror="this.src='../res/images/defaultUser.png'" width = "110" heigt="110">
         <button id="editButton" type="button" onclick="openEdit()" width>Edit Profile</button>
         <button id="changeButton" type="button" onclick="changePassword()">Change Password</button>
     </div>
