@@ -42,7 +42,7 @@ $(document).ready(function() {
       if($('form').length != 0){
         $('form').remove();
       }
-      $form = $('<form id="form" method="post" action="../pages/signupO.php" onsubmit="return checkO();"></form>');
+      $form = $('<form id="form" method="post" action="../pages/signupO.php" onsubmit="return checkO();" enctype="multipart/form-data"></form>');
       $form.append('<label> First name <input type="text" class ="preenche" name="firstname" id="firstnameO"></label><br>'); //Primeiro nome
       $form.append('<label> Last name<input type="text" class ="preenche" name="lastname" id="lastnameO"></label><br>'); //Ultimo nome
       $form.append('<label> Email <input type="e-mail" class ="preenche" name="email" id="emailO"></label><br>'); //Email
@@ -51,7 +51,9 @@ $(document).ready(function() {
       $form.append('<label> Name <input type="text" class ="preenche" name="r_name" id="r_nameO"></label><br>'); //Name of restaurant
       $form.append('<label> Description <input type="text" class ="preenche" name="description" id="descriptionO"></label><br>'); //Description
       $form.append('<label> Address <input type="text" class ="preenche" name="address" id="addressO"></label><br>'); //Address
+      $form.append('<label> Image <input type="file" name="restfile" id="restfile"/></label><br>');
       $form.append('<button type="submit" class="button"> Register! </button>');
+      $form.append('<input type="hidden" name="MAX_FILE_SIZE" value="512000" />');
 
       $('body').append($form);
 
