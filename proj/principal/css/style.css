@@ -1,5 +1,6 @@
 html{
-  background-color: #2F4F4F
+  background-color: #2F4F4F;
+  overflow: hidden;
 }
 
 body{
@@ -111,7 +112,6 @@ body{
 	padding-top: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
-
 }
 
 form {
