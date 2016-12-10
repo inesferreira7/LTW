@@ -22,6 +22,7 @@
 		<title>Foodaholics</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/restPage.css">
   </head>
   <body>
     <div id="information">
@@ -42,7 +43,7 @@
     <div header ="review">
       <form id="addreview" method="post" action="addReview.php">
         <input type="number" name="stars" min="1" max="5" value="1">
-        <textarea name="review" rows="4" cols="50"></textarea>
+        <textarea name="review" rows="4" cols="50"></textarea><br>
         <button type="submit">Add review</button>
       </form>
     </div>
