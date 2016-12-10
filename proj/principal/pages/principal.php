@@ -1,5 +1,9 @@
 <?php
 
+include_once("connection.php");
+
+global $db;
+
 session_start();
 
 	if(isset($_SESSION['id'])){
@@ -48,12 +52,26 @@ session_start();
 		</form>
 	</div>
 
-	<div class="image1">
-		<div class="image">
-			<img id="myImg" src="../res/images/pizza.jpg" width="300" height="200">
+	<div class="best_res">
+		<?php
+			$stmt = $db->prepare('SELECT restaurant_id FROM Review GROUP BY restaurant_id ORDER BY AVG(stars) DESC');
+			$stmt->execute();
+			$res = $stmt->fetchAll();
+			$number_of_rows = $stmt->fetchColumn();
+			$count = 1;
+			foreach($res as $row){
+				if($count === 6 || $count === $number_of_rows){
+					break;
+				}
+				$count++;
+				$temp = $db->prepare('SELECT * FROM Restaurant WHERE restaurant_id = ? ');
+				$temp->execute([$row["restaurant_id"]]);
+				$restemp = $temp->fetch();
+				echo "<a href='restPage.php?name=" . $restemp["name"] . "' class='image' >
+									<img src='" . $restemp["image"] . "' alt='restaurant photo' width='170' height='128'></a>";
+			}
+		?>
 	</div>
-
-
 
 	</body>
 </html>

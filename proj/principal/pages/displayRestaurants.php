@@ -20,6 +20,18 @@ if(count($search) === 0){
   return;
 }
 
+$username = $_SESSION['username'];
+
+$table = $db->prepare('SELECT * FROM User');
+$table->execute();
+$result = $table->fetchAll();
+
+foreach($result as $row) {
+    if ($row["username"] === $username) {
+        $image = $row["image"];
+    }
+}
+
 unset($_SESSION['search']);
 ?>
 
@@ -30,6 +42,7 @@ unset($_SESSION['search']);
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
     <link rel="stylesheet" href="../css/displayRestaurants.css">
+    <script type="text/javascript" src="../js/dropDownUser.js"></script>
 </head>
 
 <body>
@@ -37,26 +50,36 @@ unset($_SESSION['search']);
 <div id="header">
     <div id="logo">
         <a href="principal.php" width="128" >
-            <img src="../res/images/fork.png" class="logo" alt="Foodaholics" width="128" height="128">
+            <img src="../res/images/logo.png" class="logo" alt="Foodaholics" width="500" height="80">
         </a>
     </div>
-    <div id="title">
-        <img id="foodaholics" src="../res/images/title.png" alt="Foodaholics" >
+
+    <div id="userImage" class="dropdown">
+        <img id="currentPhoto" src="<?php echo $image?>"onerror="this.src='../res/images/defaultUser.png'" width="110" height="110" onclick="clickUser()" class="dropbtn">
+        <div id="userOptions" class="dropdown-content">
+            <a href="../userPage.html"><?php echo $username?></a>
+            <a href="editUser.php">Edit Profile</a>
+            <a href="principal.php">Logout</a>
+        </div>
     </div>
 
 </div>
   <?php
   foreach($search as $res){
+
+
     $name = $res["name"];
     $descricao = $res["descricao"];
     $morada = $res["morada"];
+
     echo "<div class='rest'>
-            <a href='restPage.php?name=". $name . "'>" . $name .
-            "</a><br><p id='descricao'>". $descricao . "'</p><p id='morada'>" . $morada ."</div>";
+                        <a href='restPage.php?name=". $name . "'>" . $name ."</a>
+                        <h5 id='morada' >". $morada . "'</h5><h3 id='descricao'>" . $descricao ."</div>";
 
     $image = $res["image"];
     echo "<div class='restI'>
             <img id='img' src='". $image . "' alt='Image restaurant' ><br></div>";
+
   }
   ?>
 </body>

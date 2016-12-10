@@ -105,13 +105,12 @@ body{
 
 
 #content{
+  position: absolute;
   background-color:	#2F4F4F;
-  clear:left;
-  clear:right;
-	padding-bottom: 30px;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
+  width: 100%;
+  height: auto;
+  float:left;
+  left:8%;
 }
 
 form {
@@ -165,10 +164,19 @@ img {
   transform: translate(-50%,-50%);
 }
 
+.best_res {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  bottom:15%;
+  left: 20%;
+  float: left;
+}
 
 .image {
-  width: 100%;
-  height: 100%;
+  padding-top: 5%;
+  padding-left: 10%;
+  display:inline-block;
 }
 
 .image img {
