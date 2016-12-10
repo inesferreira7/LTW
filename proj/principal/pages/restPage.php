@@ -12,11 +12,6 @@
 
   $res = $stmt->fetch();
 
-  echo $res['restaurant_id'];
-  echo $res['name'];
-  echo $res['descricao'];
-  echo $res["morada"];
-
   $_SESSION['rest'] = $res['restaurant_id'];
 
 ?>
@@ -29,6 +24,21 @@
 		<link rel="stylesheet" href="../css/reset.css">
   </head>
   <body>
+    <div id="information">
+      <?php
+      $r_name = $res['name'];
+      $image = $res['image'];
+      $description=$res['descricao'];
+      $address = $res['morada'];
+      echo "<div class='restname'>
+              <p>" . $r_name . "</p></div>";
+
+      echo "<div class='inf'>
+              <img src='" . $image . "'alt='Image'><br>
+              <p>" . $description . "</p>
+              <p>" . $address . "</p>";
+      ?>
+    </div>
     <div header ="review">
       <form id="addreview" method="post" action="addReview.php">
         <input type="number" name="stars" min="1" max="5" value="1">
