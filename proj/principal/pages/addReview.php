@@ -4,7 +4,7 @@
   global $db;
 
   session_start();
-  
+
   if(!isset($_SESSION['username'])){
     echo 'Cant post a comment if u are not a user...';
     return;
@@ -24,4 +24,4 @@
 
   echo $user_id.$rest_id.$review.$stars;
 
-  ?>
+?>

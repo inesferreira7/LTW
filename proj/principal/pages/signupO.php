@@ -5,15 +5,17 @@ global $db;
 
 session_start();
 
-$firstname=$_POST['firstname'];
-$lastname=$_POST['lastname'];
-$email=$_POST['email'];
-$username=$_POST['username'];
-$password=$_POST['password'];
-$image=$_POST['image'];
-$restname=$_POST['r_name'];
-$description=$_POST['description'];
-$address=$_POST['address'];
+$firstname = htmlspecialchars($_POST['firstname']);
+$lastname = htmlspecialchars($_POST['lastname']);
+$email = htmlspecialchars($_POST['email']);
+$username = htmlspecialchars($_POST['username']);
+$password = htmlspecialchars($_POST['password']);
+$image = $_POST['image'];
+$restname = htmlspecialchars($_POST['r_name']);
+$description = htmlspecialchars($_POST['description']);
+$address = htmlspecialchars($_POST['address']);
+
+$password = password_hash($password, PASSWORD_DEFAULT);
 
 if(strlen($username) < 3){
   echo "Username needs to be at least 3 characters long";
@@ -70,7 +72,10 @@ else{
   $rest = $db->prepare('INSERT INTO Restaurant VALUES (NULL,?,?,?,?,?)');
   $rest->execute([$restname,$description,$address,$ownerid,$uploadfile]);
 
-  header('Location: principal.php');
+  $_SESSION['id'] = $id;
+  $_SESSION['username'] = $username;
+
+  header('Location: principalUser.php');
 }
 
 ?>

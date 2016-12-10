@@ -8,11 +8,11 @@
   if(!isset($_SESSION['username']))
     header("principal.php");
 
-  $firstname =$_POST['firstname'];
-  $lastname = $_POST['lastname'];
-  $email = $_POST['email'];
-  $username = $_POST['username'];
-  $image = $_POST['userfile'];
+  $firstname = htmlspecialchars($_POST['firstname']);
+  $lastname = htmlspecialchars($_POST['lastname']);
+  $email = htmlspecialchars($_POST['email']);
+  $username = htmlspecialchars($_POST['username']);
+  $image = htmlspecialchars($_POST['userfile']);
 
   if(strlen($firstname) != 0){
     $changeFirst = $db->prepare('UPDATE User SET first_name= ? WHERE user_id = ?');

@@ -3,12 +3,14 @@ include_once('connection.php');
 session_start();
 global $db;
 
-$firstname=$_POST['firstname'];
-$lastname=$_POST['lastname'];
-$email=$_POST['email'];
-$username=$_POST['username'];
-$password=$_POST['password'];
+$firstname = htmlspecialchars($_POST['firstname']);
+$lastname = htmlspecialchars($_POST['lastname']);
+$email = htmlspecialchars($_POST['email']);
+$username= htmlspecialchars($_POST['username']);
+$password = htmlspecialchars($_POST['password']);
 $image = $_POST['userfile'];
+
+$password = password_hash($password, PASSWORD_DEFAULT);
 
 if(strlen($username) < 3){
   echo "Username needs to be at least 3 characters long";
@@ -61,7 +63,11 @@ else{
 
   $s = $db->prepare("INSERT INTO Reviewer(reviewer_id, user_id) VALUES (NULL, $id)");
   $s->execute();
-  header('Location: principal.php');
+
+  $_SESSION['id'] = $id;
+  $_SESSION['username'] = $username;
+
+  header('Location: principalUser.php');
 
 
 
