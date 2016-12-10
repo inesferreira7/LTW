@@ -6,7 +6,7 @@ global $db;
 session_start();
 
 if(!isset($_SESSION['search'])){
-  echo "search is empty";
+  echo "search is empty1";
   //header('Location: principal.php');
   return;
 }
@@ -15,7 +15,7 @@ else {
 }
 
 if(count($search) === 0){
-  echo "search is empty";
+  echo "search is empty2";
   //header('Location: principal.php');
   return;
 }
@@ -46,9 +46,17 @@ unset($_SESSION['search']);
 </div>
   <?php
   foreach($search as $res){
+    $name = $res["name"];
     echo "<div class='rest'>
-            <a href='restPage.php?name=". $res . "'>" . $res .
+            <a href='restPage.php?name=". $name . "'>" . $name .
             "</a><br></div>";
+    echo $res["descricao"];
+    echo $res["morada"];
+
+    $image = $res["image"];
+        echo $image;
+    echo "<div class='restI'>
+            <img id='img' src='". $image . "' alt='Image restaurant' ><br></div>";
   }
   ?>
 </body>

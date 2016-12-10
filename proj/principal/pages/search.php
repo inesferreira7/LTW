@@ -14,12 +14,10 @@ $restname=$_POST['search'];
   $rests = array();
   foreach ($all as $rest) {
     if(strpos($rest["name"], $restname) !== false){
-      echo $rest["name"];
-      array_push($rests, $rest["name"]);
+      array_push($rests, $rest);
     }
     else if(strpos(strtolower($rest["name"]), $restname) !== false){
-      echo $rest["name"];
-      array_push($rests, $rest["name"]);
+      array_push($rests, $rest);
     }
   }
 
