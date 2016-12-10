@@ -12,6 +12,10 @@
 
   $res = $stmt->fetch();
 
+  $s = $db->prepare('SELECT * FROM Review where restaurant_id = ?');
+  $s->execute([$res['restaurant_id']]);
+  $reviews = $s->fetchAll();
+
   $_SESSION['rest'] = $res['restaurant_id'];
 
 ?>
@@ -39,6 +43,18 @@
               <p>" . $description . "</p>
               <p>" . $address . "</p>";
       ?>
+    </div>
+    <div id="showreviews">
+      <?php
+      foreach($reviews as $review){
+        $comment=$review['comment'];
+        $stars = $review['stars'];
+        $s = $db->prepare('SELECT * from User where user_id = ?');
+        $s->execute([$review['user_id']]);
+        $user=$s->fetch();
+        echo "<p id='comment'>" . $comment ."</p><p id='stars'>" . $stars ."</p><p id='username'>" . $user['username'] . "</p>" ;
+      }
+       ?>
     </div>
     <div header ="review">
       <form id="addreview" method="post" action="addReview.php">
