@@ -52,6 +52,17 @@ foreach($result as $row) {
         <div id="userOptions" class="dropdown-content">
             <a href="principalUser.php"><?php echo $username ?></a>
             <a href="editUser.php">Edit Profile</a>
+            <?php
+            $userid = $_SESSION['id'];
+            $s = $db->prepare('SELECT * FROM Owner');
+            $s->execute();
+            $owners = $s->fetchAll();
+            foreach($owners as $owner){
+              if($owner['user_id'] === $userid){
+                echo "<a href='manageRest.php'>Manage restaurants</a>";
+              }
+            }
+             ?>
             <a href="logout.php">Logout</a>
         </div>
 
