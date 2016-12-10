@@ -12,6 +12,10 @@
 
   $res = $stmt->fetch();
 
+  $s = $db->prepare('SELECT * FROM Review where restaurant_id = ?');
+  $s->execute([$res['restaurant_id']]);
+  $reviews = $s->fetchAll();
+
   $_SESSION['rest'] = $res['restaurant_id'];
 
 ?>
@@ -22,6 +26,7 @@
 		<title>Foodaholics</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/restPage.css">
   </head>
   <body>
     <div id="information">
@@ -39,10 +44,22 @@
               <p>" . $address . "</p>";
       ?>
     </div>
+    <div id="showreviews">
+      <?php
+      foreach($reviews as $review){
+        $comment=$review['comment'];
+        $stars = $review['stars'];
+        $s = $db->prepare('SELECT * from User where user_id = ?');
+        $s->execute([$review['user_id']]);
+        $user=$s->fetch();
+        echo "<p id='comment'>" . $comment ."</p><p id='stars'>" . $stars ."</p><p id='username'>" . $user['username'] . "</p>" ;
+      }
+       ?>
+    </div>
     <div header ="review">
       <form id="addreview" method="post" action="addReview.php">
         <input type="number" name="stars" min="1" max="5" value="1">
-        <textarea name="review" rows="4" cols="50"></textarea>
+        <textarea name="review" rows="4" cols="50"></textarea><br>
         <button type="submit">Add review</button>
       </form>
     </div>

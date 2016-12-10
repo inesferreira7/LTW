@@ -1,0 +1,39 @@
+html{
+  background-color: #2F4F4F;
+}
+
+img{
+  width:500px;
+  height:auto;
+  margin-bottom:20px;
+}
+
+#information{
+  position:absolute;
+     width:100%;
+     height:100%;
+     text-align: center;
+}
+
+.restname{
+  margin-top:30px;
+  margin-bottom:20px;
+  color:#d3d3d3;
+  font-family: 'Work Sans', sans-serif;
+  font-size:170%;
+}
+
+.inf{
+  color:#d3d3d3;
+  margin-top:20px;
+  margin-bottom: 30px;
+}
+
+textarea{
+  border-radius: 5px;
+}
+
+p{
+  margin-bottom:5px;
+  font-size:120%;
+}

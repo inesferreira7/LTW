@@ -50,3 +50,12 @@ CREATE TABLE Review(
   FOREIGN KEY(user_id) REFERENCES User(user_id),
   FOREIGN KEY(restaurant_id) REFERENCES Restaurant(restaurant_id)
 );
+
+CREATE TABLE Reply(
+  reply_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  review_id INTEGER NOT NULL,
+  user_id INTEGER NOT NULL,
+  comment TEXT NOT NULL,
+  FOREIGN KEY(review_id) REFERENCES Review(review_id),
+  FOREIGN KEY(user_id) REFERENCES User(user_id)
+);

@@ -48,6 +48,7 @@ $(document).ready(function() {
       if($('form').length != 0){
         $('form').remove();
       }
+      $defaultPhoto = '../res/images/defaultUser.png';
       $form = $('<form id="form" method="post" action="../pages/signupO.php" onsubmit="return checkO();" enctype="multipart/form-data"></form>');
       $divL = $('<div id="left" style="display:inline-block; margin-right:60px">');
       $divL.append('<label> First name <input type="text" class ="preenche" name="firstname" id="firstnameO"></label><br>'); //Primeiro nome
@@ -61,10 +62,25 @@ $(document).ready(function() {
       $divR.append('<label> Name <input type="text" class ="preenche" name="r_name" id="r_nameO"></label><br>'); //Name of restaurant
       $divR.append('<label> Description <input type="text" class ="preenche" name="description" id="descriptionO"></label><br>'); //Description
       $divR.append('<label> Address <input type="text" class ="preenche" name="address" id="addressO"></label><br>'); //Address
-      $divR.append('<label> Image <input type="file" name="restfile" id="restfile"/></label><br>');
       $form.append($divR);
+
+      $divP =$('<div id="photosO" style="display:inline-block">');
+      $divP.append('<p id="phototextO"> User photo</p>');
+      $divP.append('<img id="ownerPhoto" class= "oPhoto" src="#" onerror="this.src=$defaultPhoto"  />' );
+      $divP.append('<input id="submitO" type="file" onchange="readURL1(this);" name="OPS"  />');
+      $divP.append('<input type="hidden" name="MAX_FILE_SIZE" value="512000" />');
+      $form.append($divP);
+
+      $divPR =$('<div id="photosR" style="display:inline-block">');
+      $divPR.append('<p id="phototextR"> Restaurant photo</p>');
+      $divPR.append('<img id="restaurantPhoto" class= "rPhoto" src="#" onerror="this.src=$defaultPhoto"  />' );
+      $divPR.append('<input  id="submitR" type="file" onchange="readURL2(this);" name="RPS"/>');
+      $divPR.append('<input type="hidden" name="MAX_FILE_SIZE" value="512000" />');
+      $form.append($divPR);
+
+
       $form.append('<button type="submit" class="button"> Register! </button>');
-      $form.append('<input type="hidden" name="MAX_FILE_SIZE" value="512000" />');
+
 
       $('body').append($form);
 
@@ -120,6 +136,38 @@ function readURL(input) {
 
     reader.onload = function (e) {
       $('#photo')
+          .attr('src', e.target.result);
+
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+
+
+}
+
+function readURL1(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#ownerPhoto')
+          .attr('src', e.target.result);
+
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+
+
+}
+
+function readURL2(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#restaurantPhoto')
           .attr('src', e.target.result);
 
     };
