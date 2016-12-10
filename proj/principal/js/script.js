@@ -9,7 +9,7 @@ $(document).ready(function() {
         $('form').remove();
       }
       $defaultPhoto = '../res/images/defaultUser.png';
-      $form = $('<form id="form" method="post" action="../pages/signupR.php" onsubmit="return checkR(); enctype="multipart/form-data"></form>');
+      $form = $('<form id="form" method="post" action="../pages/signupR.php" onsubmit="return checkR();" enctype="multipart/form-data"></form>');
       $form.append('<label> First name <input type="text" class ="preenche" name="firstname" id="firstnameR"></label><br>'); //Primeiro nome
       $form.append('<label> Last name<input type="text" class ="preenche" name="lastname" id="lastnameR"></label><br>'); //Ultimo nome
       $form.append('<label> Email <input type="e-mail" class ="preenche" name="email" id="emailR"></label><br>'); //Email
@@ -49,15 +49,20 @@ $(document).ready(function() {
         $('form').remove();
       }
       $form = $('<form id="form" method="post" action="../pages/signupO.php" onsubmit="return checkO();" enctype="multipart/form-data"></form>');
-      $form.append('<label> First name <input type="text" class ="preenche" name="firstname" id="firstnameO"></label><br>'); //Primeiro nome
-      $form.append('<label> Last name<input type="text" class ="preenche" name="lastname" id="lastnameO"></label><br>'); //Ultimo nome
-      $form.append('<label> Email <input type="e-mail" class ="preenche" name="email" id="emailO"></label><br>'); //Email
-      $form.append('<div id="un"><label> Username <input type="text" class ="preenche" name="username" id="usernameO"></label><img class="u" src ="../res/images/info.png" alt="inf" width="25" height="25"></div><br>'); //Username
-      $form.append('<div id="pw"><label> Password <input type="password" class ="preenche" name="password" id="passwordO"></label><img class="p" src ="../res/images/info.png" alt="inf" width="25" height="25"></div><br>'); //Password
-      $form.append('<label> Name <input type="text" class ="preenche" name="r_name" id="r_nameO"></label><br>'); //Name of restaurant
-      $form.append('<label> Description <input type="text" class ="preenche" name="description" id="descriptionO"></label><br>'); //Description
-      $form.append('<label> Address <input type="text" class ="preenche" name="address" id="addressO"></label><br>'); //Address
-      $form.append('<label> Image <input type="file" name="restfile" id="restfile"/></label><br>');
+      $divL = $('<div id="left" style="display:inline-block; margin-right:60px">');
+      $divL.append('<label> First name <input type="text" class ="preenche" name="firstname" id="firstnameO"></label><br>'); //Primeiro nome
+      $divL.append('<label> Last name<input type="text" class ="preenche" name="lastname" id="lastnameO"></label><br>'); //Ultimo nome
+      $divL.append('<label> Email <input type="e-mail" class ="preenche" name="email" id="emailO"></label><br>'); //Email
+      $divL.append('<div id="un"><label> Username <input type="text" class ="preenche" name="username" id="usernameO"></label><img class="u" src ="../res/images/info.png" alt="inf" width="25" height="25"></div><br>'); //Username
+      $divL.append('<div id="pw"><label> Password <input type="password" class ="preenche" name="password" id="passwordO"></label><img class="p" src ="../res/images/info.png" alt="inf" width="25" height="25"></div><br>'); //Password
+      $form.append($divL);
+      $divR =$('<div id="right" style="display:inline-block">');
+      $divR.append('<p id="rest"> Register your restaurant</p>');
+      $divR.append('<label> Name <input type="text" class ="preenche" name="r_name" id="r_nameO"></label><br>'); //Name of restaurant
+      $divR.append('<label> Description <input type="text" class ="preenche" name="description" id="descriptionO"></label><br>'); //Description
+      $divR.append('<label> Address <input type="text" class ="preenche" name="address" id="addressO"></label><br>'); //Address
+      $divR.append('<label> Image <input type="file" name="restfile" id="restfile"/></label><br>');
+      $form.append($divR);
       $form.append('<button type="submit" class="button"> Register! </button>');
       $form.append('<input type="hidden" name="MAX_FILE_SIZE" value="512000" />');
 

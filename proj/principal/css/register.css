@@ -69,15 +69,21 @@ input[name=username]{
 input[name=password]{
   margin-left:56px;
   margin-bottom: 10px;
-
-
 }
 
-input[name=userfile]{
+input[name=r_name]{
+  margin-left: 60px;
+  margin-bottom: 40px;
+}
 
+input[name=description]{
+  margin-left:29px;
+  margin-bottom: 40px;
+}
 
-
-
+input[name=address]{
+  margin-left:48px;
+  margin-bottom: 40px;
 }
 
 label{
@@ -105,7 +111,6 @@ label{
   font-family: 'Work Sans', sans-serif;
   font-size: 0.9rem;
   margin-left:100px;
-  margin-top:40px;
   background-color: #d3d3d3;
   border-radius:5px;
   padding:5px;
@@ -113,7 +118,19 @@ label{
 
 }
 
+#rest{
+  color:#d3d3d3;
+  font-family: 'Work Sans', sans-serif;
+  margin-bottom:40px;
+  margin-left:80px;
+}
 
+#right{
+  margin-left:30px;
+  position: absolute;
+  left: 550px;
+  top:180px;
+}
 
  #un .u{
    position:relative;
