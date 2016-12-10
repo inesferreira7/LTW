@@ -94,6 +94,12 @@ label{
 
 }
 
+input[type=file]{
+  position:absolute;
+  top:430px;
+  left:630px;
+}
+
 .preenche{
   width:200px;
   padding-top: 8px;
@@ -110,12 +116,13 @@ label{
 .button{
   font-family: 'Work Sans', sans-serif;
   font-size: 0.9rem;
-  margin-left:100px;
   background-color: #d3d3d3;
   border-radius:5px;
   padding:5px;
   outline: 0;
-
+  position:absolute;
+  top:510px;
+  left:670px;
 }
 
 #rest{
@@ -158,8 +165,8 @@ label{
 
 #photo{
   position: relative;
-  left:40%;
-  bottom:360px;
-  width: 254px;
-  height:254px;
+  left:50%;
+  bottom:400px;
+  width: 200px;
+  height:200px;
 }
