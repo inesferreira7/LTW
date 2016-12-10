@@ -29,6 +29,7 @@ unset($_SESSION['search']);
     <title>Foodaholics-Search</title>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="../css/displayRestaurants.css">
 </head>
 
 <body>
@@ -47,11 +48,11 @@ unset($_SESSION['search']);
   <?php
   foreach($search as $res){
     $name = $res["name"];
+    $descricao = $res["descricao"];
+    $morada = $res["morada"];
     echo "<div class='rest'>
             <a href='restPage.php?name=". $name . "'>" . $name .
-            "</a><br></div>";
-    echo $res["descricao"];
-    echo $res["morada"];
+            "</a><br><p id='descricao'>". $descricao . "'</p><br><p id='morada'>" . $morada ."</div>";
 
     $image = $res["image"];
         echo $image;

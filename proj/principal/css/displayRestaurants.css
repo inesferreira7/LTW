@@ -1,0 +1,43 @@
+html{
+  background-color: #2F4F4F
+}
+
+body{
+margin: 0 auto;
+max-width: 100%;
+}
+
+#header{
+  background-color:#20B2AA;
+    padding-top: 10px;
+  height: 130px;
+}
+
+#header #logo{
+
+  padding-left: 50px;
+  float:left;
+}
+
+#header #title{
+  padding-top:18px;
+  float:left;
+
+}
+
+#header #foodaholics{
+ position:relative;
+   right:25px;
+}
+
+
+#img{
+  float:right;
+  margin-left:50px;
+  width:200px;
+  height:auto;
+}
+
+.restI{
+  float:left;
+}
