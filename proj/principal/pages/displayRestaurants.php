@@ -52,6 +52,11 @@ unset($_SESSION['search']);
             "</a><br></div>";
     echo $res["descricao"];
     echo $res["morada"];
+
+    $image = $res["image"];
+        echo $image;
+    echo "<div class='restI'>
+            <img id='img' src='". $image . "' alt='Image restaurant' ><br></div>";
   }
   ?>
 </body>
