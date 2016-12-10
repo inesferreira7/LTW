@@ -10,10 +10,12 @@ $lastname = htmlspecialchars($_POST['lastname']);
 $email = htmlspecialchars($_POST['email']);
 $username = htmlspecialchars($_POST['username']);
 $password = htmlspecialchars($_POST['password']);
-$image = $_POST['image'];
+$imageOwner = $_POST['OPS'];
+$imageRestaurant = $_POST['RPS'];
 $restname = htmlspecialchars($_POST['r_name']);
 $description = htmlspecialchars($_POST['description']);
 $address = htmlspecialchars($_POST['address']);
+
 
 $password = password_hash($password, PASSWORD_DEFAULT);
 
@@ -24,6 +26,26 @@ else if(strlen($password) < 7){
   echo "Password needs to be at least 7 character long";
 }
 else{
+
+  $uploaddir = '../res/images/';
+  $uploadfileO = $uploaddir . basename($_FILES['OPS']['name']);
+  $uploadfileR = $uploaddir . basename($_FILES['RPS']['name']);
+  
+  if (move_uploaded_file($_FILES['OPS']['tmp_name'], $uploadfileO)) {
+    echo "File is valid, and was successfully uploaded.\n";
+
+
+  } else {
+    echo "Upload failed";
+  }
+
+  if (move_uploaded_file($_FILES['RPS']['tmp_name'], $uploadfileR)) {
+    echo "File is valid, and was successfully uploaded.\n";
+
+
+  } else {
+    echo "Upload failed";
+  }
 
   $checkuser = $db->prepare('SELECT * FROM User WHERE username = ?');
   $checkuser->execute([$username]);
@@ -41,18 +63,9 @@ else{
     return;
   }
 
-  $uploaddir = '../res/images/';
-  $uploadfile = $uploaddir . basename($_FILES['restfile']['name']);
-
-  if (move_uploaded_file($_FILES['restfile']['tmp_name'], $uploadfile)) {
-    echo "File is valid, and was successfully uploaded.\n";
-  } else {
-    echo "Upload failed ";
-    return;
-  }
 
   $statement = $db->prepare('INSERT INTO User VALUES (NULL, ?, ?, ?, ?, ?, ?)');
-  $statement->execute([$firstname, $lastname, $email,$username,$password,$image]);
+  $statement->execute([$firstname, $lastname, $email,$username,$password,$uploadfileO]);
 
   //$username = mysql_real_escape_string($username);
 
@@ -70,7 +83,7 @@ else{
   $ownerid = $r["owner_id"];
 
   $rest = $db->prepare('INSERT INTO Restaurant VALUES (NULL,?,?,?,?,?)');
-  $rest->execute([$restname,$description,$address,$ownerid,$uploadfile]);
+  $rest->execute([$restname,$description,$address,$ownerid,$uploadfileR]);
 
   $_SESSION['id'] = $id;
   $_SESSION['username'] = $username;
