@@ -32,12 +32,15 @@ max-width: 100%;
 
 
 #img{
-  float:right;
-  margin-left:50px;
+  margin-left:80px;
+  margin-top:70px;
+  float:left;
   width:200px;
   height:auto;
 }
 
-.restI{
-  float:left;
+.rest{
+  float:right;
+  margin-right:800px;
+  margin-top:70px;
 }

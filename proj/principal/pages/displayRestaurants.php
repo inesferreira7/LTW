@@ -52,10 +52,9 @@ unset($_SESSION['search']);
     $morada = $res["morada"];
     echo "<div class='rest'>
             <a href='restPage.php?name=". $name . "'>" . $name .
-            "</a><br><p id='descricao'>". $descricao . "'</p><br><p id='morada'>" . $morada ."</div>";
+            "</a><br><p id='descricao'>". $descricao . "'</p><p id='morada'>" . $morada ."</div>";
 
     $image = $res["image"];
-        echo $image;
     echo "<div class='restI'>
             <img id='img' src='". $image . "' alt='Image restaurant' ><br></div>";
   }
