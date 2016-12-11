@@ -37,7 +37,10 @@ if(isset($_SESSION['id'])){
     </div>
     <div id="buttons">
             <button id="login" onclick="document.getElementById('formContainer').style.display='block'">Login</button>
-            <input id='register' type="submit" value="Register" />
+            <form action="register.php">
+                <input id='register' type="submit" value="Register" />
+            </form>
+
     </div>
 
 <div id="formContainer" class="modal">
