@@ -60,6 +60,9 @@ foreach($rests as $rest){
       <div id="Edit">
         <button id="editButton" type="button" onclick="openEdit()" width>Edit Profile</button>
       </div>
+      <div id="Add">
+        <button id="addButton" type="button" onclick = "openAdd()"> Add restaurant </button>
+      </div>
 
   </body>
   </html>
