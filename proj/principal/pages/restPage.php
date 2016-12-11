@@ -52,7 +52,22 @@
         $s = $db->prepare('SELECT * from User where user_id = ?');
         $s->execute([$review['user_id']]);
         $user=$s->fetch();
+
         echo "<p id='comment'>" . $comment ."</p><p id='stars'>" . $stars ."</p><p id='username'>" . $user['username'] . "</p>" ;
+
+        $rep = $db->prepare('SELECT * FROM Reply WHERE review_id = ?');
+        $rep->execute([$review['review_id']]);
+
+        $replies = $rep->fetchAll();
+        foreach($replies as $r){
+          echo "<p class='reply'>" . $r['comment'] . "</p><p id='username'>" . $r['user_id'] . "</p><br><br>" ;
+        }
+
+        echo "<form method='post' class='reply' action='addReply.php?name=" . $review['review_id'] . "&restname=" . $name ."'>
+          <textarea name='" . $review['review_id'] . "' rows='2' cols='50'></textarea><br>
+          <button type='submit'>Reply</button>
+        </form>";
+
       }
        ?>
     </div>
