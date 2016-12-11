@@ -1,0 +1,76 @@
+body, html {
+    height: 100%;
+
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../res/images/rest3.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container #logo .logo{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+ #container #buttons #login{
+     background-color: #E2FCEF;
+     position: absolute;
+     top:56%;
+     left: 40%;
+     padding: 4px 24px;
+     text-align: center;
+     text-decoration: none;
+     font-size: 16px;
+     transition-duration: 0.4s;
+     cursor: pointer;
+     border-radius: 6px;
+     color: #454955;
+     border: 2px solid #454955;
+     font-family: 'Work Sans', sans-serif;
+     width:120px;
+     outline: 0;
+ }
+
+#container #buttons #login:hover {
+    background-color:#454955 ;
+    color: #E2FCEF;
+}
+
+#container #buttons #register{
+    background-color: #E2FCEF;
+    position: absolute;
+    top:56%;
+    left: 52%;
+    padding: 4px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #454955;
+    border: 2px solid #454955;
+    font-family: 'Work Sans', sans-serif;
+    width:120px;
+    outline: 0;
+
+}
+
+#container #buttons #register:hover {
+    background-color:#454955 ;
+    color: #E2FCEF;
+}
