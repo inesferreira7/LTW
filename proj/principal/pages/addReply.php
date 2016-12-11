@@ -5,6 +5,12 @@ global $db;
 
 session_start();
 
+if ($_SESSION['token'] !== $_POST['token']) {
+  header('HTTP/1.0 403 Forbidden');
+  header('Location: 403.html');
+  die();
+}
+
 $rev_id = $_GET['name'];
 $rest_name = $_GET['restname'];
 

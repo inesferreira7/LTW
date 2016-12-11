@@ -5,6 +5,9 @@ session_start();
 if(!isset($_SESSION['username'])){
     header("principal.php");
 }
+
+$_SESSION['token'] = generateRandomToken();
+
 $username = $_SESSION["username"];
 $table = $db->prepare('SELECT * FROM User');
 $table->execute();

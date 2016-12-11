@@ -8,6 +8,12 @@
   if(!isset($_SESSION['username']))
     header("principal.php");
 
+    if ($_SESSION['token'] !== $_POST['token']) {
+      header('HTTP/1.0 403 Forbidden');
+      header('Location: 403.html');
+      die();
+  }
+
   $firstname = htmlspecialchars($_POST['firstname']);
   $lastname = htmlspecialchars($_POST['lastname']);
   $email = htmlspecialchars($_POST['email']);
