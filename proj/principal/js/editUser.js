@@ -20,7 +20,7 @@ function changePassword(){
     if($('form').length != 0){ //Impede que quando voltamos a carregar crie outro abaixo
         $('form').remove();
     }
-    $form = $('<form id="form1" method="post" action="../pages/signup.php"></form>');
+    $form = $('<form id="form1" method="post" action="../pages/updateUser.php"></form>');
     $form.append('<label> Current Password<input type="password" class ="preenche" name="currPassword"></label><br>'); //Pass atual
     $form.append('<label> New Password <input type="password" class ="preenche" name="newPassword"></label><br>'); //Nova pass
     $form.append('<button type="submit" class="button"> Update </button>');

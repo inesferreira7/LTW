@@ -19,6 +19,9 @@ $address = htmlspecialchars($_POST['address']);
 
 $password = password_hash($password, PASSWORD_DEFAULT);
 
+
+
+
 if(strlen($username) < 3){
   echo "Username needs to be at least 3 characters long";
 }
