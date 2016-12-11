@@ -20,6 +20,7 @@ foreach($rests as $rest){
   $name = $rest['name'];
   $description = $rest['descricao'];
   $address = $rest['morada'];
+  $image = $rest['image'];
 }
 
 ?>
@@ -53,6 +54,7 @@ foreach($rests as $rest){
             <h1 id = "name"><?php echo $name ?></h1>
             <h1 id = "description"><?php echo $description?></h1>
             <h1 id = "address"><?php echo $address?></h1>
+            <img id = "image" src="<?php echo $image?>" alt="Image restaurant"/>
         </p>
       </div>
       <div id="Edit">
