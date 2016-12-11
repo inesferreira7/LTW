@@ -7,7 +7,7 @@ function openEdit() {
     $form.append('<label> Description  <input type="text" class ="preenche" name="description"></label><br>'); //Description
     $form.append('<label> Address      <input type="text" class ="preenche" name="address" id="email"></label><br>'); //Address
     $form.append('<input type="file" onchange="readURL(this);" name="image" />');
-    $form.append('<button type="submit" class="button"> Add restaurant </button>');
+    $form.append('<button type="submit" class="button"> Update </button>');
     $form.append('<input type="hidden" name="MAX_FILE_SIZE" value="512000" />');
 
     $('body').append($form);
@@ -22,7 +22,7 @@ function openAdd() {
     $form.append('<label> Description  <input type="text" class ="preenche" name="description"></label><br>'); //Description
     $form.append('<label> Address      <input type="text" class ="preenche" name="address" id="email"></label><br>'); //Address
     $form.append('<input type="file" onchange="readURL(this);" name="image" />');
-    $form.append('<button type="submit" class="button"> Update </button>');
+    $form.append('<button type="submit" class="button"> Add restaurant </button>');
     $form.append('<input type="hidden" name="MAX_FILE_SIZE" value="512000" />');
 
     $('body').append($form);
