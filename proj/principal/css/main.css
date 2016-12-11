@@ -136,6 +136,7 @@ input[type=text], input[type=password] {
     padding: 16px;
 }
 
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -150,7 +151,6 @@ input[type=text], input[type=password] {
     padding-top: 60px;
 }
 
-
 .modal-content {
     background-color: #F3EFF5;
     margin: 5% auto 15% auto;
@@ -161,7 +161,6 @@ input[type=text], input[type=password] {
     border-radius: 6px;
 
 }
-
 
 .animate {
     -webkit-animation: animatezoom 0.6s;
@@ -213,4 +212,89 @@ img {
   -webkit-transform:scale(1.25);
   transform:scale(1.25);
   opacity: 0.85;
+}
+
+
+.arrow_box {
+    position: absolute;
+    left:43.8%;
+    top:62.5%;
+    width:200px;
+    height:40px;
+    border-radius: 2px;
+    background: #E2FCEF;
+    border-radius: 6px;
+    border: 2px solid #454955;
+}
+
+.arrow_box:after, .arrow_box:before {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.arrow_box:after {
+    border-bottom-color: #E2FCEF;
+    border-width: 10px;
+    margin-left: 58px;
+
+}
+
+.arrow_box:before {
+
+    border-bottom-color: #454955;
+    border-width: 13px;
+    margin-left: 55px;
+
+}
+
+#container #registerOptions .arrow_box #reviewer{
+    padding: 4px ;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #454955;
+    border: 1px solid #454955;
+    font-family: 'Work Sans', sans-serif;
+    position:absolute;
+    left:10%;
+    top: 20%;
+    outline: 0;
+    width:35%;
+}
+
+#container #registerOptions .arrow_box #reviewer:hover {
+    background-color:#454955 ;
+    color: #F3EFF5;
+}
+
+#container #registerOptions .arrow_box #owner{
+    padding: 4px ;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #454955;
+    border: 1px solid #454955;
+    font-family: 'Work Sans', sans-serif;
+    position:absolute;
+    left:55%;
+    top:20%;
+    outline: 0;
+    width:35%;
+}
+
+#container #registerOptions .arrow_box #owner:hover {
+    background-color:#454955 ;
+    color: #F3EFF5;
 }

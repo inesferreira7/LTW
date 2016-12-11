@@ -7,3 +7,18 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function showDiv() {
+    var x = document.getElementById('registerOptions');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+$(function () {
+    $(".showMenu").click(function () {
+        $(this).next(".menu").fadeToggle(400);
+    });
+});

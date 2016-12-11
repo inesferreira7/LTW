@@ -35,12 +35,25 @@ if(isset($_SESSION['id'])){
     <div id="logo" >
         <img src="../res/images/logo.png" class="logo" alt="Foodaholics" width="312" >
     </div>
+
     <div id="buttons">
             <button id="login" onclick="document.getElementById('formContainer').style.display='block'">Login</button>
+            <input id='register' type="button" value="Register" onclick="showDiv()"/>
+    </div>
+
+
+
+    <div id="registerOptions"  style="display:none;"  >
+        <div class="arrow_box">
+
             <form action="register.php">
-                <input id='register' type="submit" value="Register" />
+                <button id="reviewer">Reviewer</button>
             </form>
 
+            <form action="register.php">
+                <button id="owner">Owner</button>
+            </form>
+        </div>
     </div>
 
 <div id="formContainer" class="modal">
@@ -66,9 +79,7 @@ if(isset($_SESSION['id'])){
               }
 
             ?>
-
         </div>
-
     </div>
     <div class="best_res">
     <?php
