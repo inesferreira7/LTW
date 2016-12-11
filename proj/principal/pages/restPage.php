@@ -72,7 +72,7 @@
        ?>
     </div>
     <div header ="review">
-      <form id="addreview" method="post" action="addReview.php">
+      <form id="addreview" method="post" action="addReview.php?name=<?php echo $name?>">
         <input type="number" name="stars" min="1" max="5" value="1">
         <textarea name="review" rows="4" cols="50"></textarea><br>
         <button type="submit">Add review</button>
