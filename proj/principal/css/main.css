@@ -110,6 +110,11 @@ input[type=text], input[type=password] {
     color: #F3EFF5;
 }
 
+#formContainer .formPU #cancelPU:hover {
+    background-color:#454955 ;
+    color: #F3EFF5;
+}
+
 #formContainer .formPU #cancelPU{
     margin-top: 10px;
     float:right;
@@ -173,3 +178,39 @@ input[type=text], input[type=password] {
     to {transform: scale(1)}
 }
 
+#login-error {
+  padding-top: 9%;
+  color: red;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.best_res {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  bottom:15%;
+  left: 20%;
+  float: left;
+  top: 70%;
+}
+
+.image {
+  padding-top: 5%;
+  padding-left: 10%;
+  display:inline-block;
+}
+
+.image img {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.image:hover img {
+  -webkit-transform:scale(1.25);
+  transform:scale(1.25);
+  opacity: 0.85;
+}

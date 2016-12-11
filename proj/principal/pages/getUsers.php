@@ -17,7 +17,8 @@ foreach($result as $row){
   if($row["username"] == $username){
     if(!password_verify($password, $row['password'])){
       echo 'false';
-      header('Location: logout.php');
+      $_SESSION['login-error'] = "Wrong username or password";
+      header('Location: main.php');
       return;
     }
     else{
@@ -30,6 +31,6 @@ foreach($result as $row){
   }
 }
 }
-echo 'false';
-header('Location: principal.php');
+$_SESSION['login-error'] = "Wrong username or password";
+header('Location: main.php');
 ?>
