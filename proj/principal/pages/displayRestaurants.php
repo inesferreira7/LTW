@@ -74,7 +74,7 @@ unset($_SESSION['search']);
 
     echo "<div class='rest'>
                         <a href='restPage.php?name=". $name . "'>" . $name ."</a>
-                        <h5 id='morada' >". $morada . "'</h5><h3 id='descricao'>" . $descricao ."</div>";
+                        <h5 id='morada' ><iframe width='200' height='128' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0' src='https://maps.google.com/maps?&amp;q=" . $morada . "&amp;output=embed'></iframe>" . $morada . "</h5><h3 id='descricao'>" . $descricao ."</div>";
 
     $image = $res["image"];
     echo "<div class='restI'>
