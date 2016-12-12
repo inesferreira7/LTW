@@ -1,0 +1,72 @@
+html,body{
+  background-image: url("../res/images/rest3.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#all{
+  margin-right:15%;
+  width:70%;
+  font-family: 'Work Sans', sans-serif;
+  padding:4%;
+  display: inline-block;
+  background-color: #F3EFF5;
+  position:absolute;
+  height:auto;
+  top:9%;
+  left:12%;
+  border-radius: 6px;
+}
+
+#space{
+  float:left;
+}
+
+#photo{
+  margin-right:20%;
+  float:right;
+  width:auto;
+  height:180px;
+}
+
+#sub{
+  position:absolute;
+  cursor: pointer;
+  padding:8px;
+  border-radius: 2px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  color: #454955;
+  border: 1px solid #454955;
+  font-family: 'Work Sans', sans-serif;
+  width:15%;
+  margin-top:6%;
+  left:65%;
+}
+
+#sub:hover{
+  background-color:#454955 ;
+  color: #F3EFF5;
+}
+
+input[type=text], input[type=password], input[type=e-mail] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline:0;
+    border-radius:2px;
+}
+
+input[type=file]{
+  margin-left:23%;
+  margin-top:3%;
+  left:10%;
+  bottom:10%;
+}
