@@ -82,7 +82,7 @@ if(isset($_SESSION['id'])){
                 <form id="registerR" method="post" action="registerR.php">
                     <input id="registerReviewer" type="submit" value="Reviewer">
                 </form>
-                
+
                 <button id="cancelRegister" type="button" onclick="document.getElementById('registerContainer').style.display='none'" >Cancel</button>
 
             </div>
@@ -90,7 +90,7 @@ if(isset($_SESSION['id'])){
     </div>
 
     <div id="searchContainer">
-        <form method="post" action="../pages/search.php">
+        <form class= "search" method="post" action="../pages/search.php">
             <input type="text" id="searchBar" placeholder="Search">
             <button type="submit" id="searchButton">
         </form>
