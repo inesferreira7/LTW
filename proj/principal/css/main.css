@@ -231,12 +231,14 @@ img {
     font-size:140%;
 }
 
-#registerContainer .formPU #registerOwner:hover {
+#registerContainer .formPU #registerO #registerOwner:hover {
     background-color:#454955 ;
     color: #F3EFF5;
 }
 
-#registerContainer .formPU #registerOwner{
+#registerContainer .formPU #registerO #registerOwner{
+    margin-top: 20px;
+    float:left;
     padding: 4px;
     text-align: center;
     text-decoration: none;
@@ -248,16 +250,18 @@ img {
     border: 1px solid #454955;
     font-family: 'Work Sans', sans-serif;
     width:45%;
+
+
 }
 
-#registerContainer .formPU #registerReviewer:hover {
+#registerContainer .formPU #registerR #registerReviewer:hover {
     background-color:#454955 ;
     color: #F3EFF5;
 }
 
-#registerContainer .formPU #registerReviewer{
+#registerContainer .formPU #registerR #registerReviewer{
+    float:right;
     margin-top: 20px;
-    margin-left:18px;
     padding: 4px;
     text-align: center;
     text-decoration: none;
@@ -279,7 +283,7 @@ img {
 #registerContainer .formPU #cancelRegister{
     float:right;
     margin-top: 25px;
-
+    outline: 0;
     padding: 4px;
     text-align: center;
     text-decoration: none;
@@ -294,19 +298,26 @@ img {
 }
 
 
+.search{
+    width:200px;
+    display: inline-block;
+
+}
+
 #searchContainer{
     position: absolute;
-    left:31%;
-    top:70%;
-    width: 120%;
+    width: 35%;
     height: auto;
+    float:left;
+    left:32%;
+    top:60%;
 
 }
 
 #searchContainer #searchBar {
+    position:absolute;
     color: black;
     padding: 8px 300px 10px 35px;
-    width:30%;
     margin: 5px;
     border-radius: 15px;
     background: url('../res/images/search-icon.png');
@@ -321,6 +332,9 @@ img {
 }
 
 #searchContainer #searchButton{
+    position:absolute;
+    left:105%;
+    bottom:-220%;
     padding: 16px 16px 12px 19px;
     border-radius: 12px;
     background: url('../res/images/search-icon.png');
