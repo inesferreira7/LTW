@@ -1,0 +1,114 @@
+html,body{
+    background-image: url("../res/images/rest3.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container #logo .logo{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity:0.85;
+
+}
+
+.search{
+    width:200px;
+    display: inline-block;
+
+}
+
+#searchContainer{
+    position: absolute;
+    width: 33%;
+    height: auto;
+    float:left;
+    left:32%;
+    top:55%;
+    opacity:0.9;
+
+
+}
+
+#searchContainer #searchBar {
+    position:absolute;
+    padding: 8px 250px 10px 35px;
+    margin: 6px;
+    border-radius: 15px;
+    background: url('../res/images/search-icon.png');
+    background-size: 15px 15px;
+    background-color: #E2FCEF;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    outline: 0;
+    border: none;
+    border: 2px solid #454955;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+}
+
+#searchContainer #searchButton{
+    position:absolute;
+    left:105%;
+    bottom:-220%;
+    padding: 16px 16px 12px 19px;
+    border-radius: 12px;
+    background: url('../res/images/search-icon.png');
+    background-size:15px 15px;
+    background-color: #E2FCEF;
+    background-repeat: no-repeat;
+    background-position:10px;
+    outline: 0;
+    border:none;
+    cursor:pointer;
+    border: 2px solid #454955;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+#searchContainer #searchButton:hover{
+    background-color:#454955 ;
+    color: #F3EFF5;
+    opacity:0.85;
+}
+
+#userImage{
+    float:right;
+    padding-right:10%;
+    padding-top: 10%;
+    cursor:pointer;
+
+}
+
+.userOptions {
+    position: absolute;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width:110px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    font-family: 'Work Sans', sans-serif;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    text-align:center;
+    display: block;
+}
+
+.dropdown a:hover {background-color:#d9d9d9}
+.show {display:block;}

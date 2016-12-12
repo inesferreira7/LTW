@@ -67,7 +67,7 @@ foreach($result as $row) {
         </div>
 
     </div>
-    <h1 id="userName"><?php echo $username?></h1>
+
 
 </div>
 <div id="content">

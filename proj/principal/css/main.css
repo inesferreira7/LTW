@@ -18,7 +18,7 @@ body, html {
 }
 
 
-/*BUTTONS*/
+
 #container #logo .logo{
     position: absolute;
     top:0;
@@ -26,6 +26,7 @@ body, html {
     left: 0;
     right: 0;
     margin: auto;
+    opacity:0.85;
 
 }
 
@@ -46,11 +47,13 @@ body, html {
      font-family: 'Work Sans', sans-serif;
      width:120px;
      outline: 0;
+    opacity:0.85;
  }
 
 #container #buttons #login:hover {
     background-color:#454955 ;
     color: #E2FCEF;
+    opacity:0.85;
 }
 
 #container #buttons #register{
@@ -70,12 +73,14 @@ body, html {
     font-family: 'Work Sans', sans-serif;
     width:120px;
     outline: 0;
+    opacity:0.85;
 
 }
 
 #container #buttons #register:hover {
     background-color:#454955 ;
     color: #E2FCEF;
+    opacity:0.85;
 }
 
 
@@ -155,8 +160,8 @@ input[type=text], input[type=password] {
     background-color: #F3EFF5;
     margin: 5% auto 15% auto;
     border: 2px solid #454955;
-    width: 20%;
-    height:38%;
+    width: 28%;
+    height:40%;
     font-family: 'Work Sans', sans-serif;
     border-radius: 6px;
 }
@@ -298,58 +303,3 @@ img {
 }
 
 
-.search{
-    width:200px;
-    display: inline-block;
-
-}
-
-#searchContainer{
-    position: absolute;
-    width: 35%;
-    height: auto;
-    float:left;
-    left:32%;
-    top:60%;
-
-}
-
-#searchContainer #searchBar {
-    position:absolute;
-    color: black;
-    padding: 8px 300px 10px 35px;
-    margin: 5px;
-    border-radius: 15px;
-    background: url('../res/images/search-icon.png');
-    background-size: 15px 15px;
-    background-color: #E2FCEF;
-    background-repeat: no-repeat;
-    background-position: 10px;
-    outline: 0;
-    border: none;
-    border: 2px solid #454955;
-    font-family: 'Work Sans', sans-serif;
-}
-
-#searchContainer #searchButton{
-    position:absolute;
-    left:105%;
-    bottom:-220%;
-    padding: 16px 16px 12px 19px;
-    border-radius: 12px;
-    background: url('../res/images/search-icon.png');
-    background-size:15px 15px;
-    background-color: #E2FCEF;
-    background-repeat: no-repeat;
-    background-position:10px;
-    outline: 0;
-    border:none;
-    cursor:pointer;
-    border: 2px solid #454955;
-    font-family: 'Work Sans', sans-serif;
-}
-
-#searchContainer #searchButton:hover{
-    background-color:#454955 ;
-    color: #F3EFF5;
-}
