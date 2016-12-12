@@ -5,6 +5,8 @@ global $db;
 
 session_start();
 
+$_SESSION['token'] = generateRandomToken();
+
 $userid = $_SESSION['id'];
 
 $owner = $db->prepare('SELECT * from Owner where user_id = ?');

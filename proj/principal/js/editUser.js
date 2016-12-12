@@ -3,6 +3,7 @@ function openEdit() {
         $('form').remove();
     }
     $form = $('<form id="form" method="post" action="../pages/updateUser.php" onsubmit="return check();" enctype="multipart/form-data"></form>');
+    $form.append('<input type="hidden" name="token" value="<?php echo $_SESSION["token"];?>"/>');
     $form.append('<label> First name <input type="text" class ="preenche" name="firstname"></label><br>'); //Primeiro nome
     $form.append('<label> Last name  <input type="text" class ="preenche" name="lastname" id="lastname"></label><br>'); //Ultimo nome
     $form.append('<label> Email      <input type="text" class ="preenche" name="email" id="email"></label><br>'); //Email
@@ -21,6 +22,7 @@ function changePassword(){
         $('form').remove();
     }
     $form = $('<form id="form1" method="post" action="../pages/updateUser.php"></form>');
+    $form.append('<input type="hidden" name="token" id="token" value="<?php echo $_SESSION["token"];?>"/>');
     $form.append('<label> Current Password<input type="password" class ="preenche" name="currPassword"></label><br>'); //Pass atual
     $form.append('<label> New Password <input type="password" class ="preenche" name="newPassword"></label><br>'); //Nova pass
     $form.append('<button type="submit" class="button"> Update </button>');

@@ -5,6 +5,8 @@
 
   session_start();
 
+  $_SESSION['token'] = generateRandomToken();
+
   $name = $_GET["name"];
 
   $stmt = $db->prepare('SELECT * FROM Restaurant WHERE name = ?');
@@ -64,6 +66,7 @@
         }
 
         echo "<form method='post' class='reply' action='addReply.php?name=" . $review['review_id'] . "&restname=" . $name ."'>
+          <input type='hidden' name='token' value='" . $_SESSION['token'] . "'/>
           <textarea name='" . $review['review_id'] . "' rows='2' cols='50'></textarea><br>
           <button type='submit'>Reply</button>
         </form>";
@@ -73,6 +76,7 @@
     </div>
     <div header ="review">
       <form id="addreview" method="post" action="addReview.php?name=<?php echo $name?>">
+        <input type="hidden" name="token" value="<?php echo $_SESSION['token'];?>"/>
         <input type="number" name="stars" min="1" max="5" value="1">
         <textarea name="review" rows="4" cols="50"></textarea><br>
         <button type="submit">Add review</button>
