@@ -9,11 +9,14 @@
  		<meta charset="UTF-8">
  		<link rel="stylesheet" href="../css/reset.css">
  		<link rel="stylesheet" href="../css/registerO.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/registerO.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body>
-    <div id="all">
-      <div id="space">
-        <form  method="post" action="signupO.php">
+        <form  method="post" action="signupO.php" enctype="multipart/form-data">
+          <div id="all">
+          <div id="space">
           <label> <b>First name</b> <input type="text" placeholder="Enter first name" name="firstname" id="firstnameR" required></label><br>
           <label> <b>Last name</b><input type="text" placeholder="Enter last name" name="lastname" id="lastnameR" required></label><br>
           <label> <b>Email</b> <input type="e-mail" placeholder="Enter email" name="email" id="emailR" required></label><br>
@@ -24,11 +27,15 @@
           <img id="photo" class= "setPhoto" src="#" onerror="this.src='../res/images/defaultUser.png'"  /><br>
           <input type="file" onchange="readURL(this);" name="userfile" /><br>
           <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
-          <button id="next" type="submit" class="button"> Next step >> </button>
+          <button id="next" type="button" class="nextClick">Next step >></button>
+          </div>
+        </div>
+          <div id="rest">
+          <label> <b>Name of restaurant</b> <input type="text" placeholder="Enter name of restaurant" name="r_name" id="r_nameO" required></label><br>
+          <label> <b>Description</b> <input type="text" placeholder="Enter description" name="description" id="descriptionO"></label><br>
+          <label> <b>Address</b> <input type="text" placeholder="Enter address" name="address" id="addressO"></label><br>
+          <button id="sub" type="submit" class="button"> Register </button>
         </div>
         </form>
-      </div>
-      </span>
-    </div>
   </body>
 </html>

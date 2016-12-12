@@ -27,6 +27,8 @@ html,body{
 #photo{
   margin-right:20%;
   float:right;
+  width:auto;
+  height:200px;
 }
 
 #next{
@@ -37,7 +39,6 @@ html,body{
   text-align: center;
   text-decoration: none;
   font-size: 14px;
-  transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 2px;
   color: #454955;
@@ -49,6 +50,17 @@ html,body{
 #next:hover {
     background-color:#454955 ;
     color: #F3EFF5;
+}
+
+#rest{
+    top:9%;
+    left:115%;
+  width:20%;
+  font-family: 'Work Sans', sans-serif;
+  padding:4%;
+  display: inline-block;
+  background-color: #F3EFF5;
+  position:absolute;
 }
 
 
