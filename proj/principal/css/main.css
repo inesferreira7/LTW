@@ -26,6 +26,7 @@ body, html {
     left: 0;
     right: 0;
     margin: auto;
+
 }
 
 #container #buttons #login{
@@ -159,6 +160,16 @@ input[type=text], input[type=password] {
     height:38%;
     font-family: 'Work Sans', sans-serif;
     border-radius: 6px;
+}
+
+.modal-content2 {
+    background-color: #F3EFF5;
+    margin: 5% auto 15% auto;
+    border: 2px solid #454955;
+    width: 20%;
+    height:23%;
+    font-family: 'Work Sans', sans-serif;
+    border-radius: 6px;
 
 }
 
@@ -214,13 +225,13 @@ img {
   opacity: 0.85;
 }
 
-
+/**
 .arrow_box {
     position: absolute;
-    left:43.8%;
-    top:62.5%;
-    width:200px;
-    height:40px;
+    left:65%;
+    top:56%;
+    width:100px;
+    height:90px;
     border-radius: 2px;
     background: #E2FCEF;
     border-radius: 6px;
@@ -228,8 +239,8 @@ img {
 }
 
 .arrow_box:after, .arrow_box:before {
-    bottom: 100%;
-    left: 50%;
+    right: 100%;
+    top: 50%;
     border: solid transparent;
     content: " ";
     height: 0;
@@ -239,22 +250,22 @@ img {
 }
 
 .arrow_box:after {
-    border-bottom-color: #E2FCEF;
-    border-width: 10px;
-    margin-left: 58px;
+    border-right-color: #E2FCEF;
+    border-width: 6px;
+    margin-top: -35px;
 
 }
 
 .arrow_box:before {
-
-    border-bottom-color: #454955;
-    border-width: 13px;
-    margin-left: 55px;
+    border-right-color: #454955;
+    border-width: 9px;
+    margin-top: -38px;
 
 }
+**/
 
 #container #registerOptions .arrow_box #reviewer{
-    padding: 4px ;
+    padding: 4px;
     text-align: center;
     text-decoration: none;
     font-size: 13px;
@@ -266,9 +277,9 @@ img {
     font-family: 'Work Sans', sans-serif;
     position:absolute;
     left:10%;
-    top: 20%;
+    top: 10%;
     outline: 0;
-    width:35%;
+    width:80%;
 }
 
 #container #registerOptions .arrow_box #reviewer:hover {
@@ -288,13 +299,80 @@ img {
     border: 1px solid #454955;
     font-family: 'Work Sans', sans-serif;
     position:absolute;
-    left:55%;
-    top:20%;
+    left:10%;
+    top:55%;
     outline: 0;
-    width:35%;
+    width:80%;
 }
 
 #container #registerOptions .arrow_box #owner:hover {
     background-color:#454955 ;
     color: #F3EFF5;
+}
+
+#registerContainer .formPU #registerAs{
+    font-size:140%;
+}
+
+
+#registerContainer .formPU #registerOwner:hover {
+    background-color:#454955 ;
+    color: #F3EFF5;
+}
+
+#registerContainer .formPU #registerOwner{
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #454955;
+    border: 1px solid #454955;
+    font-family: 'Work Sans', sans-serif;
+    width:45%;
+}
+
+#registerContainer .formPU #registerReviewer:hover {
+    background-color:#454955 ;
+    color: #F3EFF5;
+}
+
+#registerContainer .formPU #registerReviewer{
+    margin-top: 20px;
+    margin-left:18px;
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #454955;
+    border: 1px solid #454955;
+    font-family: 'Work Sans', sans-serif;
+    width:45%;
+}
+
+#registerContainer .formPU #cancelRegister:hover {
+    background-color:#454955 ;
+    color: #F3EFF5;
+}
+
+#registerContainer .formPU #cancelRegister{
+    float:right;
+    margin-top: 25px;
+
+    padding: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #454955;
+    border: 1px solid #454955;
+    font-family: 'Work Sans', sans-serif;
+    width:30%;
 }

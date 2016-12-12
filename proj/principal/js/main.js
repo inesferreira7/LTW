@@ -17,8 +17,12 @@ function showDiv() {
     }
 }
 
-$(function () {
-    $(".showMenu").click(function () {
-        $(this).next(".menu").fadeToggle(400);
-    });
-});
+// Get the modal
+var modal2 = document.getElementById('registerContainer');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal2) {
+        modal2.style.display = "none";
+    }
+}

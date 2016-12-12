@@ -33,14 +33,13 @@ if(isset($_SESSION['id'])){
 
 <div id="container">
     <div id="logo" >
-        <img src="../res/images/logo.png" class="logo" alt="Foodaholics" width="312" >
+        <img src="../res/images/logo.png" class="logo" alt="Foodaholics" width="370" >
     </div>
 
     <div id="buttons">
             <button id="login" onclick="document.getElementById('formContainer').style.display='block'">Login</button>
-            <input id='register' type="button" value="Register" onclick="showDiv()"/>
+            <button id='register' onclick="document.getElementById('registerContainer').style.display='block'">Register</button>
     </div>
-
 
 
     <div id="registerOptions"  style="display:none;"  >
@@ -56,31 +55,51 @@ if(isset($_SESSION['id'])){
         </div>
     </div>
 
-<div id="formContainer" class="modal">
+    <div id="formContainer" class="modal">
 
-    <form class="modal-content animate" method="post" action="getUsers.php">
+        <form class="modal-content animate" method="post" action="getUsers.php">
 
-        <div class="formPU">
-            <label><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="username" required>
+            <div class="formPU">
+                <label><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
 
-            <label><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
 
-            <input id="loginPU" type="submit" value="Log In"> </input>
+                <input id="loginPU" type="submit" value="Log In"> </input>
 
-            <button id="cancelPU" type="button" onclick="document.getElementById('formContainer').style.display='none'" >Cancel</button>
+                <button id="cancelPU" type="button" onclick="document.getElementById('formContainer').style.display='none'" >Cancel</button>
 
-            <?php
-              if(isset($_SESSION['login-error'])){
-                echo "<script> document.getElementById('formContainer').style.display='block' </script>";
-                echo "<p id='login-error'>" . $_SESSION['login-error'] . "</p>";
-                unset($_SESSION['login-error']);
-              }
+                <?php
+                if(isset($_SESSION['login-error'])){
+                    echo "<script> document.getElementById('formContainer').style.display='block' </script>";
+                    echo "<p id='login-error'>" . $_SESSION['login-error'] . "</p>";
+                    unset($_SESSION['login-error']);
+                }
 
-            ?>
-        </div>
+                ?>
+            </div>
+        </form>
     </div>
+
+
+    <div id="registerContainer" class="modal">
+
+        <form class="modal-content2 animate" method="post" action="register.php">
+
+            <div class="formPU">
+                <label id="registerAs"><b>Register as:</b></label>
+
+                <input id="registerOwner" type="submit" value="Owner"> </input>
+
+                <input id="registerReviewer" type="submit" value="Reviewer"> </input>
+
+                <button id="cancelRegister" type="button" onclick="document.getElementById('registerContainer').style.display='none'" >Cancel</button>
+
+            </div>
+        </form>
+    </div>
+
     <div class="best_res">
     <?php
       $stmt = $db->prepare('SELECT restaurant_id FROM Review GROUP BY restaurant_id ORDER BY AVG(stars) DESC');
@@ -101,9 +120,8 @@ if(isset($_SESSION['id'])){
       }
     ?>
     </div>
-  </div>
-    </form>
 </div>
+
 
 <div class="parallax"></div>
 </body>
