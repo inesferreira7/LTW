@@ -32,6 +32,7 @@ if(isset($_SESSION['id'])){
 <div class="parallax"></div>
 
 <div id="container">
+
     <div id="logo" >
         <img src="../res/images/logo.png" class="logo" alt="Foodaholics" width="370" >
     </div>
@@ -39,20 +40,6 @@ if(isset($_SESSION['id'])){
     <div id="buttons">
             <button id="login" onclick="document.getElementById('formContainer').style.display='block'">Login</button>
             <button id='register' onclick="document.getElementById('registerContainer').style.display='block'">Register</button>
-    </div>
-
-
-    <div id="registerOptions"  style="display:none;"  >
-        <div class="arrow_box">
-
-            <form action="register.php">
-                <button id="reviewer">Reviewer</button>
-            </form>
-
-            <form action="register.php">
-                <button id="owner">Owner</button>
-            </form>
-        </div>
     </div>
 
     <div id="formContainer" class="modal">
@@ -82,21 +69,30 @@ if(isset($_SESSION['id'])){
         </form>
     </div>
 
-
     <div id="registerContainer" class="modal">
 
-        <form class="modal-content2 animate" method="post" action="register.php">
+        <div class="modal-content2 animate" >
 
             <div class="formPU">
                 <label id="registerAs"><b>Register as:</b></label>
+                <form id="registerO" method="post" action="registerO.php" >
+                    <input id="registerOwner" type="submit" value="Owner">
+                </form>
 
-                <input id="registerOwner" type="submit" value="Owner"> </input>
-
-                <input id="registerReviewer" type="submit" value="Reviewer"> </input>
-
+                <form id="registerR" method="post" action="registerR.php">
+                    <input id="registerReviewer" type="submit" value="Reviewer">
+                </form>
+                
                 <button id="cancelRegister" type="button" onclick="document.getElementById('registerContainer').style.display='none'" >Cancel</button>
 
             </div>
+        </div>
+    </div>
+
+    <div id="searchContainer">
+        <form method="post" action="../pages/search.php">
+            <input type="text" id="searchBar" placeholder="Search">
+            <button type="submit" id="searchButton">
         </form>
     </div>
 
