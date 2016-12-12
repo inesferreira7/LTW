@@ -8,7 +8,7 @@ html,body{
 }
 
 #all{
-  margin:auto;
+  margin-right:15%;
   width:70%;
   font-family: 'Work Sans', sans-serif;
   padding:4%;
@@ -17,7 +17,7 @@ html,body{
   position:absolute;
   height:auto;
   top:9%;
-  left:15%;
+  left:12%;
   border-radius: 6px;
 }
 
@@ -26,6 +26,12 @@ html,body{
 }
 #photo{
   margin-right:20%;
+  float:right;
+  width:auto;
+  height:200px;
+}
+
+#photoR{
   float:right;
   width:auto;
   height:200px;
@@ -52,15 +58,29 @@ html,body{
     color: #F3EFF5;
 }
 
-#rest{
-    top:9%;
-    left:115%;
-  width:20%;
+#all1{
+  position:absolute;
+  top:9%;
+  left:100%;
+  right:20%;
+  width:70%;
   font-family: 'Work Sans', sans-serif;
   padding:4%;
   display: inline-block;
   background-color: #F3EFF5;
+  border-radius: 6px;
+  margin-left:15%;
+}
+
+#rest{
+  float:left;
+}
+
+#lol{
   position:absolute;
+  left:100%;
+  width:15%;
+  height:50px;
 }
 
 

@@ -15,8 +15,8 @@ function readURL(input) {
 
 $( document ).ready(function() {
 $("#next").click(function(){
-      $('html, body').animate({scrollLeft: $("#rest").offset().left},'slow');
+      $('html, body').animate({scrollLeft: $("#lol").offset().left},2000);
       return false;
    });
 
- });s
+ });

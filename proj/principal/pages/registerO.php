@@ -30,11 +30,19 @@
           <button id="next" type="button" class="nextClick">Next step >></button>
           </div>
         </div>
+        <div id="all1">
           <div id="rest">
           <label> <b>Name of restaurant</b> <input type="text" placeholder="Enter name of restaurant" name="r_name" id="r_nameO" required></label><br>
           <label> <b>Description</b> <input type="text" placeholder="Enter description" name="description" id="descriptionO"></label><br>
           <label> <b>Address</b> <input type="text" placeholder="Enter address" name="address" id="addressO"></label><br>
-          <button id="sub" type="submit" class="button"> Register </button>
+          </div>
+          <div id="imageR">
+            <img id="photoR" class= "setPhoto" src="#" onerror="this.src='../res/images/defaultUser.png'"  /><br>
+            <input type="file" onchange="readURL1(this);" name="restfile" /><br>
+            <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+            <button id="sub" type="submit" class="button"> Register </button>
+          </div>
+          <div id="lol"><p>          </p></div>
         </div>
         </form>
   </body>
