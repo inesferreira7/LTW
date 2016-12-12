@@ -1,0 +1,8 @@
+html,body{
+  background-image: url("../res/images/rest3.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
