@@ -6,3 +6,66 @@ html,body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#all{
+  margin:auto;
+  width:70%;
+  font-family: 'Work Sans', sans-serif;
+  padding:4%;
+  display: inline-block;
+  background-color: #F3EFF5;
+  position:absolute;
+  height:auto;
+  top:9%;
+  left:15%;
+  border-radius: 6px;
+}
+
+#space{
+  float:left;
+}
+#photo{
+  margin-right:20%;
+  float:right;
+}
+
+#next{
+  position:absolute;
+  margin-left:45%;
+  margin-top:5%;
+  padding: 4px ;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 2px;
+  color: #454955;
+  border: 1px solid #454955;
+  font-family: 'Work Sans', sans-serif;
+  width:15%;
+}
+
+#next:hover {
+    background-color:#454955 ;
+    color: #F3EFF5;
+}
+
+
+input[type=text], input[type=password], input[type=e-mail] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline:0;
+    border-radius:2px;
+}
+
+input[type=file]{
+  margin-left:23%;
+  margin-top:5%;
+  left:10%;
+  bottom:10%;
+}
