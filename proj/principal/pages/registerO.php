@@ -25,20 +25,21 @@
         </div>
         <div id="image">
           <img id="photo" class= "setPhoto" src="#" onerror="this.src='../res/images/defaultUser.png'"  /><br>
-          <input type="file" onchange="readURL(this);" name="userfile" /><br>
+          <input type="file" onchange="readURL(this);" name="OPS" /><br>
           <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
           <button id="next" type="button" class="nextClick">Next step >></button>
           </div>
         </div>
         <div id="all1">
           <div id="rest">
+          <p> Register your first restaurant </p>
           <label> <b>Name of restaurant</b> <input type="text" placeholder="Enter name of restaurant" name="r_name" id="r_nameO" required></label><br>
           <label> <b>Description</b> <input type="text" placeholder="Enter description" name="description" id="descriptionO"></label><br>
           <label> <b>Address</b> <input type="text" placeholder="Enter address" name="address" id="addressO"></label><br>
           </div>
           <div id="imageR">
             <img id="photoR" class= "setPhoto" src="#" onerror="this.src='../res/images/defaultUser.png'"  /><br>
-            <input type="file" onchange="readURL1(this);" name="restfile" /><br>
+            <input type="file" onchange="readURL1(this);" name="RPS" /><br>
             <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
             <button id="sub" type="submit" class="button"> Register </button>
           </div>
