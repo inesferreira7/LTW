@@ -314,9 +314,8 @@ img {
     height: auto;
     float:left;
     left:28%;
-    top:70%;
+    top:63%;
     opacity:0.9;
-
 
 }
 
@@ -340,7 +339,7 @@ img {
 #searchContainer #searchButton{
     position:absolute;
     left:103%;
-    bottom:-210%;
+    top:9px;
     padding: 12px 16px 12px 19px;
     border-radius: 12px;
     background: url('../res/images/search-icon.png');
