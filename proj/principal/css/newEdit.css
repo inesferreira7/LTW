@@ -1,0 +1,75 @@
+html,body{
+    background-image: url("../res/images/rest3.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#all{
+  width:100%;
+  height:100%;
+  display:inline-block;
+}
+
+#left{
+  float:left;
+  padding-left:16%;
+  padding-top: 12%;
+}
+
+img{
+  border-radius: 4px;
+}
+
+#right{
+  font-family: 'Work Sans', sans-serif;
+  padding:4%;
+  padding-bottom: 7%;
+  float:right;
+  background-color: #F3EFF5;
+  position:absolute;
+  height:auto;
+  border-radius: 6px;
+  top:9%;
+  right:15%;
+}
+
+input[type=text], input[type=password], input[type=e-mail] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    outline:0;
+    border-radius:2px;
+}
+
+.button{
+  position:absolute;
+  cursor: pointer;
+  padding:4px;
+  border-radius: 2px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  color: #454955;
+  border: 1px solid #454955;
+  font-family: 'Work Sans', sans-serif;
+  width:20%;
+  margin-top:6%;
+  margin-left:25%;
+}
+
+.button:hover{
+  background-color:#454955 ;
+  color: #F3EFF5;
+}
+
+#newImage{
+  position:absolute;
+  top:55%;
+  left:13%;
+}
