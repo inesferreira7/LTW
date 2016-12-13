@@ -61,6 +61,19 @@ foreach($result as $row) {
             <input id="editUser" type="submit" value="Edit Profile">
         </form>
 
+        <?php
+        $userid = $_SESSION['id'];
+        $s = $db->prepare('SELECT * FROM Owner');
+        $s->execute();
+        $owners = $s->fetchAll();
+        foreach($owners as $owner){
+          if($owner['user_id'] === $userid){
+            echo "<form id='manage' action='manageRest.php' >
+                <input id='manageRest' type='submit' value='Manage Restaurants'>
+            </form>";
+          }
+        }
+        ?>
         <form id="userOut" action="logout.php" >
             <input id="logout" type="submit" value="Log Out">
         </form>

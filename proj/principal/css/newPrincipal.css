@@ -84,7 +84,7 @@ html,body{
 
 }
 
-#userImage #userP #userProfile, #userImage #editU #editUser, #userImage #userOut #logout{
+#userImage #userP #userProfile, #userImage #editU #editUser, #userImage #userOut #logout, #userImage #manage #manageRest{
     width:200px;
     height:30px;
     margin-top: 2px;
