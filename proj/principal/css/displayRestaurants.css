@@ -1,87 +1,27 @@
-html{
-  background-color: #2F4F4F
+html,body{
+  background-image: url("../res/images/rest3.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-body{
-margin: 0 auto;
-max-width: 100%;
-}
-
-#header{
-  background-color:#20B2AA;
-
-  height: 130px;
-}
-
-#header #logo{
-  padding-left: 50px;
-  padding-top: 30px;
+.restaurantImage #img{
+  width:250px;
+  height:auto;
   float:left;
-
-}
-
-
-#header #userImage{
-  float:right;
-  padding-right:10%;
-  padding-top: 0.7%;
-  cursor:pointer;
-
-}
-
-.userOptions {
-  position: absolute;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  margin-top: 0.5%;
-  background-color: #f9f9f9;
-  width:110px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  font-family: 'Work Sans', sans-serif;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 10px;
-  text-decoration: none;
-  text-align:center;
-  display: block;
-}
-
-.dropdown a:hover {background-color:#d9d9d9}
-.show {display:block;}
+  padding-left:13%;
+  padding-top: 9%;
 
 
 
-
-/*
-#rect #myCanvas{
-  position:absolute;
-  left:7.5%;
-  top:29%;
-
-}*/
-
-
-#img{
-  float:left;
-  margin-left: 8%;
-  margin-top: 2%;
-  width:258px;
-  height:160px;
 }
 
 
 .rest{
-
   z-index:10;
   float:right;
-  margin-right:700px;
   margin-top: 2%;
   color:#041B15;
   font-family: 'Work Sans', sans-serif;
@@ -92,24 +32,9 @@ max-width: 100%;
 
 }
 
-.rest a{
-
-  font-size: 200%;
-  color:#041B15;
-  text-decoration: none;
-
-}
-
-.rest #morada {
 
 
 
-}
-
-.rest #descricao{
-  width:270px;
-
-}
 
 
 

@@ -42,28 +42,14 @@ unset($_SESSION['search']);
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
     <link rel="stylesheet" href="../css/displayRestaurants.css">
-    <script type="text/javascript" src="../js/dropDownUser.js"></script>
+
 </head>
 
 <body>
 
-<div id="header">
-    <div id="logo">
-        <a href="principal.php" width="128" >
-            <img src="../res/images/logo.png" class="logo" alt="Foodaholics" width="500" height="80">
-        </a>
-    </div>
 
-    <div id="userImage" class="dropdown">
-        <img id="currentPhoto" src="<?php echo $image?>"onerror="this.src='../res/images/defaultUser.png'" width="110" height="110" onclick="clickUser()" class="dropbtn">
-        <div id="userOptions" class="dropdown-content">
-            <a href="../userPage.html"><?php echo $username?></a>
-            <a href="editUser.php">Edit Profile</a>
-            <a href="principal.php">Logout</a>
-        </div>
-    </div>
 
-</div>
+
   <?php
   foreach($search as $res){
 
@@ -73,12 +59,12 @@ unset($_SESSION['search']);
     $morada = $res["morada"];
 
     echo "<div class='rest'>
-                        <a href='restPage.php?name=". $name . "'>" . $name ."</a>
-                        <h5 id='morada' ><iframe width='200' height='128' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0' src='https://maps.google.com/maps?&amp;q=" . $morada . "&amp;output=embed'></iframe>" . $morada . "</h5><h3 id='descricao'>" . $descricao ."</div>";
+          <a href='restPage.php?name=". $name . "'>" . $name ."</a>
+          <iframe width='200' height='128' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0' src='https://maps.google.com/maps?&amp;q=" . $morada . "&amp;output=embed'></iframe>" . $morada . "</h5></div>";
 
     $image = $res["image"];
-    echo "<div class='restI'>
-            <img id='img' src='". $image . "' alt='Image restaurant' ><br></div>";
+    echo "<div class='restaurantImage'>
+            <img id='img' src='". $image . "' alt='Image restaurant' ></div>";
 
   }
   ?>
