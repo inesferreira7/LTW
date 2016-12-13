@@ -25,7 +25,7 @@ foreach($result as $row){
     echo 'true';
     $_SESSION['username'] = $username;
     $_SESSION['id'] = $row["user_id"];
-    header('Location: principalUser.php');
+    header('Location: newPrincipal.php');
     die();
     return;
   }

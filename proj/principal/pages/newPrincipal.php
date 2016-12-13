@@ -52,11 +52,11 @@ foreach($result as $row) {
             <button type="submit" id="searchButton">
         </form>
     </div>
-    
+
     <div id="userImage" class="dropdown">
-        <img id="currentPhoto" src="<?php echo $image?>" onerror="this.src='../res/images/defaultUser.png'" width="110" height="110" onclick="clickUser()" class="dropbtn">
+        <img id="currentPhoto" src="<?php echo $image?>" onerror="this.src='../res/images/defaultUser.png'" width="200" height="auto" onclick="clickUser()" class="dropbtn">
         <div id="userOptions" class="dropdown-content">
-            <a href="#">Profile</a>
+            <a href="newPrincipal.php"><?php echo $username?></a>
             <a href="#">Edit Profile</a>
             <?php
             $userid = $_SESSION['id'];
