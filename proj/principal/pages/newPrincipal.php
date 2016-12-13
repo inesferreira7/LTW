@@ -57,7 +57,7 @@ foreach($result as $row) {
             <input id="userProfile" type="submit" value="Profile">
         </form>
 
-        <form id="editU" action="editUser.php" >
+        <form id="editU" action="newEdit.php" >
             <input id="editUser" type="submit" value="Edit Profile">
         </form>
 

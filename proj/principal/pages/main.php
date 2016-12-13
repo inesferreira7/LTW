@@ -97,7 +97,6 @@ if(isset($_SESSION['id'])){
     </div>
 
 
-
     <div class="best_res">
     <?php
       $stmt = $db->prepare('SELECT restaurant_id FROM Review GROUP BY restaurant_id ORDER BY AVG(stars) DESC');
