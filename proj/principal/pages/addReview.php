@@ -30,6 +30,6 @@
   $stmt = $db->prepare('INSERT INTO Review VALUES(NULL,?,?,?,?)');
   $stmt->execute([$user_id,$rest_id,$review,$stars]);
 
-  header('Location: restPage.php?name=' . $resname);
+  header('Location: newRestPage.php?name=' . $resname);
 
 ?>

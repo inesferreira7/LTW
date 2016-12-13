@@ -14,6 +14,13 @@
 
   $res = $stmt->fetch();
 
+  $getOwner = $db->prepare('SELECT * FROM Owner WHERE user_id = ?');
+  $getOwner->execute([$_SESSION['id']]);
+
+  $ret = $getOwner->fetch();
+
+  $owner = $ret['user_id'];
+
   $s = $db->prepare('SELECT * FROM Review where restaurant_id = ?');
   $s->execute([$res['restaurant_id']]);
   $reviews = $s->fetchAll();
@@ -94,6 +101,7 @@
         echo "<p class='rep2'>&nbsp;" . $r['comment'] . "</p><br>" ;
       }
 
+      if(isset($_SESSION['id']))
       echo "<form method='post' class='reply' action='addReply.php?name=" . $review['review_id'] . "&restname=" . $name ."'>
         <input type='hidden' name='token' value='" . $_SESSION['token'] . "'/>
         <textarea name='" . $review['review_id'] . "' rows='2' cols='50'></textarea><br>
@@ -101,14 +109,15 @@
       </form>";
 
     }
-     ?>
-     <br><br>
-    <form id="addreview" method="post" action="addReview.php?name=<?php echo $name?>">
-      <input type="hidden" name="token" value="<?php echo $_SESSION['token'];?>"/>
-      <input type="number" name="stars" min="1" max="5" value="1">
-      <textarea name="review" rows="4" cols="50"></textarea><br>
-      <button type="submit">Add review</button>
-    </form>
+     echo "<br><br>";
+    if(isset($_SESSION['id']) && $_SESSION['id'] !== $owner)
+      echo '<form id="addreview" method="post" action="addReview.php?name=<?php echo $name?>">
+              <input type="hidden" name="token" value="' . $_SESSION["token"] . '"/>
+              <input type="number" name="stars" min="1" max="5" value="1">
+              <textarea name="review" rows="4" cols="50"></textarea><br>
+              <button type="submit">Add review</button>
+            </form>';
+    ?>
 </div>
   <div id='inf'>
     <?php

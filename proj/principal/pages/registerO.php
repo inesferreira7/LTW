@@ -14,6 +14,7 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body>
+        <div id="lol2"><p></p></div>
         <form  method="post" action="signupO.php" enctype="multipart/form-data">
           <div id="all">
           <div id="space">
@@ -41,7 +42,7 @@
             <img id="photoR" class= "setPhoto" src="#" onerror="this.src='../res/images/defaultUser.png'"  /><br>
             <input type="file" onchange="readURL1(this);" name="RPS" /><br>
             <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
-            <button id="sub" type="submit" class="button"> Register </button>
+            <button id="sub" type="submit" class="nextClick"> Register </button>
           </div>
           <div id="lol"><p>          </p></div>
         </div>

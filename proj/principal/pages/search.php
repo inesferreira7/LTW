@@ -5,6 +5,8 @@ global $db;
 
 session_start();
 
+unset($_SESSION['search']);
+
 $restname=$_POST['search'];
 
   //seleciona restaurants
