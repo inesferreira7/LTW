@@ -59,7 +59,7 @@ unset($_SESSION['search']);
     $morada = $res["morada"];
 
     echo "<div class='rest'>
-          <a href='restPage.php?name=". $name . "'>" . $name ."</a>
+          <a href='newRestPage.php?name=". $name . "'>" . $name ."</a>
           <iframe width='200' height='128' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0' src='https://maps.google.com/maps?&amp;q=" . $morada . "&amp;output=embed'></iframe>" . $morada . "</h5></div>";
 
     $image = $res["image"];

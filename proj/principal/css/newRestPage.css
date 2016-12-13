@@ -1,0 +1,82 @@
+body, html {
+    height: 100%;
+
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../res/images/rest3.jpg");
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#div1{
+  position: absolute;
+  width: 90%;
+  background-color: #F3EFF5;
+  display: inline-block;
+  height:auto;
+  padding-top: 5%;
+  margin-left: 5%;
+  top: 5%;
+  padding-bottom: 5%;
+  font-family: 'Work Sans', sans-serif;
+  border-radius: 10px;
+}
+
+#div1 #information{
+  float: left;
+  width:auto;
+  padding-left: 3%;
+}
+
+#div1 #information .title{
+  color: gray;
+  font-family: 'Work Sans', sans-serif;
+  font-size:170%;
+  font-weight: bold;
+}
+
+#div1 #information .com{
+  text-indent: 10px;
+}
+
+#div1 #information .comt, .rep{
+  font-weight: bold;
+}
+
+
+#div1 #information .rep{
+  text-indent: 20px;
+}
+
+#div1 #information .rep2{
+  text-indent: 30px;
+}
+
+#div1 #inf{
+  float:left;
+  width: auto;
+  margin-right: auto;
+  margin-top: 2.5%;
+}
+
+#div1 #user_photo{
+  float: right;
+  width: auto;
+  margin-right: 5%;
+}
+
+textarea{
+  border-radius: 5px;
+}
+
+p{
+  font-size:120%;
+  font-family: 'Work Sans', sans-serif;
+  color: gray;
+}
