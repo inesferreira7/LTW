@@ -32,7 +32,6 @@ foreach($result as $row) {
     }
 }
 
-unset($_SESSION['search']);
 ?>
 
 <!DOCTYPE html>
