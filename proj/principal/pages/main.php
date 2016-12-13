@@ -89,6 +89,12 @@ if(isset($_SESSION['id'])){
         </div>
     </div>
 
+    <div id="searchContainer">
+        <form  method="post" action="../pages/search.php">
+            <input class= "search" type="text" name="search" id="searchBar" placeholder="Search">
+            <button type="submit" id="searchButton">
+        </form>
+    </div>
 
 
     <div class="best_res">

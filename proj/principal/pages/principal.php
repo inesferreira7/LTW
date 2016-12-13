@@ -48,7 +48,7 @@ session_start();
 	<div id="content">
 		<form method="post" action="../pages/search.php">
           <input type="text" class="search" name="search" placeholder="Search">
-					<button type="submit" class="button">
+			<button type="submit" class="button">
 		</form>
 	</div>
 
