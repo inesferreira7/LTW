@@ -32,9 +32,6 @@ foreach($result as $row) {
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/newPrincipal.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-    <script type="text/javascript" src="../js/dropDownUser.js"></script>
-
-
 
 </head>
 <body>
@@ -55,22 +52,19 @@ foreach($result as $row) {
 
     <div id="userImage" class="dropdown">
         <img id="currentPhoto" src="<?php echo $image?>" onerror="this.src='../res/images/defaultUser.png'" width="200" height="auto" onclick="clickUser()" class="dropbtn">
-        <div id="userOptions" class="dropdown-content">
-            <a href="newPrincipal.php"><?php echo $username?></a>
-            <a href="#">Edit Profile</a>
-            <?php
-            $userid = $_SESSION['id'];
-            $s = $db->prepare('SELECT * FROM Owner');
-            $s->execute();
-            $owners = $s->fetchAll();
-            foreach($owners as $owner){
-                if($owner['user_id'] === $userid){
-                    echo "<a href='manageRest.php'>Manage restaurants</a>";
-                }
-            }
-            ?>
-            <a href="main.php">Logout</a>
-        </div>
+
+        <form id="userP" action="newPrincipal.php" >
+            <input id="userProfile" type="submit" value="Profile">
+        </form>
+
+        <form id="editU" action="editUser.php" >
+            <input id="editUser" type="submit" value="Edit Profile">
+        </form>
+
+        <form id="userOut" action="main.php" >
+            <input id="logout" type="submit" value="Log Out">
+        </form>
+
 
     </div>
 

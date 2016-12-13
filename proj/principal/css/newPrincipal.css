@@ -33,25 +33,9 @@ html,body{
 
 }
 
-#username{
-  width:15%;
-  background-color: #E2FCEF;
-  position: absolute;
-  padding: 8px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 2px;
-  color: #454955;
-  border: 2px solid #454955;
-  font-family: 'Work Sans', sans-serif;
-}
-
-
 #searchContainer #searchBar {
     position:absolute;
-    padding: 8px 250px 10px 35px;
+    padding: 8px 250px 8px 35px;
     margin: 6px;
     border-radius: 15px;
     background: url('../res/images/search-icon.png');
@@ -68,9 +52,9 @@ html,body{
 
 #searchContainer #searchButton{
     position:absolute;
-    left:105%;
-    bottom:-220%;
-    padding: 16px 16px 12px 19px;
+    left:87%;
+    bottom:-210%;
+    padding: 12px 16px 12px 19px;
     border-radius: 12px;
     background: url('../res/images/search-icon.png');
     background-size:15px 15px;
@@ -91,40 +75,36 @@ html,body{
     opacity:0.85;
 }
 
-#userImage{
+
+#userImage {
     float:left;
     padding-left:16%;
     padding-top: 12%;
-    cursor:pointer;
     border-radius:4px;
 
 }
 
-.userOptions {
-    position: absolute;
-    display: inline-block;
-}
-
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #E2FCEF;
+#userImage #userP #userProfile, #userImage #editU #editUser, #userImage #userOut #logout{
     width:200px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    font-family: 'Work Sans', sans-serif;
-}
-
-a {
-    color: black;
-    padding: 10px;
-    text-decoration: none;
-    text-align:center;
-    display: block;
+    height:30px;
+    margin-top: 2px;
+    background-color: #E2FCEF;
+    border:0;
+    outline:0;
+    cursor: pointer;
     border: 1px solid #454955;
-    opacity:0.8;
+    font-family: 'Work Sans', sans-serif;
+    border-radius:2px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    opacity:0.85;
+    font-weight: 500;
+
 }
 
-.dropdown a:hover {background-color:#d9d9d9}
-.show {display:block;}
+#userImage #userP #userProfile:hover, #userImage #editU #editUser:hover, #userImage #userOut #logout:hover{
+    background-color:#454955 ;
+    color: #F3EFF5;
+}
