@@ -61,7 +61,7 @@ foreach($result as $row) {
             <input id="editUser" type="submit" value="Edit Profile">
         </form>
 
-        <form id="userOut" action="main.php" >
+        <form id="userOut" action="logout.php" >
             <input id="logout" type="submit" value="Log Out">
         </form>
 

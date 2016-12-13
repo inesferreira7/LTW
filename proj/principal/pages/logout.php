@@ -3,5 +3,5 @@
   session_destroy();
   session_unset();
 
-  header('Location: principal.php');
+  header('Location: main.php');
 ?>
