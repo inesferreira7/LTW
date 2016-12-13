@@ -52,19 +52,35 @@ unset($_SESSION['search']);
 
   <?php
   foreach($search as $res){
-
-
     $name = $res["name"];
     $descricao = $res["descricao"];
     $morada = $res["morada"];
-
-    echo "<div class='rest'>
-          <a href='restPage.php?name=". $name . "'>" . $name ."</a>
-          <iframe width='200' height='128' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0' src='https://maps.google.com/maps?&amp;q=" . $morada . "&amp;output=embed'></iframe>" . $morada . "</h5></div>";
-
     $image = $res["image"];
-    echo "<div class='restaurantImage'>
-            <img id='img' src='". $image . "' alt='Image restaurant' ></div>";
+    echo "<div class='currentRestaurant'> 
+                <img id='img' src='". $image . "' alt='Image restaurant' >
+                    <div id='nameDiv'>
+                        <label id='name'>Name:</label>
+                        <label id='realName'>" . $name ."</label>
+                    </div>
+                    
+                    <div id='addressDiv'>
+                        <label id='address'>Address:</label>
+                        <label id='realAddress'>" . $morada ." </label>
+                    </div>
+                 
+                    <div id='descriptionDiv'>
+                        <label id='description'>Description:</label>
+                        <label id='realDescription'>" .$descricao ."</label>
+                    </div>
+                    
+                
+            
+            
+          </div>";
+
+
+    /*<iframe width='200' height='128' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0' src='https://maps.google.com/maps?&amp;q=\" . $morada . \"&amp;output=embed'></iframe>*/
+
 
   }
   ?>

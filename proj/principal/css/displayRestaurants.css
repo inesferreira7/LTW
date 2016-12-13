@@ -1,39 +1,114 @@
 html,body{
   background-image: url("../res/images/rest3.jpg");
-  height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.restaurantImage #img{
-  width:250px;
-  height:auto;
+
+.currentRestaurant{
   float:left;
-  padding-left:13%;
-  padding-top: 9%;
-
-
-
-}
-
-
-.rest{
-  z-index:10;
-  float:right;
-  margin-top: 2%;
-  color:#041B15;
+  background-color: #F3EFF5;
+  height:200px;
+  width:900px;
+  border-radius: 10px;
+  border: 1px solid #454955;
   font-family: 'Work Sans', sans-serif;
-  height:160px;
-  text-align:center;
-  display: block;
+  margin-top: 4%;
+  margin-bottom:4%;
+  margin-left: 15%;
+  text-decoration: none;
 
+
+
+}
+.currentRestaurant #img{
+  width:250px;
+  height:160px;
+  float:left;
+  margin-left: 4%;
+  margin-top: 2.5%;
+  border-radius:4px;
+}
+
+.currentRestaurant #nameDiv{
+  float:left;
+  margin-top: 1.7%;
+  width:300px;
+  height:50px;
+}
+
+.currentRestaurant #name{
+  float:left;
+  margin-top: 2.2%;
+  margin-left:10%;
+  outline:0;
+  font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+  font-size: 150%;
+  width:250px;
+
+}
+
+.currentRestaurant #realName{
+  float:left;
+  margin-left:10%;
+  width:250px;
 
 }
 
 
+.currentRestaurant #addressDiv{
+  float:left;
+  margin-top: 1.7%;
+  width:250px;
+  height:50px;
 
+
+}
+
+.currentRestaurant #address{
+  float:left;
+  margin-top: 2.2%;
+  margin-left:10%;
+  outline:0;
+  font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+  font-size: 150%;
+  width:250px;
+
+}
+
+.currentRestaurant #realAddress{
+  float:left;
+  margin-left:10%;
+  width:250px;
+
+}
+
+.currentRestaurant #restaurantDiv{
+  float:left;
+  width:250px;
+  height:50px;
+}
+
+.currentRestaurant #description{
+  float:left;
+  margin-top: 5%;
+  margin-left:3.4%;
+  outline:0;
+  font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+  font-size: 150%;
+  width:250px;
+}
+
+.currentRestaurant #realDescription{
+  float:left;
+  margin-left:3.4%;
+  width:400px;
+}
 
 
 
