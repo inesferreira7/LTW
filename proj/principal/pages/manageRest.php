@@ -33,32 +33,39 @@ $rests = $restaurants->fetchAll();
   </head>
 
     <body>
-      <div id="left">
+      <div id="all">
+      <div id="big">
         <?php
         foreach($rests as $rest){
+
           $name = $rest['name'];
           $description = $rest['descricao'];
           $address = $rest['morada'];
           $image = $rest['image'];
+          echo "<div id='each'>";
+
+
+          echo "<img src='" . $image . "' alt='Restaurant image' width='300' height='auto'>";
+
+          echo"<div id='right'>";
 
           echo "<p class='name'>" . $name . "</p>";
-          echo "<img src='" . $image . "' alt='Restaurant image' width='200' height='auto'>";
+
+          echo"<button id='editButton' type='button' onclick='openEdit()'>Edit Profile</button>
+          </div>
+          <div id='righter'></div>";
+
+          echo "</div>";
         }
          ?>
 
-      </div>
-      <div id="right">
-      <div id="Edit">
-        <button id="editButton" type="button" onclick="openEdit()" width>Edit Profile</button>
-      </div>
-      <div id="Add">
-        <button id="addButton" type="button" onclick = "openAdd()"> Add restaurant </button>
-      </div>
-      <div id="AddR">
-        <form id="form" method="post" action="../pages/addRestaurant.php" enctype="multipart/form-data">
-          <input name="token" type="hidden" value="<?php echo $_SESSION["token"]; ?>">
-        </form>
-    </div>
+       </div>
+  <div id="add">
+    <form id="form" method="post" action="../pages/addRestaurant.php" enctype="multipart/form-data">
+       <input name="token" type="hidden" value="<?php echo $_SESSION["token"]; ?>">
+     </form>
+ </div>
+ </div>
 
   </body>
   </html>
