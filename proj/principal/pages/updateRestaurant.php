@@ -29,6 +29,7 @@
   }
 
   $uploaddir = '../res/images/';
+  if(basename($_FILES['image']['name']) !== ""){
   $uploadfile = $uploaddir . basename($_FILES['image']['name']);
 
   if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile)) {
@@ -39,7 +40,7 @@
   } else {
       echo "Upload failed";
 }
-
+}
       echo 'true';
-      header('location: principalUser.php');
+      header('Location: newPrincipal.php');
   return;

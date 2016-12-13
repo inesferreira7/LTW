@@ -18,13 +18,6 @@ $restaurants = $db->prepare('SELECT * FROM Restaurant WHERE owner_id = ?');
 $restaurants->execute([$ownerid]);
 $rests = $restaurants->fetchAll();
 
-foreach($rests as $rest){
-  $name = $rest['name'];
-  $description = $rest['descricao'];
-  $address = $rest['morada'];
-  $image = $rest['image'];
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -40,31 +33,32 @@ foreach($rests as $rest){
   </head>
 
     <body>
-    <div id="header">
-        <div id="logo">
-            <a href="principal.php" width="128" >
-                <img src="../res/images/fork.png" class="logo" alt="Foodaholics" width="128" height="128">
-            </a>
-        </div>
-        <div id="title">
-            <img id="foodaholics" src="../res/images/title.png" alt="Foodaholics" >
-        </div>
-    </div>
+      <div id="left">
+        <?php
+        foreach($rests as $rest){
+          $name = $rest['name'];
+          $description = $rest['descricao'];
+          $address = $rest['morada'];
+          $image = $rest['image'];
 
-    <div id="userOptions">
-        <p class="big">
-            <h1 id = "name"><?php echo $name ?></h1>
-            <h1 id = "description"><?php echo $description?></h1>
-            <h1 id = "address"><?php echo $address?></h1>
-            <img id = "image" src="<?php echo $image?>" alt="Image restaurant"/>
-        </p>
+          echo "<p class='name'>" . $name . "</p>";
+          echo "<img src='" . $image . "' alt='Restaurant image' width='200' height='auto'>";
+        }
+         ?>
+
       </div>
+      <div id="right">
       <div id="Edit">
         <button id="editButton" type="button" onclick="openEdit()" width>Edit Profile</button>
       </div>
       <div id="Add">
         <button id="addButton" type="button" onclick = "openAdd()"> Add restaurant </button>
       </div>
+      <div id="AddR">
+        <form id="form" method="post" action="../pages/addRestaurant.php" enctype="multipart/form-data">
+          <input name="token" type="hidden" value="<?php echo $_SESSION["token"]; ?>">
+        </form>
+    </div>
 
   </body>
   </html>
