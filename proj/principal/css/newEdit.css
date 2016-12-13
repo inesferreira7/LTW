@@ -16,7 +16,7 @@ html,body{
 #left{
   float:left;
   padding-left:16%;
-  padding-top: 12%;
+  padding-top: 8%;
 }
 
 img{
@@ -70,6 +70,6 @@ input[type=text], input[type=password], input[type=e-mail] {
 
 #newImage{
   position:absolute;
-  top:55%;
+  top:57%;
   left:13%;
 }

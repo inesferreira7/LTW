@@ -30,6 +30,8 @@ foreach($result as $row){
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/newEdit.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/newEdit.js"></script>
   </head>
   <body>
     <div id="all">
