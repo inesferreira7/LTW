@@ -56,8 +56,9 @@ foreach($result as $row) {
     $descricao = $res["descricao"];
     $morada = $res["morada"];
     $image = $res["image"];
+     
     echo "<div class='currentRestaurant'> 
-                <img id='img' src='". $image . "' alt='Image restaurant' >
+                <a href='newRestPage.php?name=".$name."'<img id='img' src=" .$image. " alt='Image restaurant' ></a>
                     <div id='nameDiv'>
                         <label id='name'>Name:</label>
                         <label id='realName'>" . $name ."</label>
@@ -72,9 +73,6 @@ foreach($result as $row) {
                         <label id='description'>Description:</label>
                         <label id='realDescription'>" .$descricao ."</label>
                     </div>
-                    
-                
-            
             
           </div>";
 
