@@ -48,6 +48,8 @@ unset($_SESSION['search']);
 <body>
 
 
+
+
   <?php
   foreach($search as $res){
 
