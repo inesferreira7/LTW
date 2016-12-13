@@ -50,13 +50,14 @@ foreach($result as $row) {
 
 
 
+
   <?php
   foreach($search as $res){
     $name = $res["name"];
     $descricao = $res["descricao"];
     $morada = $res["morada"];
     $image = $res["image"];
-     
+
     echo "<div class='currentRestaurant'> 
                 <a href='newRestPage.php?name=".$name."'<img id='img' src=" .$image. " alt='Image restaurant' ></a>
                     <div id='nameDiv'>
