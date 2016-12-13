@@ -67,7 +67,7 @@ else{
   $_SESSION['id'] = $id;
   $_SESSION['username'] = $username;
 
-  header('Location: principalUser.php');
+  header('Location: newPrincipal.php');
 
 
 

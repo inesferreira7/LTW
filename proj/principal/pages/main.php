@@ -7,7 +7,7 @@ global $db;
 session_start();
 
 if(isset($_SESSION['id'])){
-    header('Location: principalUser.php');
+    header('Location: newPrincipal.php');
     die();
     return;
 }

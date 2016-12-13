@@ -33,7 +33,7 @@ else{
   $uploaddir = '../res/images/';
   $uploadfileO = $uploaddir . basename($_FILES['OPS']['name']);
   $uploadfileR = $uploaddir . basename($_FILES['RPS']['name']);
-  
+
   if (move_uploaded_file($_FILES['OPS']['tmp_name'], $uploadfileO)) {
     echo "File is valid, and was successfully uploaded.\n";
 
@@ -91,7 +91,7 @@ else{
   $_SESSION['id'] = $id;
   $_SESSION['username'] = $username;
 
-  header('Location: principalUser.php');
+  header('Location: newPrincipal.php');
 }
 
 ?>
