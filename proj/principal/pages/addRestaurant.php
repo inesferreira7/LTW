@@ -31,4 +31,6 @@ $ownerid = $owner['owner_id'];
 
 $s = $db->prepare('INSERT INTO Restaurant VALUES(NULL,?,?,?,?,?)');
 $s->execute([$name, $description, $address, $ownerid,$uploadfile]);
+
+header('Location: newPrincipal.php');
 ?>

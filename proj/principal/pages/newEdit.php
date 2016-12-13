@@ -30,6 +30,8 @@ foreach($result as $row){
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/newEdit.css">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../js/newEdit.js"></script>
   </head>
   <body>
     <div id="all">
@@ -38,10 +40,11 @@ foreach($result as $row){
       </div>
       <div id="right">
         <form id="update" method="post" action="../pages/updateUser.php" enctype="multipart/form-data">
-        <label> <b>First name</b> <input type="text" placeholder="Enter first name" name="firstname" id="firstnameR"></label><br>
-        <label> <b>Last name</b><input type="text" placeholder="Enter last name" name="lastname" id="lastnameR"></label><br>
-        <label> <b>Email</b> <input type="e-mail" placeholder="Enter email" name="email" id="emailR"></label><br>
-        <label> <b>Username</b> <input type="text" placeholder="Enter username" class ="preenche" name="username" id="usernameR"></label><br>
+        <input type="hidden" name="token" value="<?php echo $_SESSION["token"];?>"/>
+        <label> <b>First name</b> <input type="text" placeholder=<?php echo $firstName ?> name="firstname" id="firstnameR"></label><br>
+        <label> <b>Last name</b><input type="text" placeholder=<?php echo $lastName ?> name="lastname" id="lastnameR"></label><br>
+        <label> <b>Email</b> <input type="e-mail" placeholder=<?php echo $email ?> name="email" id="emailR"></label><br>
+        <label> <b>Username</b> <input type="text" placeholder=<?php echo $username ?> class ="preenche" name="username" id="usernameR"></label><br>
         <label> <b>Password</b> <input type="password" placeholder="Enter password" class ="preenche" name="password" id="passwordR"></label><br>
         <button type="submit" class="button">Update</button>
       </div>

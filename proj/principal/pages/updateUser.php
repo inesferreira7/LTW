@@ -120,6 +120,6 @@ if(strlen($firstname) != 0){
 }
 
         echo 'true';
-        header('location: principalUser.php');
+        header('location: newPrincipal.php');
     return;
 ?>
