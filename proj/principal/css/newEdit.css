@@ -74,12 +74,11 @@ input[type=text], input[type=password], input[type=e-mail] {
   left:13%;
 }
 
-#profile, #delete{
-  margin-bottom:100px;
+#all #profile #profile{
+  margin-top: 30%;
   outline:0;
   width:200px;
   height:30px;
-  margin-top: 2px;
   background-color: #E2FCEF;
   cursor: pointer;
   border: 1px solid #454955;
@@ -88,8 +87,27 @@ input[type=text], input[type=password], input[type=e-mail] {
   text-align: center;
   text-decoration: none;
   font-size: 14px;
+
 }
 
-#back{
-  margin-bottom:15%;
+#all #delete #delete{
+    margin-top: 5%;
+    outline:0;
+    width:200px;
+    height:30px;
+    background-color: #E2FCEF;
+    cursor: pointer;
+    border: 1px solid #454955;
+    font-family: 'Work Sans', sans-serif;
+    border-radius:2px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+
 }
+
+#all #delete #delete:hover, #all #profile #profile:hover {
+    background-color:#454955 ;
+    color: #F3EFF5;
+}
+

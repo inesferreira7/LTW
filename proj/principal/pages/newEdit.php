@@ -37,6 +37,13 @@ foreach($result as $row){
     <div id="all">
       <div id="left">
         <img id="currentPhoto" src="<?php echo $image?>" onerror="this.src='../res/images/defaultUser.png'" width="200" height="auto">
+          <form id="profile" action="newPrincipal.php" >
+              <input id="profile" type="submit" value="Back">
+          </form>
+          <form id="delete" action="deleteAccount.php" >
+              <input id="delete" type="submit" value="Delete account">
+          </form>
+
       </div>
       <div id="right">
         <form id="update" method="post" action="../pages/updateUser.php" enctype="multipart/form-data">
@@ -52,12 +59,7 @@ foreach($result as $row){
       <input id="newImage" type="file" onchange="readURL(this);" name="userfile" />
       <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
     </form>
-    <form id="profile" action="newPrincipal.php" >
-        <input id="profile" type="submit" value="Back">
-    </form>
-    <form id="delete" action="deleteAccount.php" >
-        <input id="delete" type="submit" value="Delete account">
-    </form>
+
 
 
   </div>
