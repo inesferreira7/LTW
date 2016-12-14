@@ -59,7 +59,7 @@ foreach($result as $row) {
     $image = $res["image"];
 
     echo "<div class='currentRestaurant'> 
-                <a href='newRestPage.php?name=".$name."'<img id='img' src=" .$image. " alt='Image restaurant' ></a>
+                <a href='newRestPage.php?name=".$name."'><img id='img' src=" .$image. " alt='Image restaurant' ></a>
                     <div id='nameDiv'>
                         <label id='name'>Name:</label>
                         <label id='realName'>" . $name ."</label>
@@ -78,7 +78,6 @@ foreach($result as $row) {
           </div>";
 
 
-    /*<iframe width='200' height='128' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0' src='https://maps.google.com/maps?&amp;q=\" . $morada . \"&amp;output=embed'></iframe>*/
 
 
   }

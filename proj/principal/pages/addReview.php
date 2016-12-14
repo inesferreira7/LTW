@@ -11,7 +11,7 @@
     die();
 }
 
-  $resname = $_GET['name'];
+  $resname = $_GET['restname'];
 
   if(!isset($_SESSION['username'])){
     echo 'Cant post a comment if u are not a user...';
@@ -20,12 +20,15 @@
 
   echo $_SESSION['username'];
 
+  echo $resname;
+
   $rest_id = $_SESSION['rest'];
 
   $user_id = $_SESSION['id'];
 
-  $stars=$_POST['stars'];
-  $review=$_POST['review'];
+  $stars=$_POST['revVal'];
+  $review=$_POST['revText'];
+
 
   $stmt = $db->prepare('INSERT INTO Review VALUES(NULL,?,?,?,?)');
   $stmt->execute([$user_id,$rest_id,$review,$stars]);

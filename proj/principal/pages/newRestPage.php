@@ -50,43 +50,40 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
     <script type="text/javascript" src="../js/main.js"></script>
 
-
 </head>
 <body>
 
 
-<div class="parallax"></div>
 
-<div id="div1">
+
+<div id="mainDiv">
   <div id="user_photo">
   <?php
     if(isset($_SESSION['id']))
       echo '<a href="newPrincipal.php">
-      <img id="user_photo" src ="' . $photo . '" onerror="this.src=\'../res/images/defaultUser.png\'" width="128" height="128"></a>';
+      <img id="user_photo" src ="' . $photo . '" onerror="this.src=\'../res/images/defaultUser.png\'" width="200" height="auto"></a>';
   ?>
 </div>
-  <div id="information">
-    <?php
+  <div id="reviews">
+   <?php
     $r_name = $res['name'];
     $image = $res['image'];
     $description=$res['descricao'];
     $address = $res['morada'];
-    echo "<p class='title'>" . $r_name . "</p>";
 
-    echo "<img src='" . $image . "'alt='Image' width='350' height='250'><br><br><br><br>";
 
-    echo "<p class='title'> Reviews: </p>";
+    echo "<p class='title'>Reviews: </p>";
 
-    foreach($reviews as $review){
+   foreach($reviews as $review){
       $comment=$review['comment'];
       $stars = $review['stars'];
       $s = $db->prepare('SELECT * from User where user_id = ?');
       $s->execute([$review['user_id']]);
       $user=$s->fetch();
 
-      echo "<br><p>___________________________________</p></br>";
-      echo "<br><br><p class='comt'>" . $user['username'] . " wrote: </p><br>";
-      echo "<p id='comment' class='com'>&nbsp;" . $comment . "    &nbsp;   " . $stars ."</p><br>" ;
+
+      echo "<p class='whoCommented'>" . $user['username'] . " wrote: </p>";
+      echo "<p class='comment' class='com'>&nbsp;" . $comment . "    &nbsp;   " . $stars ."</p> <br>" ;
 
       $rep = $db->prepare('SELECT * FROM Reply WHERE review_id = ?');
       $rep->execute([$review['review_id']]);
@@ -97,36 +94,47 @@
         $getrep->execute([$r['user_id']]);
         $repUser = $getrep->fetch();
 
-        echo "<p class='rep'>&nbsp;" . $repUser['username'] . " replied: </p><br>";
-        echo "<p class='rep2'>&nbsp;" . $r['comment'] . "</p><br>" ;
+        echo "<p class='whoReplied'>&nbsp;" . $repUser['username'] . " replied: </p>";
+        echo "<p class='replyText'>&nbsp;" . $r['comment'] . "</p>" ;
       }
 
       if(isset($_SESSION['id']))
       echo "<form method='post' class='reply' action='addReply.php?name=" . $review['review_id'] . "&restname=" . $name ."'>
         <input type='hidden' name='token' value='" . $_SESSION['token'] . "'/>
-        <textarea name='" . $review['review_id'] . "' rows='2' cols='50'></textarea><br>
+        <textarea name='" . $review['review_id'] . "' rows='4' cols='50'></textarea><br>
         <button type='submit'>Reply</button>
       </form>";
 
     }
-     echo "<br><br>";
+
     if(isset($_SESSION['id']) && $_SESSION['id'] !== $owner)
-      echo '<form id="addreview" method="post" action="addReview.php?name=<?php echo $name?>">
-              <input type="hidden" name="token" value="' . $_SESSION["token"] . '"/>
-              <input type="number" name="stars" min="1" max="5" value="1">
-              <textarea name="review" rows="4" cols="50"></textarea><br>
-              <button type="submit">Add review</button>
-            </form>';
+      echo "<form id=\"addreview\" method=\"post\" action='addReview.php?name=".'&restname=' . $name ."'>
+              <label id='rating'>Rating: </label>
+              <input type='number' name='revVal' id='stars' min='1' max='5' value='1'>
+              <button id='submitReview' type='submit'>Add review</button><br>
+              <textarea name='revText' id='reviewText' rows='4' cols='50' ></textarea>
+              <input type='hidden' name='token' value='" . $_SESSION['token'] . "'/>
+            </form>";
     ?>
 </div>
-  <div id='inf'>
-    <?php
-    echo "<p>" . $description . "</p><br>
-    <p>" . $address . "</p><br>
-    <iframe width='270' height='168' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0' src='https://maps.google.com/maps?&amp;q=" . $address . "&amp;output=embed'></iframe>";
-    ?>
+
+  <div class="restaurantImage">
+    <img id='restaurantImage' src='<?php echo  $image ?> 'alt='Image' width='290' height='200'>
   </div>
+
+
+  <div id='restaurantInfo'>
+    <p id="name" ><?php echo $r_name ?></p>
+    <p id="description"><?php echo $description ?></p>
+    <p id="address"><?php echo $address ?></p>
+    <iframe width='270' height='168' frameborder='0' scrolling='no'  marginheight='0' marginwidth='0' src='https://maps.google.com/maps?&amp;q=" <?php echo $address ?> "&amp;output=embed'></iframe>
+
+
+  </div>
+  
+
+
 </div>
-<div class="parallax"></div>
+
 </body>
 </html>
