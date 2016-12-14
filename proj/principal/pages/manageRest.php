@@ -50,9 +50,9 @@ $rests = $restaurants->fetchAll();
           echo "<p class='name'>" . $name . "</p>";
 
           echo"<button id='editButton' type='button' onclick='openEdit()'>Edit Profile</button>
-          <form id='delete' action='deleteRest.php' >
-              <input id='deleteRest' type='submit' value='Delete restaurant'>
-          </form>
+          <a href='deleteRest.php?name=". $name . "'>
+              <input id='deleteRest' value='Delete restaurant'>
+          </a>
           </div>
           <div id='righter'></div>";
 

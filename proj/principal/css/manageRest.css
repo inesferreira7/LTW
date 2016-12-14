@@ -69,6 +69,12 @@ img{
   text-decoration: none;
   border-radius: 2px;
   font-size: 14px;
+  background-color: #d3d3d3;
+}
+
+#deleteRest:hover{
+  background-color:#454955 ;
+  color: #F3EFF5;
 }
 
 #righter{
@@ -150,8 +156,8 @@ input[type=text], input[type=password], input[type=e-mail] {
 }
 
 #photo{
-  height:150px;
-  width:auto;
+  width:200px;
+  height: auto;
 }
 
 #choose{
@@ -161,7 +167,8 @@ input[type=text], input[type=password], input[type=e-mail] {
 }
 
 #addS{
+  float:left;
+  margin-left:15%;
   width:10%;
   margin-top:15%;
-  margin-left:22%;
 }
