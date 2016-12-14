@@ -14,7 +14,7 @@ function readURL(input) {
 }
 
 function readURL1(input) {
-  if (input.files && input.files[1]) {
+  if (input.files && input.files[0]) {
     var reader = new FileReader();
 
     reader.onload = function (e) {
@@ -23,7 +23,7 @@ function readURL1(input) {
 
     };
 
-    reader.readAsDataURL(input.files[1]);
+    reader.readAsDataURL(input.files[0]);
   }
 
 }

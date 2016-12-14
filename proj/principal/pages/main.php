@@ -114,7 +114,7 @@ if(isset($_SESSION['id'])){
         $temp = $db->prepare('SELECT * FROM Restaurant WHERE restaurant_id = ? ');
         $temp->execute([$row["restaurant_id"]]);
         $restemp = $temp->fetch();
-        echo "<a href='restPage.php?name=" . $restemp["name"] . "' class='image' >
+        echo "<a href='newRestPage.php?name=" . $restemp["name"] . "' class='image' >
                   <img src='" . $restemp["image"] . "' alt='restaurant photo' width='170' height='128'></a>";
       }
     ?>
