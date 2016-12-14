@@ -61,8 +61,11 @@ $rests = $restaurants->fetchAll();
          ?>
 
        </div>
-  <div id="add">
+  <div id="footerButtons">
     <button id='addButton' type='button' onclick='openAdd()'>Add restaurant</button>
+      <form id="back" action="newPrincipal.php" >
+          <input id="backToProfile" type="submit" value="Back">
+      </form>
  </div>
  </div>
 
