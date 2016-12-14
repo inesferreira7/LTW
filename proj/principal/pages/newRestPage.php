@@ -83,7 +83,7 @@
 
 
       echo "<p class='whoCommented'>" . $user['username'] . " wrote: </p>";
-      echo "<p class='comment' class='com'>&nbsp;" . $comment . "    &nbsp;   " . $stars ."</p> <br>" ;
+      echo "<p class='comment' class='com'>&nbsp;" . $comment . "    &nbsp;   "." rating: " . $stars ."</p> <br>" ;
 
       $rep = $db->prepare('SELECT * FROM Reply WHERE review_id = ?');
       $rep->execute([$review['review_id']]);
