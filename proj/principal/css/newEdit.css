@@ -73,3 +73,23 @@ input[type=text], input[type=password], input[type=e-mail] {
   top:57%;
   left:13%;
 }
+
+#profile, #delete{
+  margin-bottom:100px;
+  outline:0;
+  width:200px;
+  height:30px;
+  margin-top: 2px;
+  background-color: #E2FCEF;
+  cursor: pointer;
+  border: 1px solid #454955;
+  font-family: 'Work Sans', sans-serif;
+  border-radius:2px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#back{
+  margin-bottom:15%;
+}
