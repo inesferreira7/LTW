@@ -26,8 +26,7 @@
         </div>
         <div id="image">
           <img id="photo" class= "setPhoto" src="#" onerror="this.src='../res/images/defaultUser.png'"  /><br>
-          <input type="file" onchange="readURL(this);" name="OPS" /><br>
-          <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+          <input type="file" onchange="readURL(this)" name="files[]" /><br>
           <button id="next" type="button" class="nextClick">Next step >></button>
           </div>
         </div>
@@ -40,8 +39,8 @@
           </div>
           <div id="imageR">
             <img id="photoR" class= "setPhoto" src="#" onerror="this.src='../res/images/defaultUser.png'"  /><br>
-            <input type="file" onchange="readURL1(this);" name="RPS" /><br>
-            <input type="hidden" name="MAX_FILE_SIZE" value="512000" />
+            <input type="file" onchange="readURL1(this)" name="files[]"/><br>
+          
             <button id="sub" type="submit" class="nextClick"> Register </button>
           </div>
           <div id="lol"><p>          </p></div>

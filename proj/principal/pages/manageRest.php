@@ -5,8 +5,6 @@ global $db;
 
 session_start();
 
-$_SESSION['token'] = generateRandomToken();
-
 $userid = $_SESSION['id'];
 
 $owner = $db->prepare('SELECT * from Owner where user_id = ?');
@@ -45,13 +43,16 @@ $rests = $restaurants->fetchAll();
           echo "<div id='each'>";
 
 
-          echo "<img src='" . $image . "' alt='Restaurant image' width='300' height='auto'>";
+          echo "<img id='imageR' src='" . $image . "' alt='Restaurant image' width='300' height='auto'>";
 
           echo"<div id='right'>";
 
           echo "<p class='name'>" . $name . "</p>";
 
           echo"<button id='editButton' type='button' onclick='openEdit()'>Edit Profile</button>
+          <a href='deleteRest.php?name=". $name . "'>
+              <input id='deleteRest' value='Delete restaurant'>
+          </a>
           </div>
           <div id='righter'></div>";
 
@@ -61,9 +62,7 @@ $rests = $restaurants->fetchAll();
 
        </div>
   <div id="add">
-    <form id="form" method="post" action="../pages/addRestaurant.php" enctype="multipart/form-data">
-       <input name="token" type="hidden" value="<?php echo $_SESSION["token"]; ?>">
-     </form>
+    <button id='addButton' type='button' onclick='openAdd()'>Add restaurant</button>
  </div>
  </div>
 

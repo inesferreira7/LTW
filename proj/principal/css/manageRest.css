@@ -7,20 +7,17 @@ html,body{
     background-size: cover;
 }
 
-#big{
-  margin:6%;
-  width:80%;
-  height:240px;
+#each{
   font-family: 'Work Sans', sans-serif;
   background-color: #F3EFF5;
-  position:absolute;
+  position:relative;
   border-radius: 6px;
   padding:4%;
   border: 1px solid #454955;
-}
-
-#each{
-  height:300px;
+  margin-bottom: 30px;
+  margin:6%;
+  width:80%;
+  height:240px;
   display:inline-block;
 }
 img{
@@ -42,7 +39,7 @@ img{
 }
 
 #editButton{
-  margin-top:6%;
+  margin-top:3%;
   position:absolute;
   cursor: pointer;
   padding:8px;
@@ -60,9 +57,29 @@ img{
   color: #F3EFF5;
 }
 
+#deleteRest{
+  margin-top:8%;
+  position:absolute;
+  cursor: pointer;
+  padding:8px;
+  color: #454955;
+  border: 1px solid #454955;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;
+  font-size: 14px;
+  background-color: #d3d3d3;
+}
+
+#deleteRest:hover{
+  background-color:#454955 ;
+  color: #F3EFF5;
+}
+
 #righter{
-  float:right;
-  margin-left: 150px;
+float:left;
+margin-left:150px;
 }
 
 input[type=text], input[type=password], input[type=e-mail] {
@@ -94,4 +111,64 @@ input[type=text], input[type=password], input[type=e-mail] {
 .button:hover{
   background-color:#454955 ;
   color: #F3EFF5;
+}
+
+#addButton{
+  margin-bottom:2%;
+  margin-top:2%;
+  margin-left:10%;
+  position:absolute;
+  cursor: pointer;
+  padding:12px;
+  color: #454955;
+  border: 1px solid #454955;
+  font-family: 'Work Sans', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 2px;
+  font-size: 18px;
+}
+
+#addButton:hover{
+  background-color:#454955 ;
+  color: #F3EFF5;
+}
+
+
+#addForm{
+  display:inline-block;
+  margin-left:6%;
+  margin-top:10%;
+  margin-bottom: 5%;
+  width:80%;
+  height:240px;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #F3EFF5;
+  position:relative;
+  border-radius: 6px;
+  padding:4%;
+  border: 1px solid #454955;
+}
+
+#left{
+  float:left;
+  margin-right: 200px;
+}
+
+#photo{
+  width:200px;
+  height: auto;
+}
+
+#choose{
+  position:absolute;
+  top:75%;
+  right:30%;
+}
+
+#addS{
+  float:left;
+  margin-left:15%;
+  width:10%;
+  margin-top:15%;
 }

@@ -5,11 +5,6 @@ global $db;
 
 session_start();
 
-if ($_SESSION['token'] !== $_POST['token']) {
-  header('HTTP/1.0 403 Forbidden');
-  header('Location: 403.html');
-  die();
-}
 
 $userid = $_SESSION['id'];
 

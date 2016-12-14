@@ -10,8 +10,6 @@ $lastname = htmlspecialchars($_POST['lastname']);
 $email = htmlspecialchars($_POST['email']);
 $username = htmlspecialchars($_POST['username']);
 $password = htmlspecialchars($_POST['password']);
-$imageOwner = $_POST['OPS'];
-$imageRestaurant = $_POST['RPS'];
 $restname = htmlspecialchars($_POST['r_name']);
 $description = htmlspecialchars($_POST['description']);
 $address = htmlspecialchars($_POST['address']);
@@ -30,25 +28,19 @@ else if(strlen($password) < 7){
 }
 else{
 
-  $uploaddir = '../res/images/';
-  $uploadfileO = $uploaddir . basename($_FILES['OPS']['name']);
-  $uploadfileR = $uploaddir . basename($_FILES['RPS']['name']);
+  $uploads_dir = '../res/images/';
+  foreach ($_FILES["files"]["error"] as $key => $error) {
+    if ($error == UPLOAD_ERR_OK) {
+        $tmp_name = $_FILES["files"]["tmp_name"][$key];
+        // basename() may prevent filesystem traversal attacks;
+        // further validation/sanitation of the filename may be appropriate
+        $name = basename($_FILES["files"]["name"][$key]);
+        move_uploaded_file($tmp_name, "$uploads_dir/$name");
+    }
+}
 
-  if (move_uploaded_file($_FILES['OPS']['tmp_name'], $uploadfileO)) {
-    echo "File is valid, and was successfully uploaded.\n";
-
-
-  } else {
-    echo "Upload failed";
-  }
-
-  if (move_uploaded_file($_FILES['RPS']['tmp_name'], $uploadfileR)) {
-    echo "File is valid, and was successfully uploaded.\n";
-
-
-  } else {
-    echo "Upload failed";
-  }
+  $uploadfileO = $uploads_dir . basename($_FILES["files"]["name"][0]);
+  $uploadfileR = $uploads_dir . basename($_FILES["files"]["name"][1]);
 
   $checkuser = $db->prepare('SELECT * FROM User WHERE username = ?');
   $checkuser->execute([$username]);
