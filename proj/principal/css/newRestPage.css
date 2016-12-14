@@ -1,82 +1,131 @@
 body, html {
-    height: 100%;
+  background-image: url("../res/images/rest3.jpg");
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
-.parallax {
-    /* The image used */
-    background-image: url("../res/images/rest3.jpg");
-    height: 100%;
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#div1{
-  position: absolute;
-  width: 90%;
+#mainDiv{
   background-color: #F3EFF5;
+  margin-top: 4%;
+  margin-left: 5%;
+  margin-right:5%;
+  padding-top: 2%;
+  font-family: 'Work Sans', sans-serif;
   display: inline-block;
   height:auto;
-  padding-top: 5%;
-  margin-left: 5%;
-  top: 5%;
-  padding-bottom: 5%;
-  font-family: 'Work Sans', sans-serif;
-  border-radius: 10px;
-}
-
-#div1 #information{
-  float: left;
-  width:auto;
-  padding-left: 3%;
-}
-
-#div1 #information .title{
-  color: gray;
-  font-family: 'Work Sans', sans-serif;
-  font-size:170%;
-  font-weight: bold;
-}
-
-#div1 #information .com{
-  text-indent: 10px;
-}
-
-#div1 #information .comt, .rep{
-  font-weight: bold;
-}
-
-
-#div1 #information .rep{
-  text-indent: 20px;
-}
-
-#div1 #information .rep2{
-  text-indent: 30px;
-}
-
-#div1 #inf{
-  float:left;
-  width: auto;
-  margin-right: auto;
-  margin-top: 2.5%;
-}
-
-#div1 #user_photo{
-  float: right;
-  width: auto;
-  margin-right: 5%;
-}
-
-textarea{
+  width:90%;
+  text-decoration: none;
   border-radius: 5px;
 }
 
-p{
-  font-size:120%;
-  font-family: 'Work Sans', sans-serif;
-  color: gray;
+
+#mainDiv .restaurantImage #restaurantImage{
+
+  margin-left: 3%;
+  border-radius: 4px;
 }
+
+
+#mainDiv #restaurantInfo{
+  width:290px;
+  height:auto;
+  margin-left: 3%;
+  margin-top: 2%;
+  padding-bottom: 1%;
+  text-align: center;
+
+}
+
+#mainDiv #restaurantInfo #name{
+  margin-top: 1%;
+  font-size:150%;
+  margin-bottom: 3%;
+}
+
+#mainDiv #restaurantInfo #address{
+  font-size:80%;
+  margin-bottom: 3%;
+}
+
+#mainDiv #restaurantInfo #description{
+  margin-bottom: 3%;
+
+}
+
+
+#mainDiv #reviews{
+  float:right;
+  margin-right: 10%;
+}
+
+#mainDiv #reviews .title{
+  font-size:175%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+#mainDiv #reviews #addReview #rating{
+  float:left;
+}
+#mainDiv #reviews #addReview #reviewText{
+  margin-top: 5%;
+  float:left;
+}
+
+#mainDiv #reviews .whoCommented{
+  margin-top: 3%;
+  margin-left: 1.7%;
+  text-align: left;
+  font-size:120%;
+  margin-bottom: 1%;
+
+
+}
+
+#mainDiv #reviews .comment{
+  text-align: left;
+  border: 1px solid #454955;
+  height:auto;
+  padding-bottom: 4%;
+
+  margin-bottom: -2%;
+
+}
+
+#mainDiv #reviews .whoReplied{
+
+  text-align: left;
+  font-size:120%;
+  margin-bottom: 1%;
+}
+
+#mainDiv #reviews .replyText{
+  text-align: left;
+  border: 1px solid #454955;
+  height:auto;
+  padding-bottom: 4%;
+  margin-bottom: 2%;
+
+}
+
+
+textarea {
+  margin-top: 2%;
+  resize: none;
+}
+
+
+#mainDiv #user_photo #user_photo {
+  float:right;
+  margin-right: 3%;
+}
+
+
+
+
+

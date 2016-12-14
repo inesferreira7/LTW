@@ -21,7 +21,7 @@ $user = $_SESSION['id'];
 $stmt = $db->prepare('INSERT INTO Reply VALUES(NULL,?,?,?)');
 $stmt->execute([$rev_id, $user, $comment]);
 
-header('Location: restPage.php?name=' . $rest_name);
+header('Location: newRestPage.php?name=' . $rest_name);
 return;
 
 ?>
