@@ -96,8 +96,10 @@ if(isset($_SESSION['id'])){
         </form>
     </div>
 
-
-    <div class="best_res">
+    <div id="scroll">
+      <img id="img1" src="../res/images/scroll.png" width="80%" heigh:"auto">
+    </div>
+    <div id="best_res" class="best_res">
     <?php
       $stmt = $db->prepare('SELECT restaurant_id FROM Review GROUP BY restaurant_id ORDER BY AVG(stars) DESC');
       $stmt->execute();
