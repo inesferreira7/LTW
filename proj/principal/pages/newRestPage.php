@@ -101,7 +101,7 @@
       if(isset($_SESSION['id']))
       echo "<form method='post' class='reply' action='addReply.php?name=" . $review['review_id'] . "&restname=" . $name ."'>
         <input type='hidden' name='token' value='" . $_SESSION['token'] . "'/>
-        <textarea name='" . $review['review_id'] . "' rows='4' cols='50'></textarea><br>
+        <textarea name='" . $review['review_id'] . "' rows='4' cols='50' required></textarea><br>
         <button type='submit'>Reply</button>
       </form>";
 
@@ -112,7 +112,7 @@
               <label id='rating'>Rating: </label>
               <input type='number' name='revVal' id='stars' min='1' max='5' value='1'>
               <button id='submitReview' type='submit'>Add review</button><br>
-              <textarea name='revText' id='reviewText' rows='4' cols='50' ></textarea>
+              <textarea name='revText' id='reviewText' rows='4' cols='50' required ></textarea>
               <input type='hidden' name='token' value='" . $_SESSION['token'] . "'/>
             </form>";
     ?>

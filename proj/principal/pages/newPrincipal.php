@@ -45,7 +45,7 @@ foreach($result as $row) {
 
     <div id="searchContainer">
         <form  method="post" action="../pages/search.php">
-            <input type="text" class="search" name="search" id="searchBar" placeholder="Search">
+            <input type="text" class="search" name="search" id="searchBar" placeholder="Search" required>
             <button type="submit" id="searchButton">
         </form>
     </div>

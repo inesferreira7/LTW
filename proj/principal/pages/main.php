@@ -91,7 +91,7 @@ if(isset($_SESSION['id'])){
 
     <div id="searchContainer">
         <form  method="post" action="../pages/search.php">
-            <input class= "search" type="text" name="search" id="searchBar" placeholder="Search">
+            <input class= "search" type="text" name="search" id="searchBar" placeholder="Search" required>
             <button type="submit" id="searchButton">
         </form>
     </div>

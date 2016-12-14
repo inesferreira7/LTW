@@ -6,8 +6,7 @@ global $db;
 session_start();
 
 if(!isset($_SESSION['search'])){
-  echo "search is empty1";
-  //header('Location: principal.php');
+  header('Location: javascript:history.back()');
   return;
 }
 else {
@@ -15,8 +14,8 @@ else {
 }
 
 if(count($search) === 0){
-  echo "search is empty2";
-  //header('Location: principal.php');
+
+  header('Location: javascript:history.back()');
   return;
 }
 
